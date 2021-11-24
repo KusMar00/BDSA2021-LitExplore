@@ -1,7 +1,6 @@
 name: Build & Test
 
 on:
-  push:
   pull_request:
     branches:
       - main
@@ -17,8 +16,14 @@ jobs:
         with:
           dotnet-version: 6.0.x
       - name: Install dependencies
-        run: dotnet restore
+        run: |
+          cd LitExplore
+          dotnet restore
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: |
+          cd LitExplore
+          dotnet build --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: |
+          cd LitExplore
+          dotnet test --no-restore --verbosity normal
