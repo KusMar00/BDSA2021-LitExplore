@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PaperDiscovery\LitExplore.PaperDiscovery.csproj" />
+    <ProjectReference Include="..\ProjectManagement\LitExplore.ProjectManagement.csproj" />
     <ProjectReference Include="..\Shared\LitExplore.Shared.csproj" />
+    <ProjectReference Include="..\UserManagement\LitExplore.UserManagement.csproj" />
   </ItemGroup>
 
   <ItemGroup>
