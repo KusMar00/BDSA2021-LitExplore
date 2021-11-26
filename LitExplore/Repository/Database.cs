@@ -34,6 +34,10 @@ public class Database
         return configuration.Build();
     }
 
+    /// <summary>
+    /// The seed data comes from Google Scholar (https://scholar.google.com/).
+    /// The seed data does not include users at these are part of the vertical slice.
+    /// </summary>
     public void Seed()
     {
         /*
@@ -63,6 +67,18 @@ public class Database
             Name = @"Spent coffee grounds as a valuable source of phenolic compounds and bioenergy",
             URL = @"https://www.sciencedirect.com/science/article/pii/S0959652611005117?casa_token=N76EXWDZvMoAAAAA:9ryevfBm9sXLugCElAxj47CxgJS2XQ08c-LW04yZyYo2h9DRKtKSsH0xUhqL3APxHAD0Slz2taI",
             Abstract = @"Spent coffee grounds collected from coffee bars (SCG-1) or recovered from coffee capsules (SCG-2) were investigated as a potential source of phenolic compounds and energy. Preliminary characterization of these materials provided a total phenolic content of 17.75 mg …",
+            Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
+        };
+
+        var Author_JB_Essner = new Author { GivenName = "Jerimy B.", Surname = "Essner" };
+        var Author_JA_Kist = new Author { GivenName = "Jennifer A", Surname = "Kist" };
+        var Author_L_Polo_Parada = new Author { GivenName = "Luis", Surname = "Polo-Parada" };
+        var Paper_Artifacts_And_Errors = new Paper
+        {
+            Authors = new List<Author>() { Author_JB_Essner, Author_JA_Kist, Author_L_Polo_Parada },
+            Name = @"Artifacts and errors associated with the ubiquitous presence of fluorescent impurities in carbon nanodots",
+            URL = @"https://www.academia.edu/download/55961585/2018_Artifact_and_Errors_associated_wit_Ubiquitous_presence_of_Fluorescent_impurities_in_Carbon_Nanodot.pdf",
+            Abstract = @"Fluorescent carbon dots have attracted tremendous attention owing to their superlative optical properties which suggest opportunities for replacing conventional fluorescent materials in various application fields. Not surprisingly, the rapid pace of publication has …",
             Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
     }
