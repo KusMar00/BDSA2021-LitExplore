@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LitExplore.Repository;
-public class Database
+public class Database //: IPaperRepository, IProjectRepository, IUserRepository
 {
     internal const string ConnectionStringName = "LitExplore";
 
