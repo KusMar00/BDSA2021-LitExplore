@@ -24,12 +24,8 @@ namespace LitExplore.UserManegement.Tests
                 new Claim(ClaimTypes.Name, "Jordan")
             }));
         
-            // var connection = new SqliteConnection("Filename=:memory:");
-            // connection.Open();
-            // var builder = new DbContextOptionsBuilder<LitExploreContext>();
-            // builder.UseSqlite(connection);
-            // var context = new ComicsContext(builder.Options);
-            // context.Database.EnsureCreated();
+            var context = new Database();
+
             
         }
 
