@@ -5,22 +5,24 @@ namespace LitExplore.UserManagement
 {
         public class CustomAuthStateProvider : AuthenticationStateProvider
         {
-            string? name;
+            string name = "";
 
             public async Task<Boolean> isUserValidAsync(string _name){
-                name = _name;
-                var authState = await GetAuthenticationStateAsync();
-                var user = authState.User;
+                if(_name != null){
+                    name = _name;
+                    var authState = await GetAuthenticationStateAsync();
+                    var user = authState.User;
+                    
 
-                if(user.Identity != null && user.Identity.IsAuthenticated)
-                    return true;
-
-                return false;   
+                    if(user.Identity != null && user.Identity.IsAuthenticated)
+                        return true;
+                }
+                return false; 
             }
 
             public override Task<AuthenticationState> GetAuthenticationStateAsync()
             {
-                var identity = new ClaimsIdentity(new[]
+                    var identity = new ClaimsIdentity(new[]
                 {
                     new Claim(ClaimTypes.Name, name),
                 });
