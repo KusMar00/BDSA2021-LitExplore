@@ -9,12 +9,20 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
 
     public LitExploreContext Context { get; set; }
 
-    public Database(DbContextOptions<LitExploreContext> options)
+    /// <summary>
+    /// Creates a Database with a custom options.
+    /// </summary>
+    /// <param name="options">Options to use to initialize the LitExploreContext</param>
+    /// <param name="migrate">Automatically apply migrations</param>
+    public Database(DbContextOptions<LitExploreContext> options, bool migrate = false)
     {
         Context = new LitExploreContext(options);
-        Context.Database.Migrate();
+        if (migrate) Context.Database.Migrate();
     }
 
+    /// <summary>
+    /// Create a Database with default options using the connection string named 'LitExplore' in LitExplore.Repository.
+    /// </summary>
     public Database()
     {
         var configuration = LoadConfiguration();
