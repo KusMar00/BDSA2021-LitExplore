@@ -6,4 +6,4 @@ public class Relation
     public Paper To { get; set; } = null!;
 }
 
-public record RelationDTO(Paper from, Paper to);
+public record RelationDTO(PaperDetailsDTO from, PaperDetailsDTO to);

@@ -4,12 +4,14 @@ using LitExplore.Repository.Entities;
 using LitExplore.PaperDiscovery;
 using Xunit;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace LitExplore.PaperDiscovery.Tests
 {
     public class PaperDiscoveryTests
     {
         public List<PaperDetailsDTO> papers = new List<PaperDetailsDTO>();
+        public List<RelationDTO> relations = new List<RelationDTO>();
         public PaperDiscovery _PaperDisovery;
 
         public PaperDiscoveryTests(){
@@ -29,14 +31,22 @@ namespace LitExplore.PaperDiscovery.Tests
 
             papers.AddRange(papersToAdd);
 
-            _PaperDisovery = new PaperDiscovery(papers);
+            var relationsToAdd = new List<RelationDTO>{
+                new RelationDTO(papers[0], papers[3]),
+                new RelationDTO(papers[1], papers[3])
+            };
+
+            relations.AddRange(relationsToAdd);
+
+
+            _PaperDisovery = new PaperDiscovery(papers, relations);
         }
 
 
         [Fact]
         public async Task Given_ID_0_return_paper0_async()
         {
-            PaperDetailsDTO paper = await _PaperDisovery.getPaper(0);
+            var paper = await _PaperDisovery.getPaper(0);
 
             Assert.Equal(papers[0], paper);
         }
@@ -52,6 +62,14 @@ namespace LitExplore.PaperDiscovery.Tests
             }
 
             Assert.Equal(papers, returnedPapers);
+        }
+
+        [Fact]
+        public async Task Given_ID_0_return_relation_between_paper_0_and_3()
+        {
+            var returnedRelations = await _PaperDisovery.getRelatedPaper(0);
+
+            Assert.Equal(relations[0], returnedRelations[0]);
         }
     }
 }
