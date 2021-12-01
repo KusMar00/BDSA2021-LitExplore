@@ -17,6 +17,13 @@ public class Paper
 
     [StringLength(2200)]
     public string? Abstract { get; set; }
+
+    public ISet<Project> UsedIn { get; set; } = null!;
+
+    // When creating the database, EF Core will generate a 'PaperPaper' entity for these two collections.
+    // This entity is equivilent to the 'Relation' object in the Application model.
+    public ICollection<Paper> Citings { get; set; } = null!;
+    public ICollection<Paper> CitedBy { get; set; } = null!;
 }
 
 public record PaperDTO (int Id, string? Name);

@@ -11,6 +11,8 @@ public class Author
 
     [StringLength(50)]
     public string Surname { get; set; } = null!;
+
+    public ISet<Paper> Papers{ get; set; } = null!;
 }
 
 public record AuthorDTO(int Id, string GivenName, string Surname);
