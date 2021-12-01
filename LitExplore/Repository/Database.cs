@@ -12,7 +12,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
     public Database(DbContextOptions<LitExploreContext> options)
     {
         Context = new LitExploreContext(options);
-        //Context.Database.Migrate();
+        Context.Database.Migrate();
     }
 
     public Database()
@@ -22,7 +22,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
         var optionsBuilder = new DbContextOptionsBuilder<LitExploreContext>()
             .UseSqlServer(connectionString);
         Context = new LitExploreContext(optionsBuilder.Options);
-        //Context.Database.Migrate();
+        Context.Database.Migrate();
     }
 
     public static IConfiguration LoadConfiguration()
@@ -41,13 +41,12 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
     /// </summary>
     public void Seed()
     {
-        /*
         Context.Database.EnsureDeleted();
         // Clean migrations.
         var migrator = Context.GetService<IMigrator>();
         migrator.Migrate("0");
         Context.Database.Migrate();
-        */
+        
 
         var Author_P_Esquivel = new Author { GivenName = "Patricia", Surname = "Esquivel" };
         var Author_VM_Jimenez = new Author { GivenName = "Victor M.", Surname = "Jimenez" };
@@ -58,6 +57,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             URL = @"https://www.sciencedirect.com/science/article/pii/S0963996911003449?casa_token=tdCQmafGfxcAAAAA:tKxOe9YNAwPLm6A_w-oKnGKZPLZu1Dug4RaZ68RKeDCfeEdjs_HFiJh0q5j-hwIEB6PBpXT0914",
             Abstract = @"Coffee, one of the most popular beverages, is consumed by millions of people every day. Traditionally, coffee beneficial effects have been attributed solely to its most intriguing and investigated ingredient, caffeine, but it is now known that other compounds also contribute to …",
         };
+        Context.Papers.Add(Paper_Functional_Properties_Of_Coffee);
 
         var Author_A_Zurro = new Author { GivenName = "Antonio", Surname = "ZUORRO" };
         var Author_R_Lavecchia = new Author { GivenName = "Roberto", Surname = "Lavecchia" };
@@ -69,6 +69,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             Abstract = @"Spent coffee grounds collected from coffee bars (SCG-1) or recovered from coffee capsules (SCG-2) were investigated as a potential source of phenolic compounds and energy. Preliminary characterization of these materials provided a total phenolic content of 17.75 mg …",
             Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
+        Context.Papers.Add(Paper_Spent_Coffee_Grounds);
 
         var Author_JB_Essner = new Author { GivenName = "Jerimy B.", Surname = "Essner" };
         var Author_JA_Kist = new Author { GivenName = "Jennifer A", Surname = "Kist" };
@@ -81,5 +82,10 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             Abstract = @"Fluorescent carbon dots have attracted tremendous attention owing to their superlative optical properties which suggest opportunities for replacing conventional fluorescent materials in various application fields. Not surprisingly, the rapid pace of publication has …",
             Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
+        Context.Papers.Add(Paper_Artifacts_And_Errors);
+
+        Context.SaveChanges();
+
+        // TODO: Only assign context when done. We don't want issues with concurrency.
     }
 }

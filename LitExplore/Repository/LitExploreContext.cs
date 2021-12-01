@@ -18,9 +18,15 @@ public class LitExploreContext : DbContext
         modelBuilder.Entity<Project>()
             .HasOne(p => p.Owner)
             .WithMany(u => u.IsOwnerOf);
+        modelBuilder.Entity<Project>()
+            .HasKey(p => p.Id);
 
         modelBuilder.Entity<Paper>() // 'Relation' in the application model.
             .HasMany(p => p.Citings)
             .WithMany(p => p.CitedBy);
+
+        modelBuilder.Entity<User>() // Squish SQLite bugs.
+            .Property(p => p.Id)
+            .HasConversion(u => u, u => u);
     }
 }
