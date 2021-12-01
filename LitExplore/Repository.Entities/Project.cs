@@ -17,8 +17,8 @@ public class Project
 
 }
 
-public record ProjectDTO(int Id, User Owner, ISet<User> Collaborators);
-public record ProjectDetailsDTO(int Id, User Owner, ISet<User> Collaborators, ISet<Paper> Papers) : ProjectDTO(Id, Owner, Collaborators);
+public record ProjectDTO(int Id, UserDTO Owner, ISet<UserDTO> Collaborators);
+public record ProjectDetailsDTO(int Id, UserDTO Owner, ISet<UserDTO> Collaborators, ISet<PaperDTO> Papers) : ProjectDTO(Id, Owner, Collaborators);
 
 public record ProjectCreateDTO
 {
