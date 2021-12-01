@@ -23,19 +23,20 @@ namespace LitExplore.PaperDiscovery
             
             // Return PaperDetailsDTO from repository
 
-            return papers[id];
+            if(id < papers.Count){
+                return papers[id];
+            }
+            else{
+                return null;
+            }
         }
-
-        // public Task<IEnumerable<RelationDTO>> getRelatedPaper(int id){
-        //     return Task.WhenAll(from relation in relations select relation where .from.id == id);
-        // }
 
 
         public async Task<List<RelationDTO>> getRelatedPaper(int id) {
             List<RelationDTO> _relations = new List<RelationDTO>();
             foreach (var relation in relations)
             {
-                if(relation.from.Id == id){
+                if(relation.from.Id == id || relation.to.Id == id){
                     _relations.Add(relation);
                 }
             }

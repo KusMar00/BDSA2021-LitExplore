@@ -65,11 +65,38 @@ namespace LitExplore.PaperDiscovery.Tests
         }
 
         [Fact]
+        public async Task Can_not_find_paper_from_ID_4()
+        {
+            var paper = await _PaperDisovery.getPaper(4);
+
+            Assert.Equal(null, paper);
+        }
+
+
+
+
+        [Fact]
         public async Task Given_ID_0_return_relation_between_paper_0_and_3()
         {
             var returnedRelations = await _PaperDisovery.getRelatedPaper(0);
 
             Assert.Equal(relations[0], returnedRelations[0]);
+        }
+
+        [Fact]
+        public async Task Given_ID_3_return_2_relations()
+        {
+            var returnedRelations = await _PaperDisovery.getRelatedPaper(3);
+
+            Assert.Equal(relations[0], returnedRelations[0]);
+            Assert.Equal(relations[1], returnedRelations[1]);
+        }
+
+        public async Task Can_not_find_relations()
+        {
+            var returnedRelations = await _PaperDisovery.getRelatedPaper(4);
+
+            Assert.Equal(returnedRelations.Count, 0);
         }
     }
 }
