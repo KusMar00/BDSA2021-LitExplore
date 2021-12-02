@@ -15,6 +15,7 @@ namespace LitExplore.Repository.Tests
             var builder = new DbContextOptionsBuilder<LitExploreContext>();
             builder.UseSqlite(connection);
             database = new(builder.Options);
+            Context.Database.EnsureCreated();
         }
 
         public void Dispose() => Context.Dispose();
