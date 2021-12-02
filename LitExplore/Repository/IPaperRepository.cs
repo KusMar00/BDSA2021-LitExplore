@@ -1,6 +1,6 @@
 ﻿namespace LitExplore.Repository;
 
-internal interface IPaperRepository
+public interface IPaperRepository
 {
     Task<PaperDTO> ReadAsync(int id);
     Task<PaperDetailsDTO> ReadDetailsAsync(int id);

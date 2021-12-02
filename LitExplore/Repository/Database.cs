@@ -9,6 +9,10 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
 
     public LitExploreContext Context { get; set; }
 
+    public IPaperRepository PaperRepository { get; private set; }
+    public IProjectRepository ProjectRepository { get; private set; }
+    public IUserRepository UserRepository { get; private set; }
+
     /// <summary>
     /// Creates a Database with a custom options.
     /// </summary>
@@ -18,6 +22,10 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
     {
         Context = new LitExploreContext(options);
         if (migrate) Context.Database.Migrate();
+
+        PaperRepository = new PaperRepository(Context);
+        ProjectRepository = new ProjectRepository(Context);
+        UserRepository = new UserRepository(Context);
     }
 
     /// <summary>
@@ -31,6 +39,10 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             .UseSqlServer(connectionString);
         Context = new LitExploreContext(optionsBuilder.Options);
         Context.Database.Migrate();
+
+        PaperRepository = new PaperRepository(Context);
+        ProjectRepository = new ProjectRepository(Context);
+        UserRepository = new UserRepository(Context);
     }
 
     public static IConfiguration LoadConfiguration()
