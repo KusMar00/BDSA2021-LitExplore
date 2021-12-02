@@ -63,7 +63,6 @@ namespace LitExplore.PaperDiscovery
                     result.Add(new PaperDTO(relation.From.Id, relation.From.Name));
                 }
             }
-     
             return result;
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace LitExplore.Repository;
 
-internal interface IProjectRepository
+public interface IProjectRepository
 {
     public Task<(Status, ProjectDTO)> CreateProjectAsync(ProjectCreateDTO project);
     public Task<ProjectDTO> ReadProjectAsync(string id);
