@@ -2,7 +2,7 @@ namespace LitExplore.Repository.Tests;
 
 public abstract class RepositoryTests : IDisposable
 {
-    private readonly Database database;
+    protected readonly Database database;
 
     protected LitExploreContext Context { get => database.Context; }
 

@@ -6,9 +6,9 @@ public class PaperRepository : IPaperRepository
 
     public PaperRepository(LitExploreContext context) => this.context = context;
 
-    public Task<PaperDTO> ReadAsync(int id)
+    public async Task<PaperDTO?> ReadAsync(int id)
     {
-        throw new NotImplementedException();
+        return null;
     }
 
     public Task<IReadOnlyCollection<PaperDTO>> ReadByNameAsync(string name)
@@ -21,7 +21,7 @@ public class PaperRepository : IPaperRepository
         throw new NotImplementedException();
     }
 
-    public Task<PaperDetailsDTO> ReadDetailsAsync(int id)
+    public Task<PaperDetailsDTO?> ReadDetailsAsync(int id)
     {
         throw new NotImplementedException();
     }
