@@ -14,6 +14,7 @@ public abstract class RepositoryTests : IDisposable
         builder.UseSqlite(connection);
         database = new(builder.Options);
         Context.Database.EnsureCreated();
+        SeedDatabase();
     }
 
     public void Dispose()
@@ -21,4 +22,6 @@ public abstract class RepositoryTests : IDisposable
         Context.Dispose();
         GC.SuppressFinalize(this);
     }
+
+    protected abstract void SeedDatabase();
 }
