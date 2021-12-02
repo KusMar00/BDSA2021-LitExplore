@@ -13,4 +13,4 @@ public class Author
     public string Surname { get; set; } = null!;
 }
 
-public record AuthorDTO(int Id, string GivenName, string Surname);
+public record AuthorDTO(int Id, string GivenName, string Surname);      // Kan denne fjernes??

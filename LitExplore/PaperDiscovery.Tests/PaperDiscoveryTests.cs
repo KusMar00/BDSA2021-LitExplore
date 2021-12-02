@@ -5,63 +5,73 @@ using LitExplore.PaperDiscovery;
 using Xunit;
 using System.Threading.Tasks;
 using System.Linq;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using LitExplore.Repository;
 
 namespace LitExplore.PaperDiscovery.Tests
 {
     public class PaperDiscoveryTests
     {
-        public List<PaperDetailsDTO> papers = new List<PaperDetailsDTO>();
-        public List<RelationDTO> relations = new List<RelationDTO>();
         public PaperDiscovery _PaperDisovery;
 
         public PaperDiscoveryTests(){
 
-            var authors = new List<AuthorDTO>{
-                new AuthorDTO(0, "James", "Wilson"),
-                new AuthorDTO(1, "Mark", "Madsen"),
-                new AuthorDTO(2, "Johnny", "Deluxe")
+            var connection = new SqliteConnection("Filename=:memory:");
+            connection.Open();
+            var builder = new DbContextOptionsBuilder<LitExploreContext>();
+            builder.UseSqlServer(connection);       // Correct: builder.UseSqlite(connection);
+            var context = new LitExploreContext(builder.Options);
+            context.Database.EnsureCreated();
+
+            var authors = new List<Author>{
+                new Author{Id = 0, GivenName = "James", Surname = "Wilson"},
+                new Author{Id = 1, GivenName = "Mark", Surname = "Madsen"},
+                new Author{Id = 2, GivenName = "Johnny", Surname = "Deluxe"}
             };
 
-            var papersToAdd = new List<PaperDetailsDTO>{
-                new PaperDetailsDTO(0, "Paper0", new Collection<AuthorDTO>{authors[0]}, null, null),
-                new PaperDetailsDTO(1, "Paper1", new Collection<AuthorDTO>{authors[1]}, null, null),
-                new PaperDetailsDTO(2, "Paper2", new Collection<AuthorDTO>{authors[2]}, null, null),
-                new PaperDetailsDTO(3, "Paper3", new Collection<AuthorDTO>{authors[0], authors[1]}, null, null)
+            var PapersToAdd = new List<Paper>{
+                new Paper{Id = 0, Name = "Paper0", Authors = new HashSet<Author>{authors[0]}, URL = null, Abstract = null},
+                new Paper{Id = 1, Name = "Paper1", Authors = new HashSet<Author>{authors[1]}, URL = null, Abstract = null},
+                new Paper{Id = 2, Name = "Paper2", Authors = new HashSet<Author>{authors[2]}, URL = null, Abstract = null},
+                new Paper{Id = 3, Name = "Paper3", Authors = new HashSet<Author>{authors[0], authors[1]}, URL = null, Abstract = null},
             };
 
-            papers.AddRange(papersToAdd);
+            context.Papers.AddRange(PapersToAdd);
 
-            var relationsToAdd = new List<RelationDTO>{
-                new RelationDTO(papers[0], papers[3]),
-                new RelationDTO(papers[1], papers[3])
+            var relationsToAdd = new List<Relation>{
+                new Relation{From = PapersToAdd[0], To = PapersToAdd[3]},
+                new Relation{From = PapersToAdd[1], To = PapersToAdd[3]}
             };
 
-            relations.AddRange(relationsToAdd);
+            context.Relations.AddRange(relationsToAdd);
 
 
-            _PaperDisovery = new PaperDiscovery(papers, relations);
+            _PaperDisovery = new PaperDiscovery(context);
         }
 
 
         [Fact]
-        public async Task Given_ID_0_return_paper0_async()
+        public async Task Given_ID_0_return_paper_0()
         {
-            var paper = await _PaperDisovery.getPaper(0);
+            var paper = await _PaperDisovery.ReadAsync(0);
 
-            Assert.Equal(papers[0], paper);
+            Assert.Equal(0, paper.Id);
+            Assert.Equal("Paper0", paper.Name);
         }
 
+/*
         [Fact]
-        public async Task Given_all_IDs_return_all_papers_in_database()
+        public async Task Given_all_IDs_return_all_context.Papers_in_database()
         {
-            var returnedPapers = new List<PaperDetailsDTO>();
+            var returnedcontext.Papers = new List<PaperDetailsDTO>();
 
-            for (int i = 0; i < papers.Count; i++)
+            for (int i = 0; i < context.Papers.Count; i++)
             {
-                 returnedPapers.Add(await _PaperDisovery.getPaper(i));
+                 returnedcontext.Papers.Add(await _PaperDisovery.getPaper(i));
             }
 
-            Assert.Equal(papers, returnedPapers);
+            Assert.Equal(context.Papers, returnedcontext.Papers);
         }
 
         [Fact]
@@ -98,5 +108,7 @@ namespace LitExplore.PaperDiscovery.Tests
 
             Assert.Equal(returnedRelations.Count, 0);
         }
+            */
     }
+
 }

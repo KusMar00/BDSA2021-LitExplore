@@ -1,21 +1,36 @@
-﻿using System.Runtime.CompilerServices;
-using LitExplore.Repository.Entities;
+﻿using LitExplore.Repository.Entities;
+using LitExplore.Repository;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using System.Linq;
 
 namespace LitExplore.PaperDiscovery
 {
-    public class PaperDiscovery
+    public class PaperDiscovery : IPaperRepository
     {
 
         List<PaperDetailsDTO> papers;
         List<RelationDTO> relations;
 
-        public PaperDiscovery(List<PaperDetailsDTO> _papers, List<RelationDTO> _relations){
-            papers = _papers;
-            relations = _relations;
+        private readonly LitExploreContext context;
+
+        public PaperDiscovery(LitExploreContext _context){
+            context = _context;
         }
 
-        public async Task<PaperDetailsDTO> getPaper(int id){
+        public async Task<PaperDTO> ReadAsync(int id){
+            // Check if user is authenticated
+
+            // Find paper with id from repository
+            
+            // Return PaperDTO from repository
+
+            var paper = (from p in context.Papers
+                        where p.Id == id
+                        select new PaperDTO(p.Id, p.Name)).FirstOrDefaultAsync();
+            return await paper;
+        }
+        public async Task<PaperDetailsDTO> ReadDetailsAsync(int id){
 
             // Check if user is authenticated
 
@@ -23,24 +38,33 @@ namespace LitExplore.PaperDiscovery
             
             // Return PaperDetailsDTO from repository
 
-            if(id < papers.Count){
-                return papers[id];
-            }
-            else{
-                return null;
-            }
+            var paper = (from p in context.Papers
+                        where p.Id == id
+                        select new PaperDetailsDTO(p.Id, p.Name, p.Authors, p.URL, p.Abstract)).FirstOrDefaultAsync();
+            return await paper;
         }
 
+        public async Task<IReadOnlyCollection<PaperDTO>> ReadByNameAsync(string name){
+            var papersOut = (from p in context.Papers
+                        where p.Name == name
+                        select new PaperDetailsDTO(p.Id, p.Name, p.Authors, p.URL, p.Abstract)).ToListAsync();
+            return await papersOut;
+        }
 
-        public async Task<List<RelationDTO>> getRelatedPaper(int id) {
-            List<RelationDTO> _relations = new List<RelationDTO>();
-            foreach (var relation in relations)
+        public async Task<IReadOnlyCollection<PaperDTO>>  ReadByRelationsAsync(int paperId) {
+            var result = new List<PaperDTO>();
+
+            foreach (var relation in context.Relations)
             {
-                if(relation.from.Id == id || relation.to.Id == id){
-                    _relations.Add(relation);
+                if(relation.From.Id == paperId){
+                    result.Add(new PaperDTO(relation.To.Id, relation.To.Name));
+                }
+                else if(relation.To.Id == paperId){
+                    result.Add(new PaperDTO(relation.From.Id, relation.From.Name));
                 }
             }
-            return _relations;
+     
+            return result;
         }
 
     }
