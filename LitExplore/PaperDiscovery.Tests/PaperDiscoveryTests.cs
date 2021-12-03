@@ -20,7 +20,7 @@ namespace LitExplore.PaperDiscovery.Tests
             var connection = new SqliteConnection("Filename=:memory:");
             connection.Open();
             var builder = new DbContextOptionsBuilder<LitExploreContext>();
-            builder.UseSqlServer(connection);       // Correct: builder.UseSqlite(connection);
+            builder.UseSqlite(connection);       // Correct: builder.UseSqlite(connection);
             var context = new LitExploreContext(builder.Options);
             context.Database.EnsureCreated();
 
