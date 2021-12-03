@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 namespace LitExplore.Repository;
-public class LitExploreContext : DbContext, ILitExploreContext
+public class LitExploreContext : DbContext
 {
     public DbSet<Author> Authors => Set<Author>();
     public DbSet<Paper> Papers => Set<Paper>();
@@ -27,6 +27,6 @@ public class LitExploreContext : DbContext, ILitExploreContext
 
         modelBuilder.Entity<User>() // Squish SQLite bugs.
             .Property(p => p.Id)
-            .HasConversion(u => u, u => u)
+            .HasConversion(u => u, u => u);
     }
 }

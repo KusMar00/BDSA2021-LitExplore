@@ -10,7 +10,7 @@ namespace LitExplore.PaperDiscovery
     {
 
         List<PaperDetailsDTO> papers;
-        List<RelationDTO> relations;
+        //List<RelationDTO> relations;
 
         private readonly LitExploreContext context;
 
@@ -54,15 +54,15 @@ namespace LitExplore.PaperDiscovery
         public async Task<IReadOnlyCollection<PaperDTO>>  ReadByRelationsAsync(int paperId) {
             var result = new List<PaperDTO>();
 
-            foreach (var relation in context.Relations)
-            {
-                if(relation.From.Id == paperId){
-                    result.Add(new PaperDTO(relation.To.Id, relation.To.Name));
-                }
-                else if(relation.To.Id == paperId){
-                    result.Add(new PaperDTO(relation.From.Id, relation.From.Name));
-                }
-            }
+            //foreach (var relation in context.Relations)
+            //{
+            //    if(relation.From.Id == paperId){
+            //        result.Add(new PaperDTO(relation.To.Id, relation.To.Name));
+            //    }
+            //    else if(relation.To.Id == paperId){
+            //        result.Add(new PaperDTO(relation.From.Id, relation.From.Name));
+            //    }
+            //}
             return result;
         }
 

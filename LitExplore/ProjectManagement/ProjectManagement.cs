@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace LitExplore.ProjectManagement
 {
-    public class ProjectManagement : IProjectRepository
+    public class ProjectManagement //: IProjectRepository
     {
         private readonly LitExploreContext context;
         public ProjectManagement(LitExploreContext _context)
@@ -92,11 +92,13 @@ namespace LitExplore.ProjectManagement
 
             //collaborator er muligvis ikke en user her
             var collaborator = context.Users.Where(u => u.Id == project.CollaboratorId);
-            context.Projects.Select(p => p.Collaborators.UnionWith(collaborator));
+            //context.Projects.Select(p => p.Collaborators.UnionWith(collaborator));
+
+            throw new NotImplementedException();
         }
-        public async Task<Status> RemoveCollaboratorAsync(ProjectAddRemoveCollaboratorDTO project);
-        public async Task<Status> AddPaperAsync(ProjectAddRemovePaperDTO project);
-        public async Task<Status> RemovePaperAsync(ProjectAddRemovePaperDTO project);
+        //public async Task<Status> RemoveCollaboratorAsync(ProjectAddRemoveCollaboratorDTO project);
+        //public async Task<Status> AddPaperAsync(ProjectAddRemovePaperDTO project);
+        //public async Task<Status> RemovePaperAsync(ProjectAddRemovePaperDTO project);
 
     }
 
