@@ -19,7 +19,14 @@ public class Project
 
 }
 
-public record ProjectDTO(int Id, User Owner, ISet<User> Collaborators);
+//Owner skal måske være UserDTO og Iset<User> skal måske være Iset<UserDTO>
+public record ProjectDTO(int Id, User Owner, ISet<User> Collaborators)
+{
+    private User owner;
+    private ISet<User> collaborators;
+}
+
+//skal måske være paperDTO i Iset papers
 public record ProjectDetailsDTO(int Id, User Owner, ISet<User> Collaborators, ISet<Paper> Papers) : ProjectDTO(Id, Owner, Collaborators);
 
 public record ProjectCreateDTO
@@ -38,7 +45,7 @@ public record ProjectAddRemoveCollaboratorDTO
     public int ProjectId { get; set; }
 
     [Required]
-    public int CollaboratorId { get; set; }
+    public Guid CollaboratorId { get; set; }
 }
 
 public record ProjectAddRemovePaperDTO
