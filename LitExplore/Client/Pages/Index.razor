@@ -5,23 +5,26 @@
 
 <PageTitle>Index</PageTitle>
 
-<div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
-	<h1>Projects</h1>
 
-	<ProjectCard/>
-    <ProjectCard/>
-</div>
+<BSJumbotron IsFluid="true">
+    <h1 class="display-4">Welcome to LitExplore</h1>
+    <p class="lead">Here you can keep a dynamic bibliography when working on a project. <i>LitExplore</i> will automatically recommend new literature, based on your existing bibliography.</p>
+    <hr class="my-4" />
+</BSJumbotron>
 
 <AuthorizeView>
     <Authorized>
-        The user is authorized
+        <div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
+            <h1>Projects</h1>
+
+            <ProjectCard/>
+            <ProjectCard/>
+        </div>
     </Authorized>
     <NotAuthorized>
-        The User is not authorized
+        <p style="margin: 50px;">You must login to LitExplore to proceed</p>
     </NotAuthorized>
 </AuthorizeView>
-
-<br>Welcome to your new app
 
 @code {
 }

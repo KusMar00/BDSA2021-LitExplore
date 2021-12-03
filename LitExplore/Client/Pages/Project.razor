@@ -14,7 +14,8 @@
             <li>Henning</li>
             <li>Flemming</li>
         </ul>
-        <button class="adder" @onclick="@(() => AddCollaborator.Show())">+</button>
+        <button Id="addCollab" class="adder" @onclick="@(() => AddCollaborator.Show())">+</button>
+        <BSTooltip Target="addCollab" Placement="Placement.Bottom">Add collaborator</BSTooltip>
     </div>
     <div class="litterature">
         <h3>Project Litterature</h3>
@@ -22,7 +23,8 @@
             <li>En bog</li>
             <li>En anden bog</li>
         </ul>
-        <button class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
+        <button Id="addLit" class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
+        <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
     </div>
 </div>
 
@@ -43,23 +45,30 @@
     <BSTabSelectedContent/>
 </BSTabGroup>
 </BSModalBody>
-    <BSModalFooter>
-        <BSButton Color="Color.Success" @onclick="@(() => AddLitterature.Hide())">Add</BSButton>
-    </BSModalFooter>
 </BSModal>
 
 <BSModal @ref="AddCollaborator" Size="Size.Large">
     <BSModalHeader OnClick="@(() => AddCollaborator.Hide())">Add a collaborator to the project</BSModalHeader>
-    <BSModalBody><p>Modal body text goes here.</p></BSModalBody>
-    <BSModalFooter>
-        <BSButton Color="Color.Success" @onclick="@(() => AddCollaborator.Hide())">Add</BSButton>
-    </BSModalFooter>
+    <BSModalBody>
+        <p>Search for a user to add as a collaborator.</p>
+        <BSBasicInput InputType="InputType.Text" @ref="UserSearchInput" Value="UserSearchTerm" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="Enter username"/>
+    </BSModalBody>
 </BSModal>
 
 @code {
-    BSModal AddLitterature { get; set; }
-    BSModal AddCollaborator { get; set; }
+    private BSModal AddLitterature;
+    private BSModal AddCollaborator;
     private Project[]? project;
+    private BSBasicInput<string> UserSearchInput;
+    
+    private string UserSearchTerm = string.Empty;
+
+    protected void SelectedChanged(string e)
+    {
+        UserSearchTerm = e;
+        Console.WriteLine(UserSearchTerm);
+    }
+
 
     protected override async Task OnInitializedAsync()
     {
