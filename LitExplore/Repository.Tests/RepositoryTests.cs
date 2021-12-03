@@ -23,5 +23,8 @@ public abstract class RepositoryTests : IDisposable
         GC.SuppressFinalize(this);
     }
 
+    /// <summary>
+    /// Use this to seed the database for tests.
+    /// </summary>
     protected abstract void SeedDatabase();
 }

@@ -8,7 +8,10 @@ public class PaperRepository : IPaperRepository
 
     public async Task<PaperDTO?> ReadAsync(int id)
     {
-        return null;
+        var papers = from p in context.Papers
+                    where p.Id == id
+                    select new PaperDTO(p.Id, p.Name);
+        return await papers.FirstOrDefaultAsync();
     }
 
     public Task<IReadOnlyCollection<PaperDTO>> ReadByNameAsync(string name)
