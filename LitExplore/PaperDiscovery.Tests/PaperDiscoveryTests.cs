@@ -39,12 +39,12 @@ namespace LitExplore.PaperDiscovery.Tests
 
             context.Papers.AddRange(PapersToAdd);
 
-            var relationsToAdd = new List<Relation>{
-                new Relation{From = PapersToAdd[0], To = PapersToAdd[3]},
-                new Relation{From = PapersToAdd[1], To = PapersToAdd[3]}
-            };
-
-            context.Relations.AddRange(relationsToAdd);
+            //var relationsToAdd = new List<Relation>{
+            //    new Relation{From = PapersToAdd[0], To = PapersToAdd[3]},
+            //    new Relation{From = PapersToAdd[1], To = PapersToAdd[3]}
+            //};
+//
+            //context.Relations.AddRange(relationsToAdd);
 
 
             _PaperDisovery = new PaperDiscovery(context);
