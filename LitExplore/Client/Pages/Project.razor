@@ -1,0 +1,77 @@
+@page "/project"
+@inject HttpClient Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+
+<PageTitle>Project</PageTitle>
+<h1>ProjectTitle</h1>
+
+<div class="content">
+    <div class="collaborators">
+        <h3>Collaborators</h3>
+        <ul>
+            <li>Henning</li>
+            <li>Flemming</li>
+        </ul>
+        <button class="adder" @onclick="@(() => AddCollaborator.Show())">+</button>
+    </div>
+    <div class="litterature">
+        <h3>Project Litterature</h3>
+        <ul>
+            <li>En bog</li>
+            <li>En anden bog</li>
+        </ul>
+        <button class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
+    </div>
+</div>
+
+<BSModal @ref="AddLitterature" Size="Size.Large">
+    <BSModalHeader OnClick="@(() => AddLitterature.Hide())">Add a paper to the project</BSModalHeader>
+	<BSModalBody>
+    <BSTabGroup>	
+    <BSTabList IsPills="true" IsList="true">
+        <BSTab>
+            <BSTabLabel>Search</BSTabLabel>
+            <BSTabContent>Search</BSTabContent>
+        </BSTab>
+        <BSTab>
+            <BSTabLabel>Recommended</BSTabLabel>
+            <BSTabContent>rec</BSTabContent>
+        </BSTab>
+    </BSTabList>
+    <BSTabSelectedContent/>
+</BSTabGroup>
+</BSModalBody>
+    <BSModalFooter>
+        <BSButton Color="Color.Success" @onclick="@(() => AddLitterature.Hide())">Add</BSButton>
+    </BSModalFooter>
+</BSModal>
+
+<BSModal @ref="AddCollaborator" Size="Size.Large">
+    <BSModalHeader OnClick="@(() => AddCollaborator.Hide())">Add a collaborator to the project</BSModalHeader>
+    <BSModalBody><p>Modal body text goes here.</p></BSModalBody>
+    <BSModalFooter>
+        <BSButton Color="Color.Success" @onclick="@(() => AddCollaborator.Hide())">Add</BSButton>
+    </BSModalFooter>
+</BSModal>
+
+@code {
+    BSModal AddLitterature { get; set; }
+    BSModal AddCollaborator { get; set; }
+    private Project[]? project;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // project = await Http.GetFromJsonAsync<SpecificProject>("api/project?id=etId");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+
+}

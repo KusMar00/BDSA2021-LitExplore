@@ -1,0 +1,9 @@
+div {
+  width: 40vw;
+  margin-top: 35px;
+}
+
+div:hover {
+  cursor: pointer;
+  box-shadow: 10px;
+}
