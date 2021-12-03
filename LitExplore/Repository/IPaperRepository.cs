@@ -1,5 +1,6 @@
 ﻿namespace LitExplore.Repository;
 
+
 public interface IPaperRepository
 {
     Task<PaperDTO?> ReadAsync(int id);
