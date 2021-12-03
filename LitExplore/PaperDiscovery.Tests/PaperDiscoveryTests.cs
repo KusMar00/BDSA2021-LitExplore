@@ -38,77 +38,13 @@ namespace LitExplore.PaperDiscovery.Tests
             };
 
             context.Papers.AddRange(PapersToAdd);
-
-            //var relationsToAdd = new List<Relation>{
-            //    new Relation{From = PapersToAdd[0], To = PapersToAdd[3]},
-            //    new Relation{From = PapersToAdd[1], To = PapersToAdd[3]}
-            //};
-//
-            //context.Relations.AddRange(relationsToAdd);
-
-
-            _PaperDisovery = new PaperDiscovery(context);
-        }
-
-
-        [Fact]
-        public async Task Given_ID_0_return_paper_0()
-        {
-            var paper = await _PaperDisovery.ReadAsync(0);
-
-            Assert.Equal(0, paper.Id);
-            Assert.Equal("Paper0", paper.Name);
-        }
-
-/*
-        [Fact]
-        public async Task Given_all_IDs_return_all_context.Papers_in_database()
-        {
-            var returnedcontext.Papers = new List<PaperDetailsDTO>();
-
-            for (int i = 0; i < context.Papers.Count; i++)
-            {
-                 returnedcontext.Papers.Add(await _PaperDisovery.getPaper(i));
-            }
-
-            Assert.Equal(context.Papers, returnedcontext.Papers);
         }
 
         [Fact]
-        public async Task Can_not_find_paper_from_ID_4()
+        public async Task UnitTest1()
         {
-            var paper = await _PaperDisovery.getPaper(4);
-
-            Assert.Equal(null, paper);
         }
 
-
-
-
-        [Fact]
-        public async Task Given_ID_0_return_relation_between_paper_0_and_3()
-        {
-            var returnedRelations = await _PaperDisovery.getRelatedPaper(0);
-
-            Assert.Equal(relations[0], returnedRelations[0]);
-        }
-
-        [Fact]
-        public async Task Given_ID_3_return_2_relations()
-        {
-            var returnedRelations = await _PaperDisovery.getRelatedPaper(3);
-
-            Assert.Equal(relations[0], returnedRelations[0]);
-            Assert.Equal(relations[1], returnedRelations[1]);
-        }
-
-        public async Task Can_not_find_relations()
-        {
-            var returnedRelations = await _PaperDisovery.getRelatedPaper(4);
-
-            Assert.Equal(returnedRelations.Count, 0);
-        }
-            */
     }
 
 }

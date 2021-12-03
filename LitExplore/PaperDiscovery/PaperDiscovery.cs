@@ -1,70 +1,38 @@
-﻿using LitExplore.Repository.Entities;
-using LitExplore.Repository;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
-using System.Linq;
+﻿using LitExplore.Repository;
+using LitExplore.Repository.Entities;
+using LitExplore.UserManagement;
 
-namespace LitExplore.PaperDiscovery
-{
-    public class PaperDiscovery : IPaperRepository
+
+namespace LitExplore.PaperDiscovery;
+
+    public class PaperDiscovery : IPaperDiscovery
     {
 
-        List<PaperDetailsDTO> papers;
-        //List<RelationDTO> relations;
+        protected Database database;
+        protected IPaperRepository paperRepository { get => database.PaperRepository; }
+        protected string userName;
 
-        private readonly LitExploreContext context;
-
-        public PaperDiscovery(LitExploreContext _context){
-            context = _context;
+        public PaperDiscovery(Database _database, string _userName){
+            database = _database;
+            userName = _userName;
         }
 
-        public async Task<PaperDTO> ReadAsync(int id){
-            // Check if user is authenticated
-
-            // Find paper with id from repository
-            
-            // Return PaperDTO from repository
-
-            var paper = (from p in context.Papers
-                        where p.Id == id
-                        select new PaperDTO(p.Id, p.Name)).FirstOrDefaultAsync();
-            return await paper;
-        }
-        public async Task<PaperDetailsDTO> ReadDetailsAsync(int id){
-
-            // Check if user is authenticated
-
-            // Find paper with id from repository
-            
-            // Return PaperDetailsDTO from repository
-
-            var paper = (from p in context.Papers
-                        where p.Id == id
-                        select new PaperDetailsDTO(p.Id, p.Name, p.Authors, p.URL, p.Abstract)).FirstOrDefaultAsync();
-            return await paper;
+        public async Task<PaperDTO?> GetPaperAsync(int id){
+            var authorization = new CustomAuthStateProvider(userName);
+            if (await authorization.isUserValidAsync()){
+                return await paperRepository.ReadAsync(id);
+            }
+            return null;
         }
 
-        public async Task<IReadOnlyCollection<PaperDTO>> ReadByNameAsync(string name){
-            var papersOut = (from p in context.Papers
-                        where p.Name == name
-                        select new PaperDetailsDTO(p.Id, p.Name, p.Authors, p.URL, p.Abstract)).ToListAsync();
-            return await papersOut;
+        public async Task<IReadOnlyCollection<PaperDTO>?> GetRelatedPaperAsync(int id){
+            var authorization = new CustomAuthStateProvider(userName);
+            if (await authorization.isUserValidAsync()){
+                return await paperRepository.ReadByRelationsAsync(id);      // Maybe use sorting
+            }
+            return null;
         }
 
-        public async Task<IReadOnlyCollection<PaperDTO>>  ReadByRelationsAsync(int paperId) {
-            var result = new List<PaperDTO>();
 
-            //foreach (var relation in context.Relations)
-            //{
-            //    if(relation.From.Id == paperId){
-            //        result.Add(new PaperDTO(relation.To.Id, relation.To.Name));
-            //    }
-            //    else if(relation.To.Id == paperId){
-            //        result.Add(new PaperDTO(relation.From.Id, relation.From.Name));
-            //    }
-            //}
-            return result;
-        }
 
     }
-}

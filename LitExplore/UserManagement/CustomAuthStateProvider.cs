@@ -5,11 +5,14 @@ namespace LitExplore.UserManagement
 {
         public class CustomAuthStateProvider : AuthenticationStateProvider
         {
-            string name = "";
+            string name;
 
-            public async Task<Boolean> isUserValidAsync(string _name){
-                if(_name != null){
-                    name = _name;
+            public CustomAuthStateProvider(string _name){
+                name = _name;
+            }
+
+            public async Task<Boolean> isUserValidAsync(){
+                if(name != null){
                     var authState = await GetAuthenticationStateAsync();
                     var user = authState.User;
                     
