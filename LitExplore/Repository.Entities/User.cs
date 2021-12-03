@@ -3,6 +3,7 @@
 public class User
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public Guid Id { get; set; }
 
     [StringLength(50)]

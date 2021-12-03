@@ -8,7 +8,7 @@ public class Paper
 
     public ISet<Author> Authors { get; set; } = null!;
 
-    [StringLength(50)]
+    [StringLength(150)]
     public string? Name { get; set; }
 
     [StringLength(250)]

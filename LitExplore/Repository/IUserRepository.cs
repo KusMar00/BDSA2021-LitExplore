@@ -1,6 +1,6 @@
 ﻿namespace LitExplore.Repository;
 
-internal interface IUserRepository
+public interface IUserRepository
 {
     Task<(Status, UserDTO)> CreateAsync(UserDTO user);
     Task<UserDTO> ReadAsync(Guid id);
