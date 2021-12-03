@@ -27,4 +27,4 @@ public class Paper
 }
 
 public record PaperDTO (int Id, string? Name);
-public record PaperDetailsDTO (int Id, string? Name, ISet<Author> Authors, string? URL, string? Abstract) : PaperDTO (Id, Name);
+public record PaperDetailsDTO (int Id, string? Name, ISet<AuthorDTO> Authors, string? URL, string? Abstract) : PaperDTO (Id, Name);

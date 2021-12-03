@@ -21,17 +21,17 @@ public class ProjectRepository : IProjectRepository
         throw new NotImplementedException();
     }
 
-    public Task<Status> DeleteProjectAsync(string id)
+    public Task<Status> DeleteProjectAsync(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<ProjectDTO> ReadProjectAsync(string id)
+    public Task<ProjectDTO> ReadProjectAsync(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<ProjectDetailsDTO> ReadProjectDetailsAsync(string id)
+    public Task<ProjectDetailsDTO> ReadProjectDetailsAsync(int id)
     {
         throw new NotImplementedException();
     }
