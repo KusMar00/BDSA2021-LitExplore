@@ -67,11 +67,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             Name = @"Spent coffee grounds as a valuable source of phenolic compounds and bioenergy",
             URL = @"https://www.sciencedirect.com/science/article/pii/S0959652611005117?casa_token=N76EXWDZvMoAAAAA:9ryevfBm9sXLugCElAxj47CxgJS2XQ08c-LW04yZyYo2h9DRKtKSsH0xUhqL3APxHAD0Slz2taI",
             Abstract = @"Spent coffee grounds collected from coffee bars (SCG-1) or recovered from coffee capsules (SCG-2) were investigated as a potential source of phenolic compounds and energy. Preliminary characterization of these materials provided a total phenolic content of 17.75 mg …",
-        };
-        var Relation_Spent_Coffee_To_Functional_Properties = new Relation
-        {
-            From = Paper_Spent_Coffee_Grounds,
-            To = Paper_Functional_Properties_Of_Coffee
+            Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
 
         var Author_JB_Essner = new Author { GivenName = "Jerimy B.", Surname = "Essner" };
@@ -83,11 +79,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             Name = @"Artifacts and errors associated with the ubiquitous presence of fluorescent impurities in carbon nanodots",
             URL = @"https://www.academia.edu/download/55961585/2018_Artifact_and_Errors_associated_wit_Ubiquitous_presence_of_Fluorescent_impurities_in_Carbon_Nanodot.pdf",
             Abstract = @"Fluorescent carbon dots have attracted tremendous attention owing to their superlative optical properties which suggest opportunities for replacing conventional fluorescent materials in various application fields. Not surprisingly, the rapid pace of publication has …",
-        };
-        var Relation_Artifacts_And_Errors_To_Functional_Properties = new Relation
-        {
-            From = Paper_Artifacts_And_Errors,
-            To = Paper_Functional_Properties_Of_Coffee
+            Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
     }
 }

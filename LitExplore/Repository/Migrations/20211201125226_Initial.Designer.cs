@@ -4,6 +4,7 @@ using LitExplore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
-    partial class LitExploreContextModelSnapshot : ModelSnapshot
+    [Migration("20211201125226_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,21 +126,6 @@ namespace LitExplore.Repository.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("PaperPaper", b =>
-                {
-                    b.Property<int>("CitedById")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CitingsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CitedById", "CitingsId");
-
-                    b.HasIndex("CitingsId");
-
-                    b.ToTable("PaperPaper");
-                });
-
             modelBuilder.Entity("PaperProject", b =>
                 {
                     b.Property<int>("PapersId")
@@ -191,21 +178,6 @@ namespace LitExplore.Repository.Migrations
                         .HasForeignKey("OwnerId");
 
                     b.Navigation("Owner");
-                });
-
-            modelBuilder.Entity("PaperPaper", b =>
-                {
-                    b.HasOne("LitExplore.Repository.Entities.Paper", null)
-                        .WithMany()
-                        .HasForeignKey("CitedById")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("LitExplore.Repository.Entities.Paper", null)
-                        .WithMany()
-                        .HasForeignKey("CitingsId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("PaperProject", b =>

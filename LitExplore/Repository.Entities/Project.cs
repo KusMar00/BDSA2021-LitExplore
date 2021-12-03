@@ -9,7 +9,9 @@ public class Project
     [StringLength(50)]
     public string Name { get; set; } = null!;
 
-    public User Owner { get; set; } = null!;
+    // The user should never be null, but enforcing this with database constraints
+    // causes issues with cycles and cascade paths, so we must handle this manually.
+    public User? Owner { get; set; }
 
     public ISet<User> Collaborators { get; set; } = null!;
 
