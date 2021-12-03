@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0" />
   </ItemGroup>
 
@@ -16,6 +17,7 @@
     <ProjectReference Include="..\ProjectManagement\LitExplore.ProjectManagement.csproj" />
     <ProjectReference Include="..\Shared\LitExplore.Shared.csproj" />
     <ProjectReference Include="..\UserManagement\LitExplore.UserManagement.csproj" />
+    <ProjectReference Include="..\Client\LitExplore.Client.csproj" />
   </ItemGroup>
 
   <ItemGroup>

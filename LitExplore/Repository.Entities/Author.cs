@@ -15,4 +15,4 @@ public class Author
     public ISet<Paper> Papers{ get; set; } = null!;
 }
 
-public record AuthorDTO(int Id, string GivenName, string Surname);
+public record AuthorDTO(int Id, string GivenName, string Surname);      // Kan denne fjernes??
