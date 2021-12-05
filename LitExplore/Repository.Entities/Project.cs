@@ -17,6 +17,23 @@ public class Project
 
     public ISet<Paper> Papers { get; set; } = null!;
 
+
+    public ProjectDTO ToDTO()
+    {
+        return new ProjectDTO(
+            Id,
+            new( // The owner should never be null if everything works
+                 // as intended, but we better make sure it works
+                 // anyway.
+                Owner != null ? Owner.Id : Guid.Empty,
+                Owner != null ? Owner.DisplayName : ""
+            ),
+            ( // Convert to DTOs.
+                from u in Collaborators
+                select new UserDTO(u.Id, u.DisplayName)
+            ).ToHashSet()
+        );
+    }
 }
 
 public record ProjectDTO(int Id, UserDTO Owner, ISet<UserDTO> Collaborators);
