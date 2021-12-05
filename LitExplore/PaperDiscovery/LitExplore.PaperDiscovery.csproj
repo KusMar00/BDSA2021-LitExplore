@@ -8,7 +8,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Repository\LitExplore.Repository.csproj" />
+    <ProjectReference Include="..\Repository\LitExplore.Repository.Tests.csproj" />
     <ProjectReference Include="..\UserManagement\LitExplore.UserManagement.csproj" />
+    <ProjectReference Include="..\Repository.Entities\LitExplore.Repository.Entities.csproj" />
   </ItemGroup>
 
 </Project>

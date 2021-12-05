@@ -32,7 +32,4 @@ namespace LitExplore.PaperDiscovery;
             }
             return null;
         }
-
-
-
     }

@@ -13,6 +13,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
     public IPaperRepository PaperRepository { get; private set; }
     public IProjectRepository ProjectRepository { get; private set; }
     public IUserRepository UserRepository { get; private set; }
+    public IPaperDiscovery PaperDiscovery { get; private set; }
 
     /// <summary>
     /// Creates a Database with a custom options.
@@ -67,7 +68,7 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
         var migrator = Context.GetService<IMigrator>();
         migrator.Migrate("0");
         Context.Database.Migrate();
-        
+
 
         var Author_P_Esquivel = new Author { GivenName = "Patricia", Surname = "Esquivel" };
         var Author_VM_Jimenez = new Author { GivenName = "Victor M.", Surname = "Jimenez" };
