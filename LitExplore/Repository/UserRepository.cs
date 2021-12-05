@@ -49,7 +49,7 @@ public class UserRepository : IUserRepository
             return Status.Deleted;
     }
 
-    public async Task<UserDTO> ReadAsync(Guid id)
+    public async Task<UserDTO?> ReadAsync(Guid id)
     {
         var users = from u in context.Users
                     where u.Id == id
