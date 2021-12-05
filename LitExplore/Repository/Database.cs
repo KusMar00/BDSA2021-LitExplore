@@ -13,7 +13,6 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
     public IPaperRepository PaperRepository { get; private set; }
     public IProjectRepository ProjectRepository { get; private set; }
     public IUserRepository UserRepository { get; private set; }
-    public IPaperDiscovery PaperDiscovery { get; private set; }
 
     /// <summary>
     /// Creates a Database with a custom options.
