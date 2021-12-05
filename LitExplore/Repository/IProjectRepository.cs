@@ -2,9 +2,9 @@
 
 public interface IProjectRepository
 {
-    public Task<(Status, ProjectDTO)> CreateProjectAsync(ProjectCreateDTO project);
-    public Task<ProjectDTO> ReadProjectAsync(int id);
-    public Task<ProjectDetailsDTO> ReadProjectDetailsAsync(int id);
+    public Task<(Status, ProjectDTO?)> CreateProjectAsync(ProjectCreateDTO project);
+    public Task<ProjectDTO?> ReadProjectAsync(int id);
+    public Task<ProjectDetailsDTO?> ReadProjectDetailsAsync(int id);
     public Task<Status> AddCollaboratorAsync(ProjectAddRemoveCollaboratorDTO project);
     public Task<Status> RemoveCollaboratorAsync(ProjectAddRemoveCollaboratorDTO project);
     public Task<Status> AddPaperAsync(ProjectAddRemovePaperDTO project);
