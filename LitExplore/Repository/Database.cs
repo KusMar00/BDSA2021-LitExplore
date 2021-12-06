@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace LitExplore.Repository;
 public class Database //: IPaperRepository, IProjectRepository, IUserRepository
@@ -39,7 +40,15 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
         var optionsBuilder = new DbContextOptionsBuilder<LitExploreContext>()
             .UseSqlServer(connectionString);
         Context = new LitExploreContext(optionsBuilder.Options);
-        Context.Database.Migrate();
+        
+        if (Context.Database.GetService<IRelationalDatabaseCreator>().Exists())
+        { // If the database exists, just apply migrations.
+            Context.Database.Migrate();
+        }
+        else
+        { // Otherwise, create and seed the database.
+            Seed();
+        }
 
         PaperRepository = new PaperRepository(Context);
         ProjectRepository = new ProjectRepository(Context);
@@ -67,7 +76,23 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
         var migrator = Context.GetService<IMigrator>();
         migrator.Migrate("0");
         Context.Database.Migrate();
+        
+        // Template for adding papers
+        /*
 
+        var Author_GivenName_Surname = new Author { GivenName = "", Surname = "" };
+        var PaperName = new Paper
+        {
+            Authors = new HashSet<Author>() { Author_GivenName_Surname },
+            Name = @"",
+            URL = @"",
+            Abstract = @"",
+            Citings = new List<Paper> {  }
+        };
+        Context.Papers.Add(PaperName);
+        
+        */
+        // Template for adding papers
 
         var Author_P_Esquivel = new Author { GivenName = "Patricia", Surname = "Esquivel" };
         var Author_VM_Jimenez = new Author { GivenName = "Victor M.", Surname = "Jimenez" };
@@ -92,6 +117,18 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
         };
         Context.Papers.Add(Paper_Spent_Coffee_Grounds);
 
+        var Author_Y_Narita = new Author { GivenName = "Y", Surname = "Narita" };
+        var Author_K_Inouye = new Author { GivenName = "K", Surname = "Inouye" };
+        var Review_On_Utilization_And_Composition_of_Coffee_Silverskin = new Paper
+        {
+            Authors = new HashSet<Author>() { Author_Y_Narita, Author_K_Inouye },
+            Name = @"Review on utilization and composition of coffee silverskin",
+            URL = @"https://www.sciencedirect.com/science/article/pii/S0963996914000295?casa_token=2IWcGZxe2gQAAAAA:xZPHNHZgDB0snvQbAL1AlWQXTVXBjjG5R6Eh0SLgQz5ufhyVAQry_dOc9IpEMqMsXGkSEwx4",
+            Abstract = @"Coffee is one of the most frequently consumed drinks in the world. Coffee silverskin (CS) is the only by-product produced during the coffee beans roasting process, and large amounts of CS are produced by roasters in coffee-consuming countries. However, methods for the …",
+            Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
+        };
+        Context.Papers.Add(Review_On_Utilization_And_Composition_of_Coffee_Silverskin);
+
         var Author_JB_Essner = new Author { GivenName = "Jerimy B.", Surname = "Essner" };
         var Author_JA_Kist = new Author { GivenName = "Jennifer A", Surname = "Kist" };
         var Author_L_Polo_Parada = new Author { GivenName = "Luis", Surname = "Polo-Parada" };
@@ -104,6 +141,22 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
             Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
         Context.Papers.Add(Paper_Artifacts_And_Errors);
+
+        var Author_Marija_Ranic = new Author { GivenName = "Marija", Surname = "Ranic" };
+        var Author_Marina_Nikolic = new Author { GivenName = "Marina", Surname = "Nikolic" };
+        var Author_Marija_Pavlovic = new Author { GivenName = "Marija", Surname = "Pavlovic" };
+        var Author_Aneta_Buntic = new Author { GivenName = "Aneta", Surname = "Buntic" };
+        var Author_Slavica_SilerMarinkovic = new Author { GivenName = "Slavica", Surname = "Siler-Marinkovic" };
+        var Author_Suzana_DimitrijevicBrankovic = new Author { GivenName = "Suzana", Surname = "Dimitrijevic-Brankovic" };
+        var Optimization_Of_Microwaveassisted_Extraction = new Paper
+        {
+            Authors = new HashSet<Author>() { Author_Marija_Ranic, Author_Marina_Nikolic, Author_Marija_Pavlovic, Author_Aneta_Buntic, Author_Slavica_SilerMarinkovic, Author_Suzana_DimitrijevicBrankovic },
+            Name = @"Optimization of microwave-assisted extraction of natural antioxidants from spent espresso coffee grounds by response surface methodology",
+            URL = @"https://www.sciencedirect.com/science/article/pii/S095965261400537X?casa_token=1lyRzLyglDoAAAAA:VuWYbjcyByJosGFptXcla5QmDSd9Tki-WBgfJb44AShJoIcf7HxBVlxvYImVgMR7Qg2EpUzZ",
+            Abstract = @"Espresso spent coffee grounds (SCG) that is a waste material abundantly produced by restaurants, cafeterias and in domestic environment could be used as a low-cost and rich source of valuable polyphenol compounds. The benefit would be twofold: extraction of …",
+            Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
+        };
+        Context.Papers.Add(Optimization_Of_Microwaveassisted_Extraction);
 
         Context.SaveChanges();
 

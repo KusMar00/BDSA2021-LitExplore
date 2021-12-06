@@ -12,6 +12,19 @@ public class User
     public ISet<Project> HasAccessTo { get; set; } = null!;
 
     public ISet<Project> IsOwnerOf { get; set; } = null!;
+
+    public User(Guid id, string displayName)
+    {
+        Id = id;
+        DisplayName = displayName;
+    }
+
+    public User()
+    {
+
+    }
 }
 
 public record UserDTO (Guid Id, string DisplayName);
+
+public record UserProjectDTO(Guid Id, IReadOnlyCollection<ProjectDTO> Owns, IReadOnlyCollection<ProjectDTO> HasAccesTo);
