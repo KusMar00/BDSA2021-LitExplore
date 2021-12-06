@@ -18,10 +18,18 @@ namespace LitExplore.PaperDiscovery;
             userName = _userName;
             authorization = new CustomAuthStateProvider();
         }
+        
 
         public async Task<PaperDTO?> GetPaperAsync(int id){
             if (await authorization.IsUserValidAsync(userName)){
                 return await paperRepository.ReadAsync(id);
+            }
+            return null;
+        }
+
+        public async Task<IReadOnlyCollection<PaperDTO?>?> GetPaperAsync(string name){
+            if (await authorization.IsUserValidAsync(userName)){
+                return await paperRepository.ReadByNameAsync(name);
             }
             return null;
         }
