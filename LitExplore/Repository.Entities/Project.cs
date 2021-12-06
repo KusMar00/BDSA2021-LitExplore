@@ -17,16 +17,55 @@ public class Project
 
     public ISet<Paper> Papers { get; set; } = null!;
 
+
+    public ProjectDTO ToDTO()
+    {
+        return new ProjectDTO(
+            Id,
+            Name,
+            new( // The owner should never be null if everything works
+                 // as intended, but we better make sure it works
+                 // anyway.
+                Owner != null ? Owner.Id : Guid.Empty,
+                Owner != null ? Owner.DisplayName : ""
+            ),
+            ( // Convert to DTOs.
+                from u in Collaborators
+                select new UserDTO(u.Id, u.DisplayName)
+            ).ToHashSet()
+        );
+    }
+
+    public ProjectDetailsDTO ToDetailsDTO()
+    {
+        var basicDTO = ToDTO();
+        return new ProjectDetailsDTO(
+            basicDTO.Id,
+            basicDTO.Name,
+            basicDTO.Owner,
+            basicDTO.Collaborators,
+            ( // Convert to DTOs.
+                from p in Papers
+                select new PaperDTO(p.Id, p.Name)
+            ).ToHashSet()
+        );
+    }
 }
 
-public record ProjectDTO(int Id, UserDTO Owner, ISet<UserDTO> Collaborators);
+public record ProjectDTO(int Id, string Name, UserDTO Owner, ISet<UserDTO> Collaborators);
 
-public record ProjectDetailsDTO(int Id, UserDTO Owner, ISet<UserDTO> Collaborators, ISet<Paper> Papers) : ProjectDTO(Id, Owner, Collaborators);
+public record ProjectDetailsDTO(int Id, string Name, UserDTO Owner, ISet<UserDTO> Collaborators, ISet<PaperDTO> Papers) : ProjectDTO(Id, Name, Owner, Collaborators);
 
 public record ProjectCreateDTO
 {
+    public ProjectCreateDTO(Guid ownerId, string name)
+    {
+        OwnerId = ownerId;
+        Name = name;
+    }
+
     [Required]
-    public User Owner { get; set; } = null!;
+    public Guid OwnerId { get; set; }
 
     [Required]
     [StringLength(50)]
@@ -35,6 +74,12 @@ public record ProjectCreateDTO
 
 public record ProjectAddRemoveCollaboratorDTO
 {
+    public ProjectAddRemoveCollaboratorDTO(int projectId, Guid collaboratorId)
+    {
+        ProjectId = projectId;
+        CollaboratorId = collaboratorId;
+    }
+
     /// <summary>
     /// The Project to modify
     /// </summary>
@@ -50,6 +95,12 @@ public record ProjectAddRemoveCollaboratorDTO
 
 public record ProjectAddRemovePaperDTO
 {
+    public ProjectAddRemovePaperDTO(int projectId, int paperId)
+    {
+        ProjectId = projectId;
+        PaperId = paperId;
+    }
+
     /// <summary>
     /// The Project to modify
     /// </summary>
