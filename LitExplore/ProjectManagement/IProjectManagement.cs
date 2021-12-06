@@ -3,7 +3,7 @@ using LitExplore.Repository.Entities;
 namespace LitExplore.ProjectManagement;
 
 public interface IProjectManagement{
-    Task<Status?> PostProjectAsync(ProjectCreateDTO project);
+    Task<(Status, ProjectDTO?)> PostProjectAsync(ProjectCreateDTO project);
     Task<ProjectDTO?> GetProjectAsync(int id);
     Task<Status?> DeleteProjectAsync(int id);
     Task<Status?> PostPaperToProjectAsync(ProjectAddRemovePaperDTO project);
