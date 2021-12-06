@@ -3,8 +3,6 @@ using LitExplore.Repository.Entities;
 using LitExplore.Repository;
 using LitExplore.Repository.Tests;
 using Xunit;
-using System.Linq;
-using Microsoft.VisualBasic;
 
 namespace LitExplore.PaperDiscovery.Tests;
     public class PaperDiscoveryTests : RepositoryTests
