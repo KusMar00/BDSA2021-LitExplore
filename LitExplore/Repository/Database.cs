@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace LitExplore.Repository;
 public class Database //: IPaperRepository, IProjectRepository, IUserRepository
@@ -39,7 +40,15 @@ public class Database //: IPaperRepository, IProjectRepository, IUserRepository
         var optionsBuilder = new DbContextOptionsBuilder<LitExploreContext>()
             .UseSqlServer(connectionString);
         Context = new LitExploreContext(optionsBuilder.Options);
-        Context.Database.Migrate();
+        
+        if (Context.Database.GetService<IRelationalDatabaseCreator>().Exists())
+        { // If the database exists, just apply migrations.
+            Context.Database.Migrate();
+        }
+        else
+        { // Otherwise, create and seed the database.
+            Seed();
+        }
 
         PaperRepository = new PaperRepository(Context);
         ProjectRepository = new ProjectRepository(Context);
