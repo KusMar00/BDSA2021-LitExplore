@@ -6,18 +6,54 @@ public class UserRepository : IUserRepository
 
     public UserRepository(LitExploreContext context) => this.context = context;
 
-    public Task<(Status, UserDTO)> CreateAsync(UserDTO user)
+    public async Task<(Status, UserDTO)> CreateAsync(UserDTO user)
     {
-        throw new NotImplementedException();
+        var conflict = await context.Users
+                            .Where(u => u.Id == user.Id)
+                            .Select(u => new UserDTO(u.Id, u.DisplayName))
+                            .FirstOrDefaultAsync();
+
+            if (conflict != null)
+            {
+                return (Status.Conflict, conflict);
+            }
+
+            var entity = new User(user.Id, user.DisplayName);
+
+            context.Users.Add(entity);
+
+            await context.SaveChangesAsync();
+
+            return (Status.Created, new UserDTO(entity.Id, entity.DisplayName));
     }
 
-    public Task<Status> DeleteAsync(Guid id)
+    public async Task<Status> DeleteAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var entity = await context.Users
+                            .Include(u => u.IsOwnerOf)
+                            .FirstOrDefaultAsync(u => u.Id == id);
+
+            if (entity == null)
+            {
+                return Status.NotFound;
+            }
+
+            if (entity.IsOwnerOf.Any())
+            {
+                return Status.Conflict;
+            }
+
+            context.Users.Remove(entity);
+            await context.SaveChangesAsync();
+
+            return Status.Deleted;
     }
 
-    public Task<UserDTO> ReadAsync(Guid id)
+    public async Task<UserDTO?> ReadAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var users = from u in context.Users
+                    where u.Id == id
+                    select new UserDTO(u.Id, u.DisplayName);
+        return await users.FirstOrDefaultAsync();
     }
 }

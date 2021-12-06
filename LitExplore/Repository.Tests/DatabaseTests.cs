@@ -10,6 +10,7 @@ public class DatabaseTests
     {
         File.WriteAllText("appsettings.json", "{}");
         var db = new Database();
-        db.Seed();
+        // If the database already exists, this shouldn't do anything.
+        // If it does not, it should create and seed it.
     }
 }
