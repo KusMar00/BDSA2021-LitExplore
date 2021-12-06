@@ -1,6 +1,4 @@
 using LitExplore.Repository.Entities;
-using LitExplore.Repository;
-using Microsoft.EntityFrameworkCore;
 
 public interface IPaperDiscovery
 {

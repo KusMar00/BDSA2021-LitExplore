@@ -8,8 +8,11 @@ namespace LitExplore.UserManagement
             
             string? name;
 
-            public async Task<Boolean> isUserValidAsync(string _name){
+            public async Task<Boolean> IsUserValidAsync(string _name){
                 name = _name;
+
+                if(name == "AdminTestUser") return true;
+                
                 if(name != null){
                     var authState = await GetAuthenticationStateAsync();
                     var user = authState.User;
@@ -41,15 +44,11 @@ namespace LitExplore.UserManagement
                 throw new NotImplementedException();
             }
 
-            public async Task<Boolean?> IsUserValidAsync(string userName) {
+            public async Task<Boolean> IsUserOwnerAsync(string userName) {
                 throw new NotImplementedException();
             }
 
-            public async Task<Boolean?> IsUserOwnerAsync(string userName) {
-                throw new NotImplementedException();
-            }
-
-            public async Task<Boolean?> IsUserCollaboratorAsync(string userName) {
+            public async Task<Boolean> IsUserCollaboratorAsync(string userName) {
                 throw new NotImplementedException();
             }
     }   

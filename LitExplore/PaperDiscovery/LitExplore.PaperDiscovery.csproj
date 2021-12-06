@@ -5,9 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\Repository\LitExplore.Repository.csproj" />
+    <ProjectReference Include="..\Repository\LitExplore.Repository.Tests.csproj" />
     <ProjectReference Include="..\UserManagement\LitExplore.UserManagement.csproj" />
   </ItemGroup>
 
