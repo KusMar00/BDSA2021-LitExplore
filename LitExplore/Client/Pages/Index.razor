@@ -1,12 +1,14 @@
 ﻿@page "/"
 @inject HttpClient Http
-
-
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using LitExplore.Shared
+@attribute [Authorize]
 
 <PageTitle>Index</PageTitle>
 
 
-<BSJumbotron IsFluid="true">
+<BSJumbotron IsFluid="true" style="color:var(--lavender);">
     <h1 class="display-4">Welcome to LitExplore</h1>
     <p class="lead">Here you can keep a dynamic bibliography when working on a project. <i>LitExplore</i> will automatically recommend new literature, based on your existing bibliography.</p>
     <hr class="my-4" />
@@ -15,7 +17,7 @@
 <AuthorizeView>
     <Authorized>
         <div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
-            <h1>Projects</h1>
+            <h1 style="color: var(--lavender);">Projects</h1>
 
             <ProjectCard/>
             <ProjectCard/>
@@ -27,4 +29,16 @@
 </AuthorizeView>
 
 @code {
+    private ProjectDTO[]? projects;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            projects = await Http.GetFromJsonAsync<ProjectDTO[]>("api/project");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
 }

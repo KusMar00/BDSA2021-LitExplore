@@ -21,6 +21,7 @@ public class ProjectController
 	[HttpGet]
 	public async Task<IEnumerable<ProjectDTO>> Get() 
 	{
+		Console.WriteLine("test");
 		throw new NotImplementedException();
 	}
 
