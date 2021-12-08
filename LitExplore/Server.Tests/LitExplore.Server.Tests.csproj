@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Repository.Entities\LitExplore.Repository.Entities.csproj" />
+    <ProjectReference Include="..\Repository\LitExplore.Repository.csproj" />
+    <ProjectReference Include="..\Repository.Tests\LitExplore.Repository.Tests.csproj" />
     <ProjectReference Include="..\Server\LitExplore.Server.csproj" />
   </ItemGroup>
 

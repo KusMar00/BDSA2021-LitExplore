@@ -32,7 +32,6 @@ namespace LitExplore.PaperDiscovery.Tests;
         Context.Papers.AddRange(new[] {Paper_1, Paper_2, Paper_3, Paper_4});
 
         Context.SaveChanges();
-        
     }
 
 

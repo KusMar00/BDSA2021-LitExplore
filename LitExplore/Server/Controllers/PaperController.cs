@@ -1,6 +1,7 @@
+using LitExplore.Repository;
+
 namespace LitExplore.Server.Controllers;
 
-using LitExplore.PaperDiscovery;
 
 [Authorize]
 [ApiController]
@@ -8,27 +9,28 @@ using LitExplore.PaperDiscovery;
 [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
 public class PaperController
 {
-	private readonly ILogger<PaperController> _logger;
-    private readonly IPaperDiscovery _manager;
-
-	public PaperController(ILogger<PaperController> logger, IPaperDiscovery manager)
+	private readonly ILogger<PaperController> logger;
+	protected IPaperRepository repository;
+	
+	public PaperController(ILogger<PaperController> _logger, IPaperRepository _repository)
     {
-        _logger = logger;
-        _manager = manager;
+        logger = _logger;
+		repository = _repository;
     }
 
 	[HttpGet]
-	public async Task<PaperDetailsDTO> Get(int id) {
-		throw new NotImplementedException();
-	}
-
-    [HttpGet]
-	public async Task<PaperDetailsDTO> Get(string name) {
-		throw new NotImplementedException();
-	}
+	public async Task<PaperDTO?> Get(int id){
+		return await repository.ReadAsync(id);
+    }
 
 	[HttpGet]
-	public async Task<IEnumerable<PaperDetailsDTO>> GetRelated(int id) {
-		throw new NotImplementedException();
+	public async Task<IReadOnlyCollection<PaperDTO?>?> Get(string name){
+		return await repository.ReadByNameAsync(name);
+	}
+
+	//TODO: DETTE BURDE SKE I EN ANDEN KLASSE
+	[HttpGet]
+	public async Task<IReadOnlyCollection<PaperDTO>?> GetRelated(int id){
+		return await repository.ReadByRelationsAsync(id);
 	}
 }

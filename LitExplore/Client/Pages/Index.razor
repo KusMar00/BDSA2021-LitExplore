@@ -19,8 +19,10 @@
         <div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
             <h1 style="color: var(--lavender);">Projects</h1>
 
-            <ProjectCard/>
-            <ProjectCard/>
+            @foreach (var project in projects)
+            {
+                <ProjectCard />
+            }
         </div>
     </Authorized>
     <NotAuthorized>
@@ -34,7 +36,7 @@
     {
         try
         {
-            projects = await Http.GetFromJsonAsync<ProjectDTO[]>("api/project");
+            projects = await Http.GetFromJsonAsync<ProjectDTO[]>("api/Project");
         }
         catch (AccessTokenNotAvailableException exception)
         {
