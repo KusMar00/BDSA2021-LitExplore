@@ -1,5 +1,6 @@
 namespace LitExplore.Server.Controllers;
 
+
 [Authorize]
 [ApiController]
 [Route("api/[controller]")]
@@ -8,6 +9,7 @@ public class ProjectController
 {
 	private readonly ILogger<ProjectController> logger;
 	private IProjectRepository repository;
+
 
 	public ProjectController(ILogger<ProjectController> _logger, IProjectRepository _repository)
     {

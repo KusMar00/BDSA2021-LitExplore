@@ -1,5 +1,6 @@
 ﻿@page "/"
 @inject HttpClient Http
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @using LitExplore.Shared
@@ -34,9 +35,12 @@
     private ProjectDTO[]? projects;
     protected override async Task OnInitializedAsync()
     {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
         try
         {
-            projects = await Http.GetFromJsonAsync<ProjectDTO[]>("api/Project");
+            projects = await Http.GetFromJsonAsync<ProjectDTO[]>($"api/Project/{user.Identity.Name}");
         }
         catch (AccessTokenNotAvailableException exception)
         {

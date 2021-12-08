@@ -1,4 +1,3 @@
-using LitExplore.Repository;
 
 namespace LitExplore.Server.Controllers;
 
