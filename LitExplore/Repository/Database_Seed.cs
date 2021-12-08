@@ -19,8 +19,11 @@ public partial class Database
         // Template for adding papers
         /*
 
-        var Author_GivenName_Surname = new Author { GivenName = "", Surname = "" };
-        var PaperName = new Paper
+        Author
+            Author_GN_Surname = new() { GivenName = "", Surname = "" },
+            Author_GN_Surname = new() { GivenName = "", Surname = "" };
+        
+        Paper PaperName = new()
         {
             Authors = new HashSet<Author>() { Author_GivenName_Surname },
             Name = @"",
@@ -33,9 +36,11 @@ public partial class Database
         */
         // Template for adding papers
 
-        var Author_P_Esquivel = new Author { GivenName = "Patricia", Surname = "Esquivel" };
-        var Author_VM_Jimenez = new Author { GivenName = "Victor M.", Surname = "Jimenez" };
-        var Paper_Functional_Properties_Of_Coffee = new Paper
+        Author
+            Author_P_Esquivel = new() { GivenName = "Patricia", Surname = "Esquivel" },
+            Author_VM_Jimenez = new() { GivenName = "Victor M.", Surname = "Jimenez" };
+
+        Paper Paper_Functional_Properties_Of_Coffee = new()
         {
             Authors = new HashSet<Author> { Author_P_Esquivel, Author_VM_Jimenez },
             Name = @"Functional properties of coffee and coffee by-products",
@@ -44,11 +49,14 @@ public partial class Database
         };
         context.Papers.Add(Paper_Functional_Properties_Of_Coffee);
 
-        var Author_A_Zurro = new Author { GivenName = "Antonio", Surname = "ZUORRO" };
-        var Author_R_Lavecchia = new Author { GivenName = "Roberto", Surname = "Lavecchia" };
-        var Paper_Spent_Coffee_Grounds = new Paper
+
+        Author
+            Author_A_Zuorro = new() { GivenName = "Antonio", Surname = "ZUORRO" },
+            Author_R_Lavecchia = new() { GivenName = "Roberto", Surname = "Lavecchia" };
+
+        Paper Paper_Spent_Coffee_Grounds = new()
         {
-            Authors = new HashSet<Author>() { Author_A_Zurro, Author_R_Lavecchia },
+            Authors = new HashSet<Author>() { Author_A_Zuorro, Author_R_Lavecchia },
             Name = @"Spent coffee grounds as a valuable source of phenolic compounds and bioenergy",
             URL = @"https://www.sciencedirect.com/science/article/pii/S0959652611005117?casa_token=N76EXWDZvMoAAAAA:9ryevfBm9sXLugCElAxj47CxgJS2XQ08c-LW04yZyYo2h9DRKtKSsH0xUhqL3APxHAD0Slz2taI",
             Abstract = @"Spent coffee grounds collected from coffee bars (SCG-1) or recovered from coffee capsules (SCG-2) were investigated as a potential source of phenolic compounds and energy. Preliminary characterization of these materials provided a total phenolic content of 17.75 mg …",
@@ -56,9 +64,12 @@ public partial class Database
         };
         context.Papers.Add(Paper_Spent_Coffee_Grounds);
 
-        var Author_Y_Narita = new Author { GivenName = "Y", Surname = "Narita" };
-        var Author_K_Inouye = new Author { GivenName = "K", Surname = "Inouye" };
-        var Review_On_Utilization_And_Composition_of_Coffee_Silverskin = new Paper
+
+        Author
+            Author_Y_Narita = new() { GivenName = "Y", Surname = "Narita" },
+            Author_K_Inouye = new() { GivenName = "K", Surname = "Inouye" };
+
+        Paper Review_On_Utilization_And_Composition_of_Coffee_Silverskin = new()
         {
             Authors = new HashSet<Author>() { Author_Y_Narita, Author_K_Inouye },
             Name = @"Review on utilization and composition of coffee silverskin",
@@ -68,10 +79,13 @@ public partial class Database
         };
         context.Papers.Add(Review_On_Utilization_And_Composition_of_Coffee_Silverskin);
 
-        var Author_JB_Essner = new Author { GivenName = "Jerimy B.", Surname = "Essner" };
-        var Author_JA_Kist = new Author { GivenName = "Jennifer A", Surname = "Kist" };
-        var Author_L_Polo_Parada = new Author { GivenName = "Luis", Surname = "Polo-Parada" };
-        var Paper_Artifacts_And_Errors = new Paper
+
+        Author
+            Author_JB_Essner = new() { GivenName = "Jerimy B.", Surname = "Essner" },
+            Author_JA_Kist = new() { GivenName = "Jennifer A", Surname = "Kist" },
+            Author_L_Polo_Parada = new() { GivenName = "Luis", Surname = "Polo-Parada" };
+
+        Paper Paper_Artifacts_And_Errors = new()
         {
             Authors = new HashSet<Author>() { Author_JB_Essner, Author_JA_Kist, Author_L_Polo_Parada },
             Name = @"Artifacts and errors associated with the ubiquitous presence of fluorescent impurities in carbon nanodots",
@@ -81,13 +95,16 @@ public partial class Database
         };
         context.Papers.Add(Paper_Artifacts_And_Errors);
 
-        var Author_Marija_Ranic = new Author { GivenName = "Marija", Surname = "Ranic" };
-        var Author_Marina_Nikolic = new Author { GivenName = "Marina", Surname = "Nikolic" };
-        var Author_Marija_Pavlovic = new Author { GivenName = "Marija", Surname = "Pavlovic" };
-        var Author_Aneta_Buntic = new Author { GivenName = "Aneta", Surname = "Buntic" };
-        var Author_Slavica_SilerMarinkovic = new Author { GivenName = "Slavica", Surname = "Siler-Marinkovic" };
-        var Author_Suzana_DimitrijevicBrankovic = new Author { GivenName = "Suzana", Surname = "Dimitrijevic-Brankovic" };
-        var Optimization_Of_Microwaveassisted_Extraction = new Paper
+
+        Author
+            Author_Marija_Ranic = new() { GivenName = "Marija", Surname = "Ranic" },
+            Author_Marina_Nikolic = new() { GivenName = "Marina", Surname = "Nikolic" },
+            Author_Marija_Pavlovic = new() { GivenName = "Marija", Surname = "Pavlovic" },
+            Author_Aneta_Buntic = new() { GivenName = "Aneta", Surname = "Buntic" },
+            Author_Slavica_SilerMarinkovic = new() { GivenName = "Slavica", Surname = "Siler-Marinkovic" },
+            Author_Suzana_DimitrijevicBrankovic = new() { GivenName = "Suzana", Surname = "Dimitrijevic-Brankovic" };
+
+        Paper Optimization_Of_Microwaveassisted_Extraction = new()
         {
             Authors = new HashSet<Author>() { Author_Marija_Ranic, Author_Marina_Nikolic, Author_Marija_Pavlovic, Author_Aneta_Buntic, Author_Slavica_SilerMarinkovic, Author_Suzana_DimitrijevicBrankovic },
             Name = @"Optimization of microwave-assisted extraction of natural antioxidants from spent espresso coffee grounds by response surface methodology",
@@ -96,6 +113,39 @@ public partial class Database
             Citings = new List<Paper> { Paper_Functional_Properties_Of_Coffee }
         };
         context.Papers.Add(Optimization_Of_Microwaveassisted_Extraction);
+
+
+        Author
+            Author_R_Campos_Vega = new() { GivenName = "Rocio", Surname = "Campos-Vega" },
+            Author_G_Loarca_Pina = new() { GivenName = "Guadalupe", Surname = "Loarca-Piña" };
+
+        Paper Paper_Spent_Coffee_Grounds_Review = new()
+        {
+            Authors = new HashSet<Author>() { Author_R_Campos_Vega, Author_G_Loarca_Pina },
+            Name = @"Spent coffee grounds: A review on current research and future prospects",
+            URL = @"https://www.sciencedirect.com/science/article/pii/S0924224415001193?casa_token=ej7n7x4S764AAAAA:uprQrezreHFr0IDoxZRUkR3ZTsn9jlsfTdUEfYX65tz1ynJz7ixm4_EiFXZhnhNBis9vEaDRHN8",
+            Abstract = @"Spent coffee ground (SCG) contains large amounts of organic compounds (ie fatty acids, amino acids, polyphenols, minerals and polysaccharides) that justify its valorization. Earlier innovation explored the extraction of specific components such as oil, flavor, terpenes, and …",
+            Citings = new List<Paper> { Paper_Spent_Coffee_Grounds }
+        };
+        context.Papers.Add(Paper_Spent_Coffee_Grounds_Review);
+
+
+        Author
+            Author_A_Panusa = new() { GivenName = "Alessia", Surname = "Panusa" },
+            // A Zuorro already exists
+            // R Lavecchia already exists
+            Author_G_Marrosu = new() { GivenName = "Giancarlo", Surname = "Marrosu" },
+            Author_R_Petrucci = new() { GivenName = "Rita", Surname = "Petrucci" };
+
+        Paper Paper_Recovery_Of_Natural_Antioxidants = new()
+        {
+            Authors = new HashSet<Author>() { Author_A_Panusa, Author_A_Zuorro, Author_R_Lavecchia, Author_G_Marrosu, Author_R_Petrucci },
+            Name = @"Recovery of natural antioxidants from spent coffee grounds",
+            URL = @"https://pubs.acs.org/doi/abs/10.1021/jf4005719",
+            Abstract = @"Spent coffee grounds (SCG) were extracted with an environmentally friendly procedure and analyzed to evaluate the recovery of relevant natural antioxidants for use as nutritional supplements, foods, or cosmetic additives. SCG were characterized in terms of their total …",
+            Citings = new List<Paper>() { Paper_Spent_Coffee_Grounds }
+        };
+        context.Papers.Add(Paper_Recovery_Of_Natural_Antioxidants);
 
         context.SaveChanges();
     }
