@@ -52,11 +52,11 @@ public class ProjectRepositoryTest : RepositoryTests
         #endregion
         #region Users
         User
-            User_1 = new User { Id = Id_1, Email = "user1@mail.com", DisplayName = "User 1" },
-            User_2 = new User { Id = Id_2, Email = "user2@mail.com", DisplayName = "User 2" },
-            User_3 = new User { Id = Id_3, Email = "user3@mail.com", DisplayName = "User 3" },
-            User_4 = new User { Id = Id_4, Email = "user4@mail.com", DisplayName = "User 4" },
-            User_5 = new User { Id = Id_5, Email = "user5@mail.com", DisplayName = "User 5" };
+            User_1 = new User { Id = Id_1, DisplayName = "User 1" },
+            User_2 = new User { Id = Id_2, DisplayName = "User 2" },
+            User_3 = new User { Id = Id_3, DisplayName = "User 3" },
+            User_4 = new User { Id = Id_4, DisplayName = "User 4" },
+            User_5 = new User { Id = Id_5, DisplayName = "User 5" };
         #endregion
         #region Projects
         Project
@@ -121,11 +121,11 @@ public class ProjectRepositoryTest : RepositoryTests
         ProjectDTO expected = new(
             Id: 1,
             Name: "Project 1",
-            Owner: new(Id_1, "user1@mail.com", "User 1"),
+            Owner: new(Id_1, "User 1"),
             Collaborators: new HashSet<UserDTO>() {
-                new(Id_2, "user2@mail.com", "User 2"),
-                new(Id_3, "user3@mail.com", "User 3"),
-                new(Id_4, "user4@mail.com", "User 4"),
+                new(Id_2, "User 2"),
+                new(Id_3, "User 3"),
+                new(Id_4, "User 4"),
             }
         );
 
@@ -148,7 +148,7 @@ public class ProjectRepositoryTest : RepositoryTests
         ProjectDTO expected = new(
             Id: 4,
             Name: "Project 4",
-            Owner: new(Guid.Empty, "", ""),
+            Owner: new(Guid.Empty, ""),
             Collaborators: new HashSet<UserDTO>() { }
         );
 
@@ -186,11 +186,11 @@ public class ProjectRepositoryTest : RepositoryTests
         ProjectDetailsDTO expected = new(
             Id: 1,
             Name: "Project 1",
-            Owner: new(Id_1, "user1@mail.com", "User 1"),
+            Owner: new(Id_1, "User 1"),
             Collaborators: new HashSet<UserDTO>() {
-                new(Id_2, "user2@mail.com", "User 2"),
-                new(Id_3, "user3@mail.com", "User 3"),
-                new(Id_4, "user4@mail.com", "User 4"),
+                new(Id_2, "User 2"),
+                new(Id_3, "User 3"),
+                new(Id_4, "User 4"),
             },
             Papers: new HashSet<PaperDTO>() {
                 new(1, "Paper 1"),
@@ -218,7 +218,7 @@ public class ProjectRepositoryTest : RepositoryTests
         ProjectDetailsDTO expected = new(
             Id: 4,
             Name: "Project 4",
-            Owner: new(Guid.Empty, "", ""),
+            Owner: new(Guid.Empty, ""),
             Collaborators: new HashSet<UserDTO>() { },
             Papers: new HashSet<PaperDTO>() { }
         );
@@ -246,7 +246,7 @@ public class ProjectRepositoryTest : RepositoryTests
         var expectedProject = new ProjectDTO(
             Id: 5,
             Name: "Project 5",
-            Owner: new(Id_3, "user3@mail.com", "User 3"),
+            Owner: new(Id_3, "User 3"),
             Collaborators: new HashSet<UserDTO>()
         );
 
@@ -283,12 +283,12 @@ public class ProjectRepositoryTest : RepositoryTests
         var expectedProject = new ProjectDTO(
             Id: 1,
             Name: "Project 1",
-            Owner: new(Id_1, "user1@mail.com", "User 1"),
+            Owner: new(Id_1, "User 1"),
             Collaborators: new HashSet<UserDTO>()
             {
-                new(Id_2, "user2@mail.com", "User 2"),
-                new(Id_3, "user3@mail.com", "User 3"),
-                new(Id_4, "user4@mail.com", "User 4"),
+                new(Id_2, "User 2"),
+                new(Id_3, "User 3"),
+                new(Id_4, "User 4"),
             }
         );
 
