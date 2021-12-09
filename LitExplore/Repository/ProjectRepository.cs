@@ -169,37 +169,7 @@ public class ProjectRepository : IProjectRepository
         {
             return Status.NotFound;
         }
-
         projectToModify.Collaborators.Remove(collaboratorToRemove);
-        context.SaveChanges();
-        return Status.Deleted;
-    }
-
-    public async Task<Status> RemovePaperAsync(ProjectAddRemovePaperDTO project)
-    {
-        var projectToModify = await (
-            from p in context.Projects
-            where p.Id == project.ProjectId
-            select p
-        ).FirstOrDefaultAsync();
-
-        if (projectToModify == null)
-        {
-            return Status.NotFound;
-        }
-
-        var paperToRemove = (
-            from p in projectToModify.Papers
-            where p.Id == project.PaperId
-            select p
-        ).FirstOrDefault();
-
-        if (paperToRemove == null)
-        {
-            return Status.NotFound;
-        }
-
-        projectToModify.Papers.Remove(paperToRemove);
         context.SaveChanges();
         return Status.Deleted;
     }
@@ -229,5 +199,34 @@ public class ProjectRepository : IProjectRepository
         ).ToListAsync<ProjectDTO>();
 
         return new(user.Id, owns.AsReadOnly(), hasAccessTo.AsReadOnly());
+    }
+    
+    public async Task<Status> RemovePaperAsync(ProjectAddRemovePaperDTO project)
+    {
+        var projectToModify = await (
+            from p in context.Projects
+            where p.Id == project.ProjectId
+            select p
+        ).FirstOrDefaultAsync();
+
+        if (projectToModify == null)
+        {
+            return Status.NotFound;
+        }
+
+        var paperToRemove = (
+            from p in projectToModify.Papers
+            where p.Id == project.PaperId
+            select p
+        ).FirstOrDefault();
+
+        if (paperToRemove == null)
+        {
+            return Status.NotFound;
+        }
+
+        projectToModify.Papers.Remove(paperToRemove);
+        context.SaveChanges();
+        return Status.Deleted;
     }
 }

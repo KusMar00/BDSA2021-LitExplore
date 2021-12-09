@@ -4,7 +4,7 @@ public abstract class RepositoryTests : IDisposable
 {
     protected readonly Database database;
 
-    protected LitExploreContext Context { get => database.Context; }
+    protected LitExploreContext Context { get; private set; }
 
     public RepositoryTests()
     {
@@ -12,7 +12,7 @@ public abstract class RepositoryTests : IDisposable
         connection.Open();
         var builder = new DbContextOptionsBuilder<LitExploreContext>();
         builder.UseSqlite(connection);
-        database = new(builder.Options);
+        Context = new(builder.Options);
         Context.Database.EnsureCreated();
         SeedDatabase();
     }

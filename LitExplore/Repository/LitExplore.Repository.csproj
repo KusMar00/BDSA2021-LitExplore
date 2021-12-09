@@ -21,5 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Repository.Entities\LitExplore.Repository.Entities.csproj" />
+    <ProjectReference Include="..\PaperDiscovery\LitExplore.PaperDiscovery.Entities.csproj" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
 public class UserRepositoryTest : RepositoryTests
 {
     private IUserRepository repo;
-    public UserRepositoryTest() : base() => repo = database.UserRepository;
+    public UserRepositoryTest() : base() => repo = new UserRepository(Context);
     
     private readonly Guid
             Id_1 = Guid.Parse("448a0dbf93344b5b95fa30cbb64f982c"),

@@ -8,13 +8,12 @@ namespace LitExplore.ProjectManagement
 {
     public class ProjectManagement : IProjectManagement
     {
-        protected Database database;
-        protected IProjectRepository projectRepository { get => database.ProjectRepository; }
+        protected IProjectRepository projectRepository;
         public string userName {get; set; }
         protected CustomAuthStateProvider authorization;
 
-        public ProjectManagement(Database _database, string _userName){
-            database = _database;
+        public ProjectManagement(IProjectRepository _projectRepository, string _userName){
+            projectRepository = _projectRepository;
             userName = _userName;
             authorization = new CustomAuthStateProvider();
         }
