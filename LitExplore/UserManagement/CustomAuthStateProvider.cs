@@ -28,7 +28,7 @@ namespace LitExplore.UserManagement
             {
                     var identity = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.Name, name),
+                    new Claim(ClaimTypes.Name, name)
                 });
 
                 var user = new ClaimsPrincipal(identity);

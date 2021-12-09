@@ -1,4 +1,3 @@
-
 namespace LitExplore.Server.Controllers;
 
 
@@ -6,7 +5,7 @@ namespace LitExplore.Server.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
-public class PaperController
+public class PaperController : Controller
 {
 	private readonly ILogger<PaperController> logger;
 	protected IPaperRepository repository;

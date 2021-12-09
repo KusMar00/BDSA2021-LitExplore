@@ -204,11 +204,11 @@ public class ProjectRepository : IProjectRepository
         return Status.Deleted;
     }
 
-    public async Task<UserProjectDTO> ReadProjectsByUserAsync(Guid userID)
+    public async Task<UserProjectDTO> ReadProjectsByUserAsync(Guid userId)
     {
         var user = await (
             from u in context.Users
-            where u.Id == userID
+            where u.Id == userId
             select u
         ).FirstOrDefaultAsync();
 

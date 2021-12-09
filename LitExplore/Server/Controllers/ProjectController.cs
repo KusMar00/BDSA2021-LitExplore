@@ -1,35 +1,31 @@
 namespace LitExplore.Server.Controllers;
 
+using Microsoft.AspNetCore.Identity;
+using System.Web;
 
 [Authorize]
 [ApiController]
 [Route("api/[controller]")]
 [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
-public class ProjectController
+public class ProjectController : Controller
 {
+	
 	private readonly ILogger<ProjectController> logger;
 	private IProjectRepository repository;
-
-
 	public ProjectController(ILogger<ProjectController> _logger, IProjectRepository _repository)
     {
         logger = _logger;
 		repository = _repository;
     }
 
-	[HttpGet]
-	public async Task<UserProjectDTO> Get(Guid id) {
-		return await repository.ReadProjectsByUserAsync(id);
+	[HttpGet("{userId}")]
+	public async Task<UserProjectDTO> Get(Guid userId) {
+		return await repository.ReadProjectsByUserAsync(userId);
 	}
 
-	[HttpPost]
+	[HttpPost("{UserId}")]
 	public async Task<(Status, ProjectDTO?)> Post(ProjectCreateDTO project){
 		return await repository.CreateProjectAsync(project);
-	}
-
-	[HttpGet]
-	public async Task<ProjectDTO?> Get(int id){
-		return await repository.ReadProjectAsync(id);
 	}
 
 	[HttpDelete]
