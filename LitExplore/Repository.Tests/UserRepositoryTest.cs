@@ -18,11 +18,11 @@ public class UserRepositoryTest : RepositoryTests
             Project_1 = new Project{Id = 1, Name = "Project 1"};
 
         User
-            User_1 = new User {Id = Id_1, Email = "user1@mail.com", DisplayName = "User 1"},
-            User_2 = new User {Id = Id_2, Email = "user2@mail.com", DisplayName = "User 2"},
-            User_3 = new User {Id = Id_3, Email = "user3@mail.com", DisplayName = "User 3", IsOwnerOf = new HashSet<Project>(){Project_1}},
-            User_4 = new User {Id = Id_4, Email = "user4@mail.com", DisplayName = "User 4"},
-            User_5 = new User {Id = Id_5, Email = "user5@mail.com", DisplayName = "User 5"};
+            User_1 = new User {Id = Id_1, DisplayName = "User 1"},
+            User_2 = new User {Id = Id_2, DisplayName = "User 2"},
+            User_3 = new User {Id = Id_3, DisplayName = "User 3", IsOwnerOf = new HashSet<Project>(){Project_1}},
+            User_4 = new User {Id = Id_4, DisplayName = "User 4"},
+            User_5 = new User {Id = Id_5, DisplayName = "User 5"};
 
             Context.Users.AddRange(new[] { User_1, User_2, User_3, User_4, User_5});
             Context.SaveChanges();
@@ -46,7 +46,7 @@ public class UserRepositoryTest : RepositoryTests
     public async void ReadAsync_User_1_Returns_User_1()
     {
         // Arrange
-        UserDTO expected = new(Id_1, "user1@mail.com", "User 1");
+        UserDTO expected = new(Id_1, "User 1");
 
         // Act
         var actual = await repo.ReadAsync(Id_1);
@@ -61,7 +61,7 @@ public class UserRepositoryTest : RepositoryTests
     public async void CreateAsync_Given_User_Returns_Created()
     {
         // Arrange
-        UserDTO user = new(Guid.Parse("540c877045f644c7860f275e1db7a497"), "user6@mail.com", "User 6");
+        UserDTO user = new(Guid.Parse("540c877045f644c7860f275e1db7a497"), "User 6");
 
         // Act
         var actual = await repo.CreateAsync(user);
@@ -74,7 +74,7 @@ public class UserRepositoryTest : RepositoryTests
     public async void CreateAsync_Given_Existing_User_Returns_Conflict()
     {
         // Arrange
-        UserDTO user = new(Id_1, "user1@mail.com", "User 1");
+        UserDTO user = new(Id_1, "User 1");
 
         // Act
         var actual = await repo.CreateAsync(user);
