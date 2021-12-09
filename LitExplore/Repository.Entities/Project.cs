@@ -27,11 +27,12 @@ public class Project
                  // as intended, but we better make sure it works
                  // anyway.
                 Owner != null ? Owner.Id : Guid.Empty,
+                Owner != null ? Owner.Email : "",
                 Owner != null ? Owner.DisplayName : ""
             ),
             ( // Convert to DTOs.
                 from u in Collaborators
-                select new UserDTO(u.Id, u.DisplayName)
+                select new UserDTO(u.Id, u.Email, u.DisplayName)
             ).ToHashSet()
         );
     }

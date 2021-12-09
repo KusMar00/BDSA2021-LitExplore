@@ -10,7 +10,7 @@ public class UserRepository : IUserRepository
     {
         var conflict = await context.Users
                             .Where(u => u.Id == user.Id)
-                            .Select(u => new UserDTO(u.Id, u.DisplayName))
+                            .Select(u => new UserDTO(u.Id, u.Email, u.DisplayName))
                             .FirstOrDefaultAsync();
 
             if (conflict != null)
@@ -18,13 +18,13 @@ public class UserRepository : IUserRepository
                 return (Status.Conflict, conflict);
             }
 
-            var entity = new User(user.Id, user.DisplayName);
+            var entity = new User(user.Id, user.Email, user.DisplayName);
 
             context.Users.Add(entity);
 
             await context.SaveChangesAsync();
 
-            return (Status.Created, new UserDTO(entity.Id, entity.DisplayName));
+            return (Status.Created, new UserDTO(entity.Id, entity.Email, entity.DisplayName));
     }
 
     public async Task<Status> DeleteAsync(Guid id)
@@ -53,7 +53,7 @@ public class UserRepository : IUserRepository
     {
         var users = from u in context.Users
                     where u.Id == id
-                    select new UserDTO(u.Id, u.DisplayName);
+                    select new UserDTO(u.Id, u.Email, u.DisplayName);
         return await users.FirstOrDefaultAsync();
     }
 }
