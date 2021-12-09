@@ -37,9 +37,9 @@ namespace LitExplore.ProjectManagement.Tests;
                 Paper_4 = new Paper{Id = 4, Name = "Paper4", Authors = new HashSet<Author>{Author_1, Author_2}, URL = null, Abstract = null};
 
             User
-                User_1 = new User {Id = guid_1, DisplayName = "User 1" },
-                User_2 = new User {Id = guid_2, DisplayName = "User 2" },
-                User_3 = new User {Id = guid_3, DisplayName = "User 3" };
+                User_1 = new User {Id = guid_1, Email = "user1@mail.com", DisplayName = "User 1" },
+                User_2 = new User {Id = guid_2, Email = "user2@mail.com", DisplayName = "User 2" },
+                User_3 = new User {Id = guid_3, Email = "user3@mail.com", DisplayName = "User 3" };
 
             Project 
                 Project_1 = new Project 
@@ -77,9 +77,9 @@ namespace LitExplore.ProjectManagement.Tests;
             ProjectDTO? expected = new(
                 Id: 1, 
                 Name: "Project 1", 
-                Owner: new (guid_1, "User 1"), 
+                Owner: new (guid_1, "user1@mail.com", "User 1"), 
                 Collaborators: new HashSet<UserDTO>(){
-                    new (guid_2, "User 2"),
+                    new (guid_2, "user2@mail.com", "User 2"),
                 }
             );
 
