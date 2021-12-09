@@ -4,7 +4,7 @@ public class PaperRepositoryTest : RepositoryTests
 {
     private IPaperRepository repo;
 
-    public PaperRepositoryTest() : base() => repo = database.PaperRepository;
+    public PaperRepositoryTest() : base() => repo = new PaperRepository(Context);
 
     protected override void SeedDatabase()
     {

@@ -1,6 +1,8 @@
+using LitExplore.Repository;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+//builder.Services.AddDbContext<LitExploreContext>(_ => Database.GetOptionsBuilder());
+builder.Services.AddDbContext<LitExploreContext>(options => options.UseSqlServer(Database.GetConnectionString()));
+builder.Services.AddScoped<IPaperRepository, PaperRepository>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 
@@ -40,5 +48,11 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<LitExploreContext>();
+    Database.SetupDatabase(context);
+}
 
 app.Run();

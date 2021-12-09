@@ -4,7 +4,7 @@ public class ProjectRepositoryTest : RepositoryTests
 {
     private IProjectRepository repo;
 
-    public ProjectRepositoryTest() : base() => repo = database.ProjectRepository;
+    public ProjectRepositoryTest() : base() => repo = new ProjectRepository(Context);
 
     private readonly Guid
             Id_1 = Guid.Parse("448a0dbf93344b5b95fa30cbb64f982c"),

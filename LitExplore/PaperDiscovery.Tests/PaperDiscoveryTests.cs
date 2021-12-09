@@ -5,34 +5,35 @@ using LitExplore.Repository.Tests;
 using Xunit;
 
 namespace LitExplore.PaperDiscovery.Tests;
-    public class PaperDiscoveryTests : RepositoryTests
-    {
-        
-        private IPaperRepository repo;
-        private PaperDiscovery paperDiscovery;
+public class PaperDiscoveryTests : RepositoryTests
+{
 
-        public PaperDiscoveryTests() {
-            repo = database.PaperRepository;
-            paperDiscovery = new PaperDiscovery(database, "AdminTestUser");
-        }
-        
+    private IPaperRepository repo;
+    private PaperDiscovery paperDiscovery;
+
+    public PaperDiscoveryTests()
+    {
+        repo = new PaperRepository(Context);
+        paperDiscovery = new PaperDiscovery(repo, "AdminTestUser");
+    }
+
     protected override void SeedDatabase()
     {
         Author
-            Author_1 = new Author{Id = 1, GivenName = "James", Surname = "Wilson"},
-            Author_2 = new Author{Id = 2, GivenName = "Mark", Surname = "Madsen"},
-            Author_3 = new Author{Id = 3, GivenName = "Johnny", Surname = "Deluxe"};
-        
-        Paper
-            Paper_1 = new Paper{Id = 1, Name = "Paper1", Authors = new HashSet<Author>{Author_1}, URL = null, Abstract = null},
-            Paper_2 = new Paper{Id = 2, Name = "Paper2", Authors = new HashSet<Author>{Author_2}, URL = null, Abstract = null, Citings = new []{Paper_1}},
-            Paper_3 = new Paper{Id = 3, Name = "Paper3", Authors = new HashSet<Author>{Author_3}, URL = null, Abstract = null, Citings = new []{Paper_2}},
-            Paper_4 = new Paper{Id = 4, Name = "Paper4", Authors = new HashSet<Author>{Author_1, Author_2}, URL = null, Abstract = null};
+            Author_1 = new Author { Id = 1, GivenName = "James", Surname = "Wilson" },
+            Author_2 = new Author { Id = 2, GivenName = "Mark", Surname = "Madsen" },
+            Author_3 = new Author { Id = 3, GivenName = "Johnny", Surname = "Deluxe" };
 
-        Context.Papers.AddRange(new[] {Paper_1, Paper_2, Paper_3, Paper_4});
+        Paper
+            Paper_1 = new Paper { Id = 1, Name = "Paper1", Authors = new HashSet<Author> { Author_1 }, URL = null, Abstract = null },
+            Paper_2 = new Paper { Id = 2, Name = "Paper2", Authors = new HashSet<Author> { Author_2 }, URL = null, Abstract = null, Citings = new[] { Paper_1 } },
+            Paper_3 = new Paper { Id = 3, Name = "Paper3", Authors = new HashSet<Author> { Author_3 }, URL = null, Abstract = null, Citings = new[] { Paper_2 } },
+            Paper_4 = new Paper { Id = 4, Name = "Paper4", Authors = new HashSet<Author> { Author_1, Author_2 }, URL = null, Abstract = null };
+
+        Context.Papers.AddRange(new[] { Paper_1, Paper_2, Paper_3, Paper_4 });
 
         Context.SaveChanges();
-        
+
     }
 
 
@@ -66,7 +67,7 @@ namespace LitExplore.PaperDiscovery.Tests;
     public async void GetRelatedPaperAsync_Paper_1_Returns_Paper_2()
     {
         // Arrange
-        IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(2, "Paper2")};
+        IReadOnlyCollection<PaperDTO>? expected = new[] { new PaperDTO(2, "Paper2") };
 
         // Act
         var actual = await paperDiscovery.GetRelatedPaperAsync(1);
@@ -79,7 +80,7 @@ namespace LitExplore.PaperDiscovery.Tests;
     public async void GetRelatedPaperAsync_Paper_2_Returns_Paper_1_And_Paper_3()
     {
         // Arrange
-        IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(1, "Paper1"), new PaperDTO(3, "Paper3")};
+        IReadOnlyCollection<PaperDTO>? expected = new[] { new PaperDTO(1, "Paper1"), new PaperDTO(3, "Paper3") };
 
         // Act
         var actual = await paperDiscovery.GetRelatedPaperAsync(2);
