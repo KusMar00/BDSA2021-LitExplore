@@ -8,7 +8,7 @@ public partial class Database
     /// The seed data comes from Google Scholar (https://scholar.google.com/).
     /// The seed data does not include users at these are part of the vertical slice.
     /// </summary>
-    public void Seed(LitExploreContext context)
+    public static void Seed(LitExploreContext context)
     {
         context.Database.EnsureDeleted();
         // Clean migrations.

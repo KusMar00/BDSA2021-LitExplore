@@ -8,13 +8,12 @@ namespace LitExplore.PaperDiscovery;
     public class PaperDiscovery : IPaperDiscovery
     {
 
-        protected Database database;
-        protected IPaperRepository paperRepository { get => database.PaperRepository; }
+        protected IPaperRepository paperRepository;
         protected string userName;
         protected CustomAuthStateProvider authorization;
 
-        public PaperDiscovery(Database _database, string _userName){
-            database = _database;
+        public PaperDiscovery(IPaperRepository _paperRepository, string _userName){
+            paperRepository = _paperRepository;
             userName = _userName;
             authorization = new CustomAuthStateProvider();
         }
