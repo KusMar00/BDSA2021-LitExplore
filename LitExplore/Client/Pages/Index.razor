@@ -1,27 +1,80 @@
 ﻿@page "/"
 @inject HttpClient Http
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Components.Authorization
 
 
+@attribute [Authorize]
 
 <PageTitle>Index</PageTitle>
 
-<div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
-	<h1>Projects</h1>
 
-	<ProjectCard/>
-    <ProjectCard/>
-</div>
+<BSJumbotron IsFluid="true" style="color:var(--lavender);">
+    <h1 class="display-4">Welcome to LitExplore</h1>
+    <p class="lead">Here you can keep a dynamic bibliography when working on a project. <i>LitExplore</i> will automatically recommend new literature, based on your existing bibliography.</p>
+    <hr class="my-4" />
+</BSJumbotron>
 
 <AuthorizeView>
     <Authorized>
-        The user is authorized
+        <div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
+            <h1 style="color: var(--lavender);">Your Projects</h1>
+            @if(projects == null || projects.Length == 0)
+            {
+                <p style="color: var(--lavender); margin-top: 10px;"><i>No projects were found</i></p>
+            }
+ 
+            <BSBasicInput InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="Project name"/>
+            <button Id="addLit" class="adder" @onclick="@(() => @CreateNewProject())">+</button>
+            <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
+        </div>
     </Authorized>
     <NotAuthorized>
-        The User is not authorized
+        <p style="margin: 50px;">You must login to LitExplore to proceed</p>
     </NotAuthorized>
 </AuthorizeView>
 
-<br>Welcome to your new app
-
 @code {
+    private ProjectDTO[]? projects = null;
+    private BSBasicInput<string>? UserSearchInput;
+    private string newProjectName = string.Empty;
+
+    private Guid userId;
+
+    protected void SelectedChanged(string e)
+    {
+        newProjectName = e;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authstate.User;
+            userId = Guid.Parse(user.FindFirst(c => c.Type == "sub")?.Value);
+            Console.WriteLine(userId);
+
+            projects = await Http.GetFromJsonAsync<ProjectDTO[]>($"api/Project/{userId}");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    protected async Task CreateNewProject(){
+        try
+        {
+            Console.WriteLine(newProjectName);
+            await Http.PostAsJsonAsync<ProjectCreateDTO>($"api/Project/{userId}", new ProjectCreateDTO(userId, newProjectName));
+        } 
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
 }

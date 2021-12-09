@@ -5,6 +5,7 @@ using LitExplore.Repository.Tests;
 using Xunit;
 
 namespace LitExplore.PaperDiscovery.Tests;
+
 public class PaperDiscoveryTests : RepositoryTests
 {
 
@@ -35,7 +36,6 @@ public class PaperDiscoveryTests : RepositoryTests
         Context.SaveChanges();
 
     }
-
 
     [Fact]
     public async void GetPaperAsync_Paper_1_Returns_Paper_1()

@@ -169,12 +169,38 @@ public class ProjectRepository : IProjectRepository
         {
             return Status.NotFound;
         }
-
         projectToModify.Collaborators.Remove(collaboratorToRemove);
         context.SaveChanges();
         return Status.Deleted;
     }
 
+    public async Task<UserProjectDTO> ReadProjectsByUserAsync(Guid userId)
+    {
+        var user = await (
+            from u in context.Users
+            where u.Id == userId
+            select u
+        ).FirstOrDefaultAsync();
+
+        if (user == null) {
+            return new UserProjectDTO(Guid.Empty, new List<ProjectDTO>(){}.AsReadOnly(), new List<ProjectDTO>() { }.AsReadOnly());
+        }
+
+        var owns = await (
+            from p in context.Projects
+            where p.Owner == user
+            select p.ToDTO()
+        ).ToListAsync<ProjectDTO>();
+
+        var hasAccessTo = await (
+            from p in context.Projects
+            where p.Collaborators.Contains(user)
+            select p.ToDTO()
+        ).ToListAsync<ProjectDTO>();
+
+        return new(user.Id, owns.AsReadOnly(), hasAccessTo.AsReadOnly());
+    }
+    
     public async Task<Status> RemovePaperAsync(ProjectAddRemovePaperDTO project)
     {
         var projectToModify = await (
