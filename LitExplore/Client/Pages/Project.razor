@@ -2,6 +2,7 @@
 @inject HttpClient Http
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject NavigationManager MyNavigationManager
 
 
 <PageTitle>Project</PageTitle>
@@ -23,6 +24,8 @@
             <li>En bog</li>
             <li>En anden bog</li>
         </ul>
+        <p>@(MyNavigationManager.Uri)</p>
+        <p>@GetQueryParm("projectId")</p>
         <button Id="addLit" class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
         <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
     </div>
@@ -58,15 +61,24 @@
 @code {
     private BSModal AddLitterature;
     private BSModal AddCollaborator;
-    private Project[]? project;
+    private ProjectDetailsDTO project;
     private BSBasicInput<string> UserSearchInput;
     
     private string UserSearchTerm = string.Empty;
 
+    [Parameter]
+    public string Id { get; set; }
+
     protected void SelectedChanged(string e)
     {
         UserSearchTerm = e;
-        Console.WriteLine(UserSearchTerm);
+    }
+
+    string GetQueryParm(string parmName)
+    {
+        var uriBuilder = new UriBuilder(MyNavigationManager.Uri);
+        var q = System.Web.HttpUtility.ParseQueryString(uriBuilder.Query);
+        return q[parmName] ?? "";
     }
 
 
@@ -74,7 +86,9 @@
     {
         try
         {
-            // project = await Http.GetFromJsonAsync<SpecificProject>("api/project?id=etId");
+            var ProjectId = GetQueryParm("projectId");
+            project = await Http.GetFromJsonAsync<ProjectDetailsDTO>($"api/Project/ProjectId/{ProjectId}");
+            Console.WriteLine(project);
         }
         catch (AccessTokenNotAvailableException exception)
         {

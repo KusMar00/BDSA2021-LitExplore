@@ -14,7 +14,7 @@ namespace LitExplore.Server.Tests;
         private PaperController paperController;
 
         public PaperControllerTest() {
-            repo = database.PaperRepository;
+            repo = new PaperReposiory(Context)
             var logger = new Mock<ILogger<PaperController>>();
             paperController = new PaperController(logger.Object, repo);
         }

@@ -5,8 +5,8 @@ using System.Web;
 
 [Authorize]
 [ApiController]
-[Route("api/[controller]")]
-[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
+[Route("api/[controller]/[Action]")]
+[RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes")]
 public class ProjectController : Controller
 {
 	
@@ -19,11 +19,19 @@ public class ProjectController : Controller
     }
 
 	[HttpGet("{userId}")]
-	public async Task<UserProjectDTO> Get(Guid userId) {
+	[ActionName("userId")]
+	public async Task<UserProjectDTO?> Get(Guid userId) {
 		return await repository.ReadProjectsByUserAsync(userId);
 	}
 
-	[HttpPost("{UserId}")]
+	[HttpGet("{ProjectId}")]
+	[ActionName("ProjectId")]
+	public async Task<ProjectDetailsDTO?> Get(int ProjectId)
+	{
+		return await repository.ReadProjectDetailsAsync(ProjectId);
+	}
+
+	[HttpPost]
 	public async Task<(Status, ProjectDTO?)> Post(ProjectCreateDTO project){
 		return await repository.CreateProjectAsync(project);
 	}
@@ -33,7 +41,7 @@ public class ProjectController : Controller
 		return await repository.DeleteProjectAsync(id);
 	}
 
-	[HttpPost]
+	[HttpPost("papers")]
 	public async Task<Status?> Post(ProjectAddRemovePaperDTO paper){
 		return await repository.AddPaperAsync(paper);
 	}
@@ -43,7 +51,7 @@ public class ProjectController : Controller
         return await repository.RemovePaperAsync(paper);
     }
 
-	[HttpPost]
+	[HttpPost("collaborators")]
 	public async Task<Status?> Post(ProjectAddRemoveCollaboratorDTO collaborator){
 		return await repository.AddCollaboratorAsync(collaborator);
 	}
