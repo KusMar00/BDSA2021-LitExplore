@@ -223,7 +223,7 @@ public partial class Database
         
         Paper Paper_Fluorescent_Chemosensors = new()
         {
-            Authors = new HashSet<Author>() { Author_GivenName_Surname },
+            Authors = new HashSet<Author>() { Author_Di_Wu, Author_AC_Sedgwick, Author_Thorf_Gunnla, Author_EU_Akkaya, Author_Juyo_Yoon, Author_TD_James },
             Name = @"Fluorescent chemosensors: the past, present and future",
             URL = @"https://pubs.rsc.org/en/content/articlehtml/2017/cs/c7cs00240h",
             Abstract = @"Fluorescent chemosensors for ions and neutral analytes have been widely applied in many diverse fields such as biology, physiology, pharmacology, and environmental sciences. The field of fluorescent chemosensors has been in existence for about 150 years. In this time, a …",
