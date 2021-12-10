@@ -13,32 +13,39 @@ public class Project
     // causes issues with cycles and cascade paths, so we must handle this manually.
     public User? Owner { get; set; }
 
+    [Required]
     public ISet<User> Collaborators { get; set; } = null!;
 
+    [Required]
     public ISet<Paper> Papers { get; set; } = null!;
 
 
     public ProjectDTO ToDTO()
     {
+        var id = Id;
+        var name = Name;
+        var owner = new UserDTO(    // The owner should never be null if everything works
+						            // as intended, but we better make sure it works
+						            // anyway.
+            Owner != null ? Owner.Id : Guid.Empty,
+            Owner != null ? Owner.DisplayName : ""
+		);
+        var collaborators = ( // Convert to DTOs.
+            from u in Collaborators ?? new HashSet<User>() { }
+            select new UserDTO(u.Id, u.DisplayName)
+        ).ToHashSet();
         return new ProjectDTO(
-            Id,
-            Name,
-            new( // The owner should never be null if everything works
-                 // as intended, but we better make sure it works
-                 // anyway.
-                Owner != null ? Owner.Id : Guid.Empty,
-                Owner != null ? Owner.DisplayName : ""
-            ),
-            ( // Convert to DTOs.
-                from u in Collaborators
-                select new UserDTO(u.Id, u.DisplayName)
-            ).ToHashSet()
+            id,
+            name,
+            owner,
+            collaborators
         );
     }
 
     public ProjectDetailsDTO ToDetailsDTO()
     {
         var basicDTO = ToDTO();
+        //TODO: FIX THIS PROBLEM.. SAME AS ProjectDTO
         return new ProjectDetailsDTO(
             basicDTO.Id,
             basicDTO.Name,

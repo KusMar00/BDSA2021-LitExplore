@@ -159,6 +159,10 @@ public class ProjectRepository : IProjectRepository
             return Status.NotFound;
         }
 
+        if (projectToModify.Collaborators == null) {
+            projectToModify.Collaborators = new HashSet<User>() { };
+        }
+
         var collaboratorToRemove = (
             from p in projectToModify.Collaborators
             where p.Id == project.CollaboratorId
@@ -174,7 +178,7 @@ public class ProjectRepository : IProjectRepository
         return Status.Deleted;
     }
 
-    public async Task<UserProjectDTO> ReadProjectsByUserAsync(Guid userId)
+    public async Task<UserProjectDTO?> ReadProjectsByUserAsync(Guid userId)
     {
         var user = await (
             from u in context.Users
@@ -212,6 +216,10 @@ public class ProjectRepository : IProjectRepository
         if (projectToModify == null)
         {
             return Status.NotFound;
+        }
+
+        if (projectToModify.Papers == null) {
+            projectToModify.Papers = new HashSet<Paper>() { };
         }
 
         var paperToRemove = (

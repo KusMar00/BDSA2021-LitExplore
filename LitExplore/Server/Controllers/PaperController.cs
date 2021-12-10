@@ -4,7 +4,7 @@ namespace LitExplore.Server.Controllers;
 [Authorize]
 [ApiController]
 [Route("api/[controller]")]
-[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
+[RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes")]
 public class PaperController : Controller
 {
 	private readonly ILogger<PaperController> logger;

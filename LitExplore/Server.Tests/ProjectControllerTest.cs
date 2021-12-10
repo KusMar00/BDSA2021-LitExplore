@@ -1,4 +1,4 @@
-using Xunit;
+            using Xunit;
 using System;
 using System.Collections.Generic;
 using LitExplore.Repository;
@@ -90,7 +90,7 @@ namespace LitExplore.Server.Tests
             );
 
             // Act
-            var actual = await projectController.Get(1);
+            var actual = await projectController.Get(guid_1);
 
             // Assert
             #pragma warning disable CS8602
