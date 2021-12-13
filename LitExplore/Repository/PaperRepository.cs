@@ -43,7 +43,7 @@ public class PaperRepository : IPaperRepository
                          p.Id,
                          p.Name,
                          ( // We need to convert Authors to AuthorDTOs.
-                             from a in p.Authors ?? new HashSet<Author>() { }
+                             from a in p.Authors
                              select new AuthorDTO(a.Id, a.GivenName, a.Surname)
                          ).ToHashSet(),
                          p.URL,

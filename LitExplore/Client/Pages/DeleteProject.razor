@@ -1,10 +1,12 @@
 @inject HttpClient Http
 @inject NavigationManager NavManager
 
-<div>  
-    <BSBasicInput style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="ProjectInput" Value="projectName" ValueChanged="@((string value) => UpdateProjectName(value))" ValidateOnInput="true" Placeholder="Username"/>
-    <BSButton style="background-color: var(--bs-danger)" OnClick="@(()=>{RemoveProject();})"> Remove 🗑 </BSButton>
-    <p style="color:var(--lavender)">Write the name of the project, to delete it</p>
+<div style="width: 100%; display: flex; justify-content: center;"> 
+    <div>
+        <BSBasicInput style ="margin-top:20px; width: 20vw; display:inline-block;"InputType="InputType.Text" @ref="ProjectInput" Value="projectName" ValueChanged="@((string value) => UpdateProjectName(value))" ValidateOnInput="true" Placeholder="Project name"/>
+        <BSButton style="background-color: var(--bs-danger); display: inline-block;" OnClick="@(()=>{RemoveProject();})">Delete 🗑 </BSButton>
+        <p style="color:var(--lavender)">Write the name of the project, to delete it</p>
+    </div>
 </div>
 
 @code {

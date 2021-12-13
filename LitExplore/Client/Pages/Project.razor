@@ -15,160 +15,34 @@
 else {
 <h1 style="color: white;">@project.Name</h1>
 <div class="content">
-    <div class="collaborators">
-        <h3>Collaborators</h3>
-        <p>@project.Owner.DisplayName <b>(Owner)</b></p>
-        @foreach (var user in project.Collaborators)
-        {
-            <p>@user.DisplayName</p>
-        }
-
-        <button Id="addCollab" class="adder" @onclick="@(() => AddCollaborator.Show())">+</button>
-        <BSTooltip Target="addCollab" Placement="Placement.Bottom">Add collaborator</BSTooltip>
-    </div>
-    <div class="litterature">
-        <h3>Project Litterature</h3>
-        <ul>
-            @foreach (var paper in project.Papers)
-            {
-                <li>
-                    <p style="display: inline-block">@paper.Name</p>
-                    <button style="display: inline-block" @onclick="@(()=>{removePaperFromProject(@paper.Id);})">Delete from project</button>
-                </li>
-            }
-        </ul>
-        <button Id="addLit" class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
-        <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
-    </div>
+    <Collaborator project=@project userId=@userId />
+    <Litterature project=@project/>
 </div>
 
-<BSModal @ref="AddLitterature" Size="Size.Large">
-    <BSModalHeader OnClick="@(() => AddLitterature.Hide())">Add a paper to the project</BSModalHeader>
-	<BSModalBody>
-        <BSTabGroup>	
-        <BSTabList IsPills="true" IsList="true">
-            <BSTab>
-                <BSTabLabel>Search</BSTabLabel>
-                <BSTabContent>
-                <BSBasicInput Style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="LitteratureSearchInput" Value="LitteratureSearch" ValueChanged="@((string value) => SearchLit(value))" ValidateOnInput="true" Placeholder="New litterature"/>
-                    @if(@SearchedPapers != null)
-                    {
-                        <ul>
-                            @foreach (var paper in @SearchedPapers)
-                            {
-                                <li>
-                                    <p style="display: inline-block; width: 75%;">@paper.Name</p>
-                                    <button style="display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</button>
-                                </li>
-                            }
-                        </ul>
-                    }
-                </BSTabContent>
-            </BSTab>
-            <BSTab>
-                <BSTabLabel>Recommended</BSTabLabel>
-                <BSTabContent>
-                <ul>
-                    @foreach (var paper in @relatedPapers)
-                    {
-                        <li>
-                            <p style="display: inline-block; width: 75%;">@paper.Name</p>
-                            <button style="display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</button>
-                        </li>
-                    }
-                </ul>
-                </BSTabContent>
-            </BSTab>
-        </BSTabList>
-        <BSTabSelectedContent/>
-    </BSTabGroup>
-    </BSModalBody>
-</BSModal>
 
-<BSModal @ref="AddCollaborator" Size="Size.Large">
-    <BSModalHeader OnClick="@(() => AddCollaborator.Hide())">Add a collaborator to the project</BSModalHeader>
-    <BSBasicInput Style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="UserSearch" ValueChanged="@((string value) => SearchUser(value))" ValidateOnInput="true" Placeholder="Username"/>
-    <BSModalBody>
-        <p>Search for a user to add as a collaborator.</p>
-        @if(@SearchedUsers != null)
-        {
-            @foreach(var user in @SearchedUsers)
-            {
-                <p>@user.DisplayName</p>
-                <button style="display: inline-block" @onclick="@(()=>{AddCollaboratorToProject(@user.Id);})">Add Collaborator</button>
-            }
-        }
-    </BSModalBody>
-</BSModal>
 @if(project.Owner.Id == userId){
     <DeleteProject CurrentProject=@project/>
 }
+
 }
 @code {
     [Parameter]
     public string Id { get; set; }
     private UserDTO user;
     private Guid userId;
-    private BSModal AddLitterature;
-    private BSModal AddCollaborator;
+
     private ProjectDetailsDTO project;
-    private PaperDTO[] SearchedPapers;
-    private UserDTO[] SearchedUsers;
-
-    private BSBasicInput<string> LitteratureSearchInput;
-    private BSBasicInput<string> UserSearchInput;
-    private string LitteratureSearch = string.Empty;
-    private string UserSearch = string.Empty;
-
-    private IReadOnlyCollection<PaperDTO> relatedPapers;
-    
-    protected async void SearchLit(string e)
-    {
-
-        LitteratureSearch = e;
-        if(LitteratureSearch.Length > 3){
-            SearchedPapers = await Http.GetFromJsonAsync<PaperDTO[]>($"api/Paper/Name/{LitteratureSearch}");
-        }
-        Console.WriteLine(SearchedPapers);
-    }
-
-    protected async void addPaperToProject(int id){
-        ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
-        var addPaper = await Http.PostAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper", paper);
-        Console.WriteLine(addPaper);
-    }
-
-    protected async void removePaperFromProject(int id){
-        ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
-        var removePaper = await Http.PutAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper/", paper);
-    }
-
-    protected async void SearchUser(string e)
-    {
-        UserSearch = e;
-        if (UserSearch.Length > 3)
-        {
-            SearchedUsers = await Http.GetFromJsonAsync<UserDTO[]>($"api/User/Name/{UserSearch}");
-        }
-    }
-
-    protected async void AddCollaboratorToProject(Guid userId)
-    {
-        ProjectAddRemoveCollaboratorDTO user = new ProjectAddRemoveCollaboratorDTO(project.Id, userId);
-        var addUser = await Http.PostAsJsonAsync<ProjectAddRemoveCollaboratorDTO>($"api/Project/Collaborator", user);
-        Console.WriteLine(addUser);
-
-    }
-
-    protected async void ShowRelatedLit(){
-        Console.WriteLine("test");
-    }
 
     string GetQueryParm(string parmName)
     {
         var uriBuilder = new UriBuilder(MyNavigationManager.Uri);
         var q = System.Web.HttpUtility.ParseQueryString(uriBuilder.Query);
         return q[parmName] ?? "";
+    }
+
+    protected async Task<ProjectDetailsDTO> GetProject(){
+        var ProjectId = GetQueryParm("projectId");
+        return await Http.GetFromJsonAsync<ProjectDetailsDTO>($"api/Project/ProjectId/{ProjectId}");
     }
 
     protected override async Task OnInitializedAsync()
@@ -178,13 +52,11 @@ else {
             var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
             userId = Guid.Parse(authstate.User.FindFirst(c => c.Type == "sub")?.Value);    
 
-            var ProjectId = GetQueryParm("projectId");
-            Console.WriteLine(ProjectId);
-            project = await Http.GetFromJsonAsync<ProjectDetailsDTO>($"api/Project/ProjectId/{ProjectId}");
+            project = await GetProject();
 
-            Console.WriteLine(project);
-            relatedPapers = await Http.GetFromJsonAsync<PaperDTO[]>($"api/PaperDiscovery/{ProjectId}");
-            Console.WriteLine(relatedPapers);
+            //if(!project.Collaborators.Contains(userID) || project.Owner.Id != userId){
+            //  MyNavigationManager.NavigateTo("/");
+            //}
         }
         catch (AccessTokenNotAvailableException exception)
         {

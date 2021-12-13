@@ -24,6 +24,7 @@ public class UserController : Controller
 	}
 
 	[HttpGet("{userId}")]
+	[ActionName("Get")]
 	public async Task<UserDTO?> Get(Guid userId)
 	{
 		return await repository.ReadAsync(userId);

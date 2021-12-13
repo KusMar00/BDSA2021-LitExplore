@@ -1,0 +1,112 @@
+@inject HttpClient Http
+@inject NavigationManager MyNavigationManager
+
+<div class="litterature">
+    <h3 style="color: var(--lavender);">Project Litterature</h3>
+    <BSListGroup ListGroupType="ListGroupType.Button">
+        @foreach (var paper in project.Papers)
+        {
+            <BSListGroupItem ListGroupType="ListGroupType.Button" @onclick="@(()=>{paperModal.OpenModal(paper.Id);})">
+                <p style="display: inline-block" >@paper.Name</p>
+                <button style="display: inline-block" @onclick="@(()=>{removePaperFromProject(@paper.Id);})">Delete from project</button>
+            </BSListGroupItem>
+        }
+    </BSListGroup>
+    <button Id="addLit" class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
+    <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
+</div>
+
+<BSModal @ref="AddLitterature" Size="Size.Large">
+    <BSModalHeader OnClick="@(() => AddLitterature.Hide())">Add a paper to the project</BSModalHeader>
+	<BSModalBody>
+        <BSTabGroup>	
+        <BSTabList IsPills="true" IsList="true">
+            <BSTab>
+                <BSTabLabel>Search</BSTabLabel>
+                <BSTabContent>
+                <BSBasicInput Style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="LitteratureSearchInput" Value="LitteratureSearch" ValueChanged="@(async (string value) => {SearchedPapers = await SearchLit(value);})" ValidateOnInput="true" Placeholder="New litterature"/>
+                    @if(@SearchedPapers != null)
+                    {
+                        <ul>
+                            @foreach (var paper in @SearchedPapers)
+                            {
+                                <li>
+                                    <p style="display: inline-block; width: 75%;">@paper.Name</p>
+                                    <button style="display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</button>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </BSTabContent>
+            </BSTab>
+            <BSTab>
+                <BSTabLabel>Recommended</BSTabLabel>
+                <BSTabContent>
+                <ul>
+                    @foreach (var paper in @relatedPapers)
+                    {
+                        <li>
+                            <p style="display: inline-block; width: 75%;">@paper.Name</p>
+                            <button style="display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</button>
+                        </li>
+                    }
+                </ul>
+                </BSTabContent>
+            </BSTab>
+        </BSTabList>
+        <BSTabSelectedContent/>
+    </BSTabGroup>
+    </BSModalBody>
+</BSModal>
+
+<PaperModal @ref=@paperModal/>
+
+@code {
+    [Parameter]
+    public ProjectDetailsDTO project {get; set;}
+
+	private BSModal AddLitterature;
+
+    private PaperModal paperModal {get; set;}
+
+    private PaperDTO[] SearchedPapers;
+
+    private BSBasicInput<string> LitteratureSearchInput;
+    private string LitteratureSearch = string.Empty;
+
+    private IReadOnlyCollection<PaperDTO> relatedPapers;
+    
+    protected async Task<PaperDTO[]> SearchLit(string e)
+    {
+
+        LitteratureSearch = e;
+        if(LitteratureSearch.Length > 3){
+            return await Http.GetFromJsonAsync<PaperDTO[]>($"api/Paper/Name/{LitteratureSearch}");
+        }
+        return new PaperDTO[0];
+        Console.WriteLine(SearchedPapers);
+    }
+
+    protected async void addPaperToProject(int id){
+        ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
+        var addPaper = await Http.PostAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper", paper);
+    }
+
+    protected async void removePaperFromProject(int id){
+        ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
+        var removePaper = await Http.PutAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper/", paper);
+    }
+
+    string GetQueryParm(string parmName)
+    {
+        var uriBuilder = new UriBuilder(MyNavigationManager.Uri);
+        var q = System.Web.HttpUtility.ParseQueryString(uriBuilder.Query);
+        return q[parmName] ?? "";
+    }
+
+    protected override async Task OnInitializedAsync(){
+        var ProjectId = GetQueryParm("projectId");
+		relatedPapers = await Http.GetFromJsonAsync<PaperDTO[]>($"api/PaperDiscovery/{ProjectId}");
+        Console.WriteLine(relatedPapers);
+    }
+}

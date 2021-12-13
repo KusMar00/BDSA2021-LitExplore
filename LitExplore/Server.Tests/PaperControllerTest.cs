@@ -57,7 +57,7 @@ namespace LitExplore.Server.Tests;
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(2, "Paper2")};
 
             // Act
-            var actual = await paperController.Get(1);
+            var actual = await paperController.Get("Paper1");
 
             // Assert
             Assert.Equal(expected, actual);
@@ -71,7 +71,7 @@ namespace LitExplore.Server.Tests;
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(1, "Paper1"), new PaperDTO(3, "Paper3")};
 
             // Act
-            var actual = await paperController.Get(2);
+            var actual = await paperController.Get("Paper2");
 
             // Assert
             Assert.Equal(expected, actual);
@@ -84,7 +84,7 @@ namespace LitExplore.Server.Tests;
             IReadOnlyCollection<PaperDTO>? expected = new List<PaperDTO>();
 
             // Act
-            var actual = await paperController.Get(4);
+            var actual = await paperController.Get("Paper4");
 
             // Assert
             Assert.Equal(expected, actual);

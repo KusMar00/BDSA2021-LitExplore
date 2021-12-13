@@ -9,7 +9,6 @@ using System.Web;
 [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes")]
 public class ProjectController : Controller
 {
-	
 	private readonly ILogger<ProjectController> logger;
 	private IProjectRepository repository;
 	public ProjectController(ILogger<ProjectController> _logger, IProjectRepository _repository)

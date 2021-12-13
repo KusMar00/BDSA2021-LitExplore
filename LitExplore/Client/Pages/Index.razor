@@ -36,7 +36,7 @@
             
 
             <div style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;">
-                <BSBasicInput Style ="width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="Project name"/>
+                <BSBasicInput Style ="width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="New project"/>
                 <BSButton style="background-color:var(--bs-success);" Id="addLit" class="adder" @onclick="@(() => @CreateNewProject())">+</BSButton>
                 <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
             </div>
@@ -62,20 +62,18 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        userId = Guid.Parse(authstate.User.FindFirst(c => c.Type == "sub")?.Value);        
-        try {
-            user = await Http.GetFromJsonAsync<UserDTO>($"api/User/{userId}");
-        } 
-        catch( Exception e)
-        {
-            var response = await Http.PostAsJsonAsync<UserDTO>("api/User/Create", new UserDTO(userId, authstate.User.Identity.Name));
-        }
-
         try
-        {
-            UserProjects = await Http.GetFromJsonAsync<UserProjectDTO>($"api/Project/userId/{userId}");
-            Console.WriteLine(UserProjects);
+            {
+            var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            userId = Guid.Parse(authstate.User.FindFirst(c => c.Type == "sub")?.Value);        
+            try {
+                user = await Http.GetFromJsonAsync<UserDTO>($"api/User/Get/{userId}");
+            } 
+            catch(Exception e)
+            {
+                var response = await Http.PostAsJsonAsync<UserDTO>("api/User/Create", new UserDTO(userId, authstate.User.Identity.Name));
+            }
+            UserProjects = await getProjects();
         }
         catch (AccessTokenNotAvailableException exception)
         {
@@ -83,10 +81,17 @@
         }
     }
 
+    protected async Task<UserProjectDTO> getProjects(){
+        return await Http.GetFromJsonAsync<UserProjectDTO>($"api/Project/userId/{userId}");
+    }
+
     protected async Task CreateNewProject(){
         try
         {
-            await Http.PostAsJsonAsync<ProjectCreateDTO>($"api/Project/Create", new ProjectCreateDTO(userId, newProjectName));
+            var response = await Http.PostAsJsonAsync<ProjectCreateDTO>($"api/Project/Create", new ProjectCreateDTO(userId, newProjectName));
+            if(response.StatusCode == System.Net.HttpStatusCode.OK){
+                UserProjects = await getProjects();
+            }
         } 
         catch (AccessTokenNotAvailableException exception)
         {

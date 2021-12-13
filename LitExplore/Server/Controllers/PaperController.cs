@@ -22,4 +22,10 @@ public class PaperController : Controller
 	public async Task<IReadOnlyCollection<PaperDTO?>?> Get(string name){
 		return await repository.ReadByNameAsync(name);
 	}
+
+	[HttpGet("{id}")]
+	[ActionName("Details")]
+	public async Task<PaperDetailsDTO?> Get(int id) {
+		return await repository.ReadDetailsAsync(id);
+	}
 }
