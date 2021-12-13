@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
-    [Migration("20211201125226_Initial")]
+    [Migration("20211210084221_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,8 +75,8 @@ namespace LitExplore.Repository.Migrations
                         .HasColumnType("nvarchar(2200)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("URL")
                         .HasMaxLength(250)
@@ -100,30 +100,53 @@ namespace LitExplore.Repository.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<Guid?>("OwnerId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("OwnerInternalId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerInternalId");
 
                     b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("LitExplore.Repository.Entities.User", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("InternalId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InternalId"), 1L, 1);
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("Id");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("InternalId");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PaperPaper", b =>
+                {
+                    b.Property<int>("CitedById")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CitingsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CitedById", "CitingsId");
+
+                    b.HasIndex("CitingsId");
+
+                    b.ToTable("PaperPaper");
                 });
 
             modelBuilder.Entity("PaperProject", b =>
@@ -143,13 +166,13 @@ namespace LitExplore.Repository.Migrations
 
             modelBuilder.Entity("ProjectUser", b =>
                 {
-                    b.Property<Guid>("CollaboratorsId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("CollaboratorsInternalId")
+                        .HasColumnType("int");
 
                     b.Property<int>("HasAccessToId")
                         .HasColumnType("int");
 
-                    b.HasKey("CollaboratorsId", "HasAccessToId");
+                    b.HasKey("CollaboratorsInternalId", "HasAccessToId");
 
                     b.HasIndex("HasAccessToId");
 
@@ -175,9 +198,24 @@ namespace LitExplore.Repository.Migrations
                 {
                     b.HasOne("LitExplore.Repository.Entities.User", "Owner")
                         .WithMany("IsOwnerOf")
-                        .HasForeignKey("OwnerId");
+                        .HasForeignKey("OwnerInternalId");
 
                     b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("PaperPaper", b =>
+                {
+                    b.HasOne("LitExplore.Repository.Entities.Paper", null)
+                        .WithMany()
+                        .HasForeignKey("CitedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LitExplore.Repository.Entities.Paper", null)
+                        .WithMany()
+                        .HasForeignKey("CitingsId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PaperProject", b =>
@@ -199,7 +237,7 @@ namespace LitExplore.Repository.Migrations
                 {
                     b.HasOne("LitExplore.Repository.Entities.User", null)
                         .WithMany()
-                        .HasForeignKey("CollaboratorsId")
+                        .HasForeignKey("CollaboratorsInternalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

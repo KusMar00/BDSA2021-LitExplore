@@ -56,4 +56,12 @@ public class UserRepository : IUserRepository
                     select new UserDTO(u.Id, u.DisplayName);
         return await users.FirstOrDefaultAsync();
     }
+
+    public async Task<IReadOnlyCollection<UserDTO>> ReadByNameAsync(string name)
+    {
+        var users = from u in context.Users
+                     where u.DisplayName != null && u.DisplayName.ToLower().Contains(name.ToLower())
+                     select new UserDTO(u.Id, u.DisplayName);
+        return (await users.ToListAsync()).AsReadOnly();
+    }
 }

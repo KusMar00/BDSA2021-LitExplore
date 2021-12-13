@@ -9,7 +9,7 @@ public class ProjectRepository : IProjectRepository
     public async Task<Status> AddCollaboratorAsync(ProjectAddRemoveCollaboratorDTO project)
     {
         var projectToModify = await (
-           from p in context.Projects
+           from p in context.Projects.Include(p => p.Collaborators)
            where p.Id == project.ProjectId
            select p
         ).FirstOrDefaultAsync();
@@ -43,7 +43,7 @@ public class ProjectRepository : IProjectRepository
     public async Task<Status> AddPaperAsync(ProjectAddRemovePaperDTO project)
     {
         var projectToModify = await (
-            from p in context.Projects
+            from p in context.Projects.Include(p => p.Papers)
             where p.Id == project.ProjectId
             select p
         ).FirstOrDefaultAsync();
@@ -64,7 +64,11 @@ public class ProjectRepository : IProjectRepository
             return Status.NotFound;
         }
 
-        if (projectToModify.Papers.Contains(paperToAdd))
+        if (projectToModify.Papers == null)
+        {
+            projectToModify.Papers = new HashSet<Paper>() { };
+        }
+        else if (projectToModify.Papers.Contains(paperToAdd))
         {
             return Status.Conflict;
         }
@@ -133,6 +137,8 @@ public class ProjectRepository : IProjectRepository
     public async Task<ProjectDTO?> ReadProjectAsync(int id)
     {
         var projects = from p in context.Projects
+                           .Include(p => p.Owner)
+                           .Include(p => p.Collaborators)
                        where p.Id == id
                        select p.ToDTO();
         return await projects.FirstOrDefaultAsync();
@@ -141,6 +147,9 @@ public class ProjectRepository : IProjectRepository
     public async Task<ProjectDetailsDTO?> ReadProjectDetailsAsync(int id)
     {
         var projects = from p in context.Projects
+                           .Include(p => p.Owner)
+                           .Include(p => p.Papers)
+                           .Include(p => p.Collaborators)
                        where p.Id == id
                        select p.ToDetailsDTO();
         return await projects.FirstOrDefaultAsync();
@@ -149,7 +158,7 @@ public class ProjectRepository : IProjectRepository
     public async Task<Status> RemoveCollaboratorAsync(ProjectAddRemoveCollaboratorDTO project)
     {
         var projectToModify = await (
-            from p in context.Projects
+            from p in context.Projects.Include(p => p.Collaborators)
             where p.Id == project.ProjectId
             select p
         ).FirstOrDefaultAsync();
@@ -197,7 +206,7 @@ public class ProjectRepository : IProjectRepository
         ).ToListAsync<ProjectDTO>();
 
         var hasAccessTo = await (
-            from p in context.Projects
+            from p in context.Projects.Include(p => p.Owner)
             where p.Collaborators.Contains(user)
             select p.ToDTO()
         ).ToListAsync<ProjectDTO>();
@@ -208,7 +217,7 @@ public class ProjectRepository : IProjectRepository
     public async Task<Status> RemovePaperAsync(ProjectAddRemovePaperDTO project)
     {
         var projectToModify = await (
-            from p in context.Projects
+            from p in context.Projects.Include(p => p.Papers)
             where p.Id == project.ProjectId
             select p
         ).FirstOrDefaultAsync();

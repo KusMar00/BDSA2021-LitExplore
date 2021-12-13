@@ -25,16 +25,21 @@
             @if(UserProjects == null)
             {
                 <p style="color: var(--lavender); margin-top: 10px;"><i>No projects were found</i></p>
+            } 
+            else
+            {
+                @foreach (var project in UserProjects.Owns.Concat(UserProjects.HasAccesTo))
+                {
+                    <ProjectCard Name="@project.Name" Owner="@project.Owner.DisplayName" ProjectId="@project.Id" />
+                }
             }
             
-            @foreach (var project in UserProjects.Owns.Concat(UserProjects.HasAccesTo))
-            {
-                <ProjectCard Name="@project.Name" Owner="@project.Owner.DisplayName" ProjectId="@project.Id" />
-            }
 
-            <BSBasicInput Style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="Project name"/>
-            <button Id="addLit" class="adder" @onclick="@(() => @CreateNewProject())">+</button>
-            <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;">
+                <BSBasicInput Style ="width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="Project name"/>
+                <BSButton style="background-color:var(--bs-success);" Id="addLit" class="adder" @onclick="@(() => @CreateNewProject())">+</BSButton>
+                <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
+            </div>
         </div>
     </Authorized>
     <NotAuthorized>
@@ -43,7 +48,7 @@
 </AuthorizeView>
 
 @code {
-    private UserProjectDTO? UserProjects = null;
+    private UserProjectDTO UserProjects;
     private BSBasicInput<string>? UserSearchInput;
     private string newProjectName = string.Empty;
 
@@ -58,15 +63,13 @@
     protected override async Task OnInitializedAsync()
     {
         var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        userId = Guid.Parse(authstate.User.FindFirst(c => c.Type == "sub")?.Value);
-        Console.WriteLine(userId);
-        
+        userId = Guid.Parse(authstate.User.FindFirst(c => c.Type == "sub")?.Value);        
         try {
             user = await Http.GetFromJsonAsync<UserDTO>($"api/User/{userId}");
         } 
         catch( Exception e)
         {
-            var response = await Http.PostAsJsonAsync<UserDTO>("api/User", new UserDTO(userId, authstate.User.Identity.Name));
+            var response = await Http.PostAsJsonAsync<UserDTO>("api/User/Create", new UserDTO(userId, authstate.User.Identity.Name));
         }
 
         try
@@ -83,7 +86,7 @@
     protected async Task CreateNewProject(){
         try
         {
-            await Http.PostAsJsonAsync<ProjectCreateDTO>($"api/Project", new ProjectCreateDTO(userId, newProjectName));
+            await Http.PostAsJsonAsync<ProjectCreateDTO>($"api/Project/Create", new ProjectCreateDTO(userId, newProjectName));
         } 
         catch (AccessTokenNotAvailableException exception)
         {

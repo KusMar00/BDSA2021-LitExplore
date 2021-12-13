@@ -1,0 +1,35 @@
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<div>  
+    <BSBasicInput style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="ProjectInput" Value="projectName" ValueChanged="@((string value) => UpdateProjectName(value))" ValidateOnInput="true" Placeholder="Username"/>
+    <BSButton style="background-color: var(--bs-danger)" OnClick="@(()=>{RemoveProject();})"> Remove 🗑 </BSButton>
+    <p style="color:var(--lavender)">Write the name of the project, to delete it</p>
+</div>
+
+@code {
+    [Parameter]
+    public ProjectDTO CurrentProject {get; set;}
+
+    private BSBasicInput<string> ProjectInput;
+    private string projectName = string.Empty;
+    
+    private void UpdateProjectName(String e)
+    {
+        projectName = e;
+        Console.WriteLine(CurrentProject);
+    }
+
+    private async void RemoveProject(){
+        if(projectName == CurrentProject.Name)
+        {
+            var id = CurrentProject.Id;
+            var response = await Http.DeleteAsync($"api/Project/Delete/{id}");
+            if(response.StatusCode == System.Net.HttpStatusCode.OK){
+                NavManager.NavigateTo("/");
+            }
+        }
+    }
+
+
+}

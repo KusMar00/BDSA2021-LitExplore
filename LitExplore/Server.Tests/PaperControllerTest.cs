@@ -14,7 +14,7 @@ namespace LitExplore.Server.Tests;
         private PaperController paperController;
 
         public PaperControllerTest() {
-            repo = new PaperReposiory(Context)
+            repo = new PaperRepository(Context);
             var logger = new Mock<ILogger<PaperController>>();
             paperController = new PaperController(logger.Object, repo);
         }
@@ -38,32 +38,6 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetPaperAsync_Paper_1_Returns_Paper_1()
-        {
-            // Arrange
-            PaperDTO? expected = new(1, "Paper1");
-
-            // Act
-            var actual = await paperController.Get(1);
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-        public async void GetPaperAsync_Paper_5_Returns_Null()
-        {
-            // Arrange
-            PaperDTO? expected = null;
-
-            // Act
-            var actual = await paperController.Get(5);
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
         public async void GetPaperAsync_String_Paper1_Returns_Paper1()
         {
             // Arrange
@@ -83,11 +57,12 @@ namespace LitExplore.Server.Tests;
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(2, "Paper2")};
 
             // Act
-            var actual = await paperController.GetRelated(1);
+            var actual = await paperController.Get(1);
 
             // Assert
             Assert.Equal(expected, actual);
         }
+
 
         [Fact]
         public async void GetRelatedPaperAsync_Paper_2_Returns_Paper_1_And_Paper_3()
@@ -96,7 +71,7 @@ namespace LitExplore.Server.Tests;
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(1, "Paper1"), new PaperDTO(3, "Paper3")};
 
             // Act
-            var actual = await paperController.GetRelated(2);
+            var actual = await paperController.Get(2);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -109,10 +84,23 @@ namespace LitExplore.Server.Tests;
             IReadOnlyCollection<PaperDTO>? expected = new List<PaperDTO>();
 
             // Act
-            var actual = await paperController.GetRelated(4);
+            var actual = await paperController.Get(4);
 
             // Assert
             Assert.Equal(expected, actual);
         }
+/*
+        [Fact]
+        public async void GetByRelationsAsync_Paper_5_Returns_Null()
+        {
+            // Arrange
+            IReadOnlyCollection<PaperDTO>? expected = new ReadOnlyCollection<PaperDTO>[] { };
 
+            // Act
+            var actual = await paperController.Get(5);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+*/
     }

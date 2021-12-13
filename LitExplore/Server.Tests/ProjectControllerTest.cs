@@ -17,7 +17,7 @@ namespace LitExplore.Server.Tests
         private IProjectRepository repo;
         private ProjectController projectController;
         public ProjectControllerTest () {
-            repo = database.ProjectRepository;
+            repo = new ProjectRepository(Context);
             var logger = new Mock<ILogger<ProjectController>>();
             projectController = new ProjectController(logger.Object, repo);
         }
@@ -90,7 +90,7 @@ namespace LitExplore.Server.Tests
             );
 
             // Act
-            var actual = await projectController.Get(guid_1);
+            ProjectDetailsDTO? actual = await projectController.Get(1);
 
             // Assert
             #pragma warning disable CS8602

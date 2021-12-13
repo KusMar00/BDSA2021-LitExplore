@@ -32,31 +32,37 @@ public class ProjectController : Controller
 	}
 
 	[HttpPost]
+	[ActionName("Create")]
 	public async Task<(Status, ProjectDTO?)> Post(ProjectCreateDTO project){
 		return await repository.CreateProjectAsync(project);
 	}
 
-	[HttpDelete]
+	[HttpDelete("{id}")]
+	[ActionName("Delete")]
 	public async Task<Status?> Delete(int id){
 		return await repository.DeleteProjectAsync(id);
 	}
 
-	[HttpPost("papers")]
+	[HttpPost]
+	[ActionName("Paper")]
 	public async Task<Status?> Post(ProjectAddRemovePaperDTO paper){
 		return await repository.AddPaperAsync(paper);
 	}
 
-	[HttpDelete]
+	[HttpPut]
+	[ActionName("Paper")]
 	public async Task<Status?> Delete(ProjectAddRemovePaperDTO paper){
         return await repository.RemovePaperAsync(paper);
     }
 
-	[HttpPost("collaborators")]
+	[HttpPost]
+	[ActionName("Collaborator")]
 	public async Task<Status?> Post(ProjectAddRemoveCollaboratorDTO collaborator){
 		return await repository.AddCollaboratorAsync(collaborator);
 	}
 
-	[HttpDelete]
+	[HttpPut]
+	[ActionName("Collaborator")]
 	public async Task<Status?> Delete(ProjectAddRemoveCollaboratorDTO collaborator){
 		return await repository.RemoveCollaboratorAsync(collaborator);
 	}

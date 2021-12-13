@@ -6,9 +6,9 @@ using Xunit;
 
 namespace LitExplore.PaperDiscovery.Tests;
 
+/*
 public class PaperDiscoveryTests : RepositoryTests
 {
-
     private IPaperRepository repo;
     private PaperDiscovery paperDiscovery;
 
@@ -102,3 +102,4 @@ public class PaperDiscoveryTests : RepositoryTests
         Assert.Equal(expected, actual);
     }
 }
+*/

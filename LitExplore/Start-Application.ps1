@@ -31,6 +31,23 @@ Write-Host "Configuring Connection String"
 dotnet user-secrets init --project $secretsProject
 dotnet user-secrets set "ConnectionStrings:$database" "$connectionString" --project $secretsProject
 
+# wait to make sure docker is running
+Write-Host "Waiting to make sure container is ready"
+
+Function Sleep-Progress($seconds) { # credit to https://lazyadmin.nl/powershell/start-sleep/ for this function
+	$s = 0;
+	Do {
+		$p = [math]::Round(100 - ((($seconds * 10) - $s) / ($seconds * 10) * 100));
+		Write-Progress -Activity "Waiting..." -Status "$p% Complete:" -SecondsRemaining ($seconds - ($s / 10)) -PercentComplete $p;
+		[System.Threading.Thread]::Sleep(100)
+		$s++;
+	}
+	While ($s -lt ($seconds * 10));
+    Write-Progress -Activity "Waiting..." -Status "100% Complete:" -SecondsRemaining (0) -PercentComplete 100;
+}
+
+Sleep-Progress 5
+
 # start application
 Write-Host "Starting App"
 dotnet run --project $startupProject
