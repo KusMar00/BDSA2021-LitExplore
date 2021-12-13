@@ -6,6 +6,7 @@ using LitExplore.Server.Controllers;
 using Xunit;
 using Microsoft.Extensions.Logging;
 using Moq;
+
 namespace LitExplore.Server.Tests;
 
     public class PaperControllerTest : RepositoryTests
@@ -14,7 +15,7 @@ namespace LitExplore.Server.Tests;
         private PaperController paperController;
 
         public PaperControllerTest() {
-            repo = new PaperReposiory(Context)
+            repo = new PaperRepository(Context);
             var logger = new Mock<ILogger<PaperController>>();
             paperController = new PaperController(logger.Object, repo);
         }
@@ -38,7 +39,7 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetPaperAsync_Paper_1_Returns_Paper_1()
+        public async void Get_Paper_By_Id_1_Returns_Paper_1()
         {
             // Arrange
             PaperDTO? expected = new(1, "Paper1");
@@ -51,7 +52,7 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetPaperAsync_Paper_5_Returns_Null()
+        public async void Get_Paper_By_Id_5_Returns_Null()
         {
             // Arrange
             PaperDTO? expected = null;
@@ -64,7 +65,7 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetPaperAsync_String_Paper1_Returns_Paper1()
+        public async void Get_Paper_By_Name_Paper1_Returns_Paper_1()
         {
             // Arrange
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(1, "Paper1")};
@@ -77,7 +78,7 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetRelatedPaperAsync_Paper_1_Returns_Paper_2()
+        public async void Get_Related_Papers_By_Id_1_Returns_Paper_2()
         {
             // Arrange
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(2, "Paper2")};
@@ -90,7 +91,7 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetRelatedPaperAsync_Paper_2_Returns_Paper_1_And_Paper_3()
+        public async void Get_Related_Papers_By_Id_2_Returns_Paper_2_And_Paper_3()
         {
             // Arrange
             IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(1, "Paper1"), new PaperDTO(3, "Paper3")};
@@ -103,7 +104,7 @@ namespace LitExplore.Server.Tests;
         }
 
         [Fact]
-        public async void GetRelatedPaperAsync_Paper_4_Returns_Empty()
+        public async void Get_Related_Papers_By_Id_4_Returns_Empty()
         {
             // Arrange
             IReadOnlyCollection<PaperDTO>? expected = new List<PaperDTO>();

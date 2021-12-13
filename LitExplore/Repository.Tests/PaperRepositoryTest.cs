@@ -80,7 +80,7 @@ public class PaperRepositoryTest : RepositoryTests
     public async void ReadDetailsAsync_Non_Existing_Returns_Null()
     {
         // Arrange
-        PaperDTO? expected = null;
+        PaperDetailsDTO? expected = null;
 
         // Act
         var actual = await repo.ReadDetailsAsync(10);

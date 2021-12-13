@@ -1,4 +1,5 @@
-﻿namespace LitExplore.Repository;
+﻿
+namespace LitExplore.Repository;
 
 public class PaperRepository : IPaperRepository
 {
@@ -35,13 +36,13 @@ public class PaperRepository : IPaperRepository
     
     public async Task<PaperDetailsDTO?> ReadDetailsAsync(int id)
     {
-        var papers = from p in context.Papers
+        var papers = from p in context.Papers.Include(p => p.Authors)
                      where p.Id == id
                      select new PaperDetailsDTO(
                          p.Id,
                          p.Name,
                          ( // We need to convert Authors to AuthorDTOs.
-                             from a in p.Authors ?? new HashSet<Author>() { }
+                             from a in p.Authors
                              select new AuthorDTO(a.Id, a.GivenName, a.Surname)
                          ).ToHashSet(),
                          p.URL,
