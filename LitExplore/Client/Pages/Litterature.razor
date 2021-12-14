@@ -7,8 +7,7 @@
         @foreach (var paper in project.Papers)
         {
             <BSListGroupItem ListGroupType="ListGroupType.Button" @onclick="@(()=>{paperModal.OpenModal(paper.Id);})">
-                <p style="display: inline-block" >@paper.Name</p>
-                <button style="display: inline-block" @onclick="@(()=>{removePaperFromProject(@paper.Id);})">Delete from project</button>
+                <h5 style="display: inline-block" >@paper.Name</h5>
             </BSListGroupItem>
         }
     </BSListGroup>
@@ -25,8 +24,8 @@
                 <BSTabLabel>Search</BSTabLabel>
                 <BSTabContent>
                 <BSBasicInput Style ="margin-top:20px; width: 20vw;"InputType="InputType.Text" @ref="LitteratureSearchInput" Value="LitteratureSearch" ValueChanged="@(async (string value) => {SearchedPapers = await SearchLit(value);})" ValidateOnInput="true" Placeholder="New litterature"/>
-                    @if(@SearchedPapers != null)
-                    {
+                    @if(@SearchedPapers != null) {
+                    
                         <ul>
                             @foreach (var paper in @SearchedPapers)
                             {
@@ -59,7 +58,7 @@
     </BSModalBody>
 </BSModal>
 
-<PaperModal @ref=@paperModal/>
+<PaperModal @ref=@paperModal ProjectId=@project.Id/>
 
 @code {
     [Parameter]
@@ -84,17 +83,11 @@
             return await Http.GetFromJsonAsync<PaperDTO[]>($"api/Paper/Name/{LitteratureSearch}");
         }
         return new PaperDTO[0];
-        Console.WriteLine(SearchedPapers);
     }
 
     protected async void addPaperToProject(int id){
         ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
         var addPaper = await Http.PostAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper", paper);
-    }
-
-    protected async void removePaperFromProject(int id){
-        ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
-        var removePaper = await Http.PutAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper/", paper);
     }
 
     string GetQueryParm(string parmName)

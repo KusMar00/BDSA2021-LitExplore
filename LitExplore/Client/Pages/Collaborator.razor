@@ -1,17 +1,22 @@
 @inject HttpClient Http
+@using Microsoft.AspNetCore.Components.Web
 
 <div class="collaborators">
     <h3 style="color: var(--lavender);">Collaborators</h3>
-    <BSListGroup>
-        <BSListGroupItem>
-            <p>@project.Owner.DisplayName <b>(Owner)</b></p>
+    <BSListGroup IsFlush="true">
+        <BSListGroupItem style="display: flex; align-items:center;background-color:#508991">
+            <p style="">@project.Owner.DisplayName <b>(Owner)</b></p>
         </BSListGroupItem>
-        @foreach (var user in project.Collaborators)
+        @foreach (var user in Collaborators)
         {
-            <BSListGroupItem style="display: flex; flex-direction: row; justify-content: space-around;">
-                <p>@user.DisplayName</p>                
+            <BSListGroupItem style="display: flex; justify-content:space-between; align-items:center; background-color:#508991">
+                <p style="flex">@user.DisplayName</p>                
                 @if(project.Owner.Id == userId){
-                    <BSButton OnClick=@(() => {removeCollaborator(@user.Id);})>Remove</BSButton>
+                    <BSButton style="background-color:white; width:2rem; height:2rem; display:flex; align-items: center; justify-content:center" OnClick=@(async () => {
+                        await removeCollaborator(@user.Id);
+                        Reload?.Invoke();
+                        Console.WriteLine("Collaborators", Collaborators);
+                        })><h4 style="color:black;">-</h4></BSButton>
                 }
             </BSListGroupItem>
         }
@@ -23,16 +28,22 @@
 
 <BSModal @ref="AddCollaborator" Size="Size.Large">
     <BSModalHeader OnClick="@(() => AddCollaborator.Hide())">Add a collaborator to the project</BSModalHeader>
-    <BSBasicInput style="margin-top:20px; width: 20vw;" InputType="InputType.Text" @ref="UserSearchInput" Value="UserSearch" ValueChanged="@(async (string value) => { SearchedUsers = await SearchUser(value);})" ValidateOnInput="true" Placeholder="Username"/>
-    <BSModalBody>
-        <p>Search for a user to add as a collaborator.</p>
+    <BSModalBody style="margin: 0 auto;">
+        <BSBasicInput style="margin-top:20px; width: 20vw;" InputType="InputType.Text" @ref="UserSearchInput" Value="UserSearch" ValueChanged="@(async (string value) => { SearchedUsers = await SearchUser(value);})" ValidateOnInput="true" Placeholder="Username"/>
         @if(@SearchedUsers != null)
         {
+            <ul style="width:40%; margin: 0 auto;">
             @foreach(var user in @SearchedUsers)
             {
-                <p>@user.DisplayName</p>
-                <button style="display: inline-block" @onclick="@(()=>{AddCollaboratorToProject(@user.Id);})">Add Collaborator</button>
+                <li style="display: flex; justify-content:space-between;">
+                <p style="display: inline-block">@user.DisplayName</p>
+                <BSButton style="display: inline-block; background-color: var(--bs-success)" @onclick="@(async ()=>{
+                    AddCollaboratorToProject(@user.Id);
+                    Reload?.Invoke();
+                })">+</BSButton>
+                </li>
             }
+            </ul>
         }
     </BSModalBody>
 </BSModal>
@@ -42,14 +53,19 @@
     public ProjectDetailsDTO project {get; set;}
     [Parameter]
     public Guid userId {get; set;}
-
+    [Parameter] public Action? Reload { get; set; }
     private BSModal AddCollaborator;
+    [Parameter]
+    public ISet<UserDTO> Collaborators {get; set;}
     private BSBasicInput<string> UserSearchInput;
     private string UserSearch = string.Empty;
     private UserDTO[] SearchedUsers;
-    protected async void removeCollaborator(Guid id){
-        await Http.PutAsJsonAsync($"api/Project/Collaborator", new ProjectAddRemoveCollaboratorDTO(project.Id, id));
+    protected async Task<ProjectAddRemoveCollaboratorDTO?> removeCollaborator(Guid id){
+        var response = Http.PutAsJsonAsync($"api/Project/Collaborator", new ProjectAddRemoveCollaboratorDTO(project.Id, id));
+        Console.WriteLine(response);
+        return null;
     }
+
      protected async Task<UserDTO[]> SearchUser(string e)
     {
         UserSearch = e;
@@ -64,5 +80,6 @@
     {
         ProjectAddRemoveCollaboratorDTO user = new ProjectAddRemoveCollaboratorDTO(project.Id, userId);
         var addUser = await Http.PostAsJsonAsync<ProjectAddRemoveCollaboratorDTO>($"api/Project/Collaborator", user);
+        ShouldRender();
     }
 }

@@ -9,9 +9,7 @@
             <h4>Authors</h4>
             <ul>
                 @foreach (var Author in paper.Authors) {
-                    <li>
-                        @Author.GivenName
-                    </li>
+                    <li style="list-style-type: disc;">@Author.Surname, @Author.GivenName</li>
                 }
             </ul>
             
@@ -22,16 +20,22 @@
         <BSModalBody>Loading paper...</BSModalBody>
     }
     <BSModalFooter style="display:flex; justify-content:center;">
-        <BSButton Color="Color.Danger">Remove Paper</BSButton>
+        <BSButton Color="Color.Danger" @onclick="@(()=>{removePaperFromProject();})" >Remove Paper</BSButton>
     </BSModalFooter>
 </BSModal>
 
 
 @code {
+    [Parameter]
+    public int ProjectId {get; set;}
     private BSModal PaperDetails {get; set; }
-    protected PaperDetailsDTO? paper {get; set;}
+    protected PaperDetailsDTO paper {get; set;}
 	public async void OpenModal(int id) {
         paper = await Http.GetFromJsonAsync<PaperDetailsDTO>($"api/Paper/Details/{id}");
         PaperDetails.Show();
 	}
+    protected async void removePaperFromProject(){
+        ProjectAddRemovePaperDTO paperToRemove = new ProjectAddRemovePaperDTO(ProjectId, paper.Id);
+        var removePaper = await Http.PutAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper/", paperToRemove);
+    }
 }

@@ -74,6 +74,9 @@ public record ProjectCreateDTO
     public string Name { get; set; } = null!;
 }
 
+/// <summary>
+/// Used to specify a project and a user to add/remove from that project when adding or removing collaborators.
+/// </summary>
 public record ProjectAddRemoveCollaboratorDTO
 {
     public ProjectAddRemoveCollaboratorDTO(int projectId, Guid collaboratorId)
@@ -95,6 +98,9 @@ public record ProjectAddRemoveCollaboratorDTO
     public Guid CollaboratorId { get; set; }
 }
 
+/// <summary>
+/// Used to specify a project and a paper to add/remove from that project when adding or removing papers.
+/// </summary>
 public record ProjectAddRemovePaperDTO
 {
     public ProjectAddRemovePaperDTO(int projectId, int paperId)

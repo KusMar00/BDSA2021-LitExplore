@@ -29,4 +29,7 @@ public class User
 
 public record UserDTO (Guid Id, string DisplayName);
 
+/// <summary>
+/// Contains all papers which a user has access to.
+/// </summary>
 public record UserProjectDTO(Guid Id, IReadOnlyCollection<ProjectDTO> Owns, IReadOnlyCollection<ProjectDTO> HasAccesTo);

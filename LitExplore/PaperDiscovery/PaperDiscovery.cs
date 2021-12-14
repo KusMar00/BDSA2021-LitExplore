@@ -8,6 +8,10 @@ namespace LitExplore.PaperDiscovery;
 
     public static class PaperDiscovery
     {
+        /// <summary>
+        /// Returns a list of all papers which are related to any paper in a
+        /// given project (excluding those which are already in the project).
+        /// </summary>
         public static async Task<IReadOnlyCollection<PaperDTO>> GetPapersRelatedToProject(int projectId, IProjectRepository projectRepo, IPaperRepository paperRepo) {
             var projectPapers = (await projectRepo.ReadProjectDetailsAsync(projectId))?.Papers ?? new HashSet<PaperDTO>() { };
             var recommendedPapers = new HashSet<PaperDTO>() { };
