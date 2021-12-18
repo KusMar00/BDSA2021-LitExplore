@@ -1,8 +1,11 @@
 @inject HttpClient Http
+@inject NavigationManager MyNavigationManager
 
 <BSModal @ref="PaperDetails" Size="Size.Large">
     @if (paper != null) {
-        <BSModalHeader OnClick="@(() => PaperDetails.Hide())"><h3>@paper.Name</h3></BSModalHeader>
+        <BSModalHeader OnClick="@(() => {
+            PaperDetails.Hide();
+            })"><h3>@paper.Name</h3></BSModalHeader>
         <BSModalBody>
             <h4>Abstract Preview</h4>
             <p>@paper.Abstract</p>
@@ -30,6 +33,9 @@
     public int ProjectId {get; set;}
     private BSModal PaperDetails {get; set; }
     protected PaperDetailsDTO paper {get; set;}
+
+    private bool changeMade = false;
+
 	public async void OpenModal(int id) {
         paper = await Http.GetFromJsonAsync<PaperDetailsDTO>($"api/Paper/Details/{id}");
         PaperDetails.Show();
@@ -37,5 +43,6 @@
     protected async void removePaperFromProject(){
         ProjectAddRemovePaperDTO paperToRemove = new ProjectAddRemovePaperDTO(ProjectId, paper.Id);
         var removePaper = await Http.PutAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper/", paperToRemove);
+        MyNavigationManager.NavigateTo($"/Project?projectId={ProjectId}", true);
     }
 }

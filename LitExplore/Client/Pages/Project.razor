@@ -15,7 +15,7 @@
 else {
 <h1 style="color: white;">@project.Name</h1>
 <div class="content">
-    <Collaborator project=@project userId=@userId Reload=@(async()=>{project = await GetProject();}) Collaborators=@collaborators />
+    <Collaborator project=@project userId=@userId />
     <Litterature project=@project />
 </div>
 
@@ -30,8 +30,6 @@ else {
 
     private ProjectDetailsDTO project;
 
-    private ISet<UserDTO> collaborators;
-
     string GetQueryParm(string parmName)
     {
         var uriBuilder = new UriBuilder(MyNavigationManager.Uri);
@@ -43,11 +41,8 @@ else {
     protected async Task<ProjectDetailsDTO> GetProject(){
         var ProjectId = GetQueryParm("projectId");
         var newProject = await Http.GetFromJsonAsync<ProjectDetailsDTO>($"api/Project/ProjectId/{ProjectId}"); 
-        
-        collaborators = newProject.Collaborators;
-        Console.WriteLine("Project", collaborators);
         return newProject;
-    }            
+    }          
 
     protected override async Task OnInitializedAsync()
     {

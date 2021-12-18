@@ -16,7 +16,10 @@
 </div>
 
 <BSModal @ref="AddLitterature" Size="Size.Large">
-    <BSModalHeader OnClick="@(() => AddLitterature.Hide())">Add a paper to the project</BSModalHeader>
+    <BSModalHeader OnClick="@(() => {
+        AddLitterature.Hide();
+        if(changeMade) MyNavigationManager.NavigateTo($"/Project?projectId={project.Id}", true);
+        })">Add a paper to the project</BSModalHeader>
 	<BSModalBody>
         <BSTabGroup>	
         <BSTabList IsPills="true" IsList="true">
@@ -31,7 +34,7 @@
                             {
                                 <li>
                                     <p style="display: inline-block; width: 75%;">@paper.Name</p>
-                                    <button style="display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</button>
+                                    <BSButton style="background-color: var(--bs-success);display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</BSButton>                                
                                 </li>
                             }
                         </ul>
@@ -46,7 +49,7 @@
                     {
                         <li>
                             <p style="display: inline-block; width: 75%;">@paper.Name</p>
-                            <button style="display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</button>
+                            <BSButton style="background-color: var(--bs-success);display: inline-block; width: 20%;" @onclick="@(()=>{addPaperToProject(@paper.Id);})">Add to project</BSButton>
                         </li>
                     }
                 </ul>
@@ -70,6 +73,8 @@
 
     private PaperDTO[] SearchedPapers;
 
+    private bool changeMade = false;
+
     private BSBasicInput<string> LitteratureSearchInput;
     private string LitteratureSearch = string.Empty;
 
@@ -88,6 +93,7 @@
     protected async void addPaperToProject(int id){
         ProjectAddRemovePaperDTO paper = new ProjectAddRemovePaperDTO(project.Id, id);
         var addPaper = await Http.PostAsJsonAsync<ProjectAddRemovePaperDTO>($"api/Project/Paper", paper);
+        changeMade = true;
     }
 
     string GetQueryParm(string parmName)
