@@ -1,13 +1,11 @@
 using Xunit;
 using System;
-using System.Collections.Generic;
 using LitExplore.Repository;
 using LitExplore.Repository.Entities;
 using LitExplore.Repository.Tests;
 using LitExplore.Server.Controllers;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace LitExplore.Server.Tests;
 
@@ -51,6 +49,7 @@ public class UserControllerTest : RepositoryTests
         var actual = await userController.Get(guid_1);
     
         // Assert
+        #pragma warning disable CS8602
         Assert.Equal(expected.Id, actual.Id);
         Assert.Equal(expected.DisplayName, actual.DisplayName);
     }
