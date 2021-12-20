@@ -50,4 +50,4 @@ Sleep-Progress 5
 
 # start application
 Write-Host "Starting App"
-dotnet run --project $startupProject
+dotnet run -nowarn --project $startupProject
