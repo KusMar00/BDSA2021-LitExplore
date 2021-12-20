@@ -7,3 +7,6 @@ global using Microsoft.Extensions.Configuration;
 global using Microsoft.EntityFrameworkCore;
 
 global using LitExplore.Repository.Entities;
+
+global using Microsoft.EntityFrameworkCore.Infrastructure;
+global using Microsoft.EntityFrameworkCore.Storage;

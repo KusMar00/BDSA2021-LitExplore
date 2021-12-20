@@ -1,14 +1,14 @@
 .content {
   display: flex;
   height: 80vh;
-  color: white;
 }
 
-li {
+li,
+::deep li {
   list-style-type: none;
 }
 
-.collaborators {
+::deep .collaborators {
   min-height: 100%;
   height: 100%;
   background-color: #508991;
@@ -21,11 +21,11 @@ li {
   border-radius: 10px;
 }
 
-.collaborators::-webkit-scrollbar {
+::deep .collaborators::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
-.litterature {
+::deep .litterature {
   flex: 5;
   background-color: #172a3a;
   border-radius: 10px;
@@ -34,11 +34,10 @@ li {
   box-shadow: 6px 6px 20px var(--dark);
 }
 
-.adder {
+::deep .adder {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  margin: 10px auto;
   color: green;
   font-size: 3.2em;
   font-weight: 750;

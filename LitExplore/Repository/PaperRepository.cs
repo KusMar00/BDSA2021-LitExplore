@@ -1,4 +1,5 @@
-﻿namespace LitExplore.Repository;
+﻿
+namespace LitExplore.Repository;
 
 public class PaperRepository : IPaperRepository
 {
@@ -25,23 +26,25 @@ public class PaperRepository : IPaperRepository
     public async Task<IReadOnlyCollection<PaperDTO>> ReadByRelationsAsync(int paperId)
     {
         var papers = from p in context.Papers
+                         .Include(p => p.Citings)
+                         .Include(p => p.CitedBy)
                      // This checks the number of cited/citedby papers whose id matches paperId.
                      // using .First may be a little faster, but it is slightly less readable.
                      where p.Citings.Count(p => p.Id == paperId) > 0 || p.CitedBy.Count(p => p.Id == paperId) > 0
                      select new PaperDTO(p.Id, p.Name);
 
-        return (await papers.ToListAsync()).AsReadOnly();
+		return (await papers.ToListAsync()).AsReadOnly();
     }
-    
+
     public async Task<PaperDetailsDTO?> ReadDetailsAsync(int id)
     {
-        var papers = from p in context.Papers
+        var papers = from p in context.Papers.Include(p => p.Authors)
                      where p.Id == id
                      select new PaperDetailsDTO(
                          p.Id,
                          p.Name,
                          ( // We need to convert Authors to AuthorDTOs.
-                             from a in p.Authors ?? new HashSet<Author>() { }
+                             from a in p.Authors
                              select new AuthorDTO(a.Id, a.GivenName, a.Surname)
                          ).ToHashSet(),
                          p.URL,

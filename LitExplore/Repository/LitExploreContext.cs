@@ -28,5 +28,8 @@ public class LitExploreContext : DbContext
         modelBuilder.Entity<User>() // Squish SQLite bugs.
             .Property(p => p.Id)
             .HasConversion(u => u, u => u);
+        modelBuilder.Entity<User>()
+            .HasIndex(u => u.Id)
+            .IsUnique();
     }
 }

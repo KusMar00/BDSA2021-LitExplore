@@ -1,4 +1,4 @@
-            using Xunit;
+using Xunit;
 using System;
 using System.Collections.Generic;
 using LitExplore.Repository;
@@ -7,17 +7,16 @@ using LitExplore.Repository.Tests;
 using LitExplore.Server.Controllers;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Microsoft.AspNetCore.Identity;
 
 
-namespace LitExplore.Server.Tests
-{
+namespace LitExplore.Server.Tests;
+
     public class ProjectControllerTest : RepositoryTests
     {
         private IProjectRepository repo;
         private ProjectController projectController;
         public ProjectControllerTest () {
-            repo = database.ProjectRepository;
+            repo = new ProjectRepository(Context);
             var logger = new Mock<ILogger<ProjectController>>();
             projectController = new ProjectController(logger.Object, repo);
         }
@@ -77,20 +76,23 @@ namespace LitExplore.Server.Tests
 
         #region GetProject
         [Fact]
-        public async void GetProjectAsync_Project_1_Returns_Project_1()
+        public async void Get_Project_By_Id_1_Returns_Project_1()
         {
              // Arrange
-            ProjectDTO? expected = new(
+            ProjectDetailsDTO? expected = new(
                 Id: 1, 
                 Name: "Project 1", 
                 Owner: new (guid_1, "User 1"), 
                 Collaborators: new HashSet<UserDTO>(){
                     new (guid_2, "User 2"),
+                },
+                Papers: new HashSet<PaperDTO>(){
+                    new (1, "Paper1"),
                 }
             );
 
             // Act
-            var actual = await projectController.Get(guid_1);
+            ProjectDetailsDTO? actual = await projectController.Get(1);
 
             // Assert
             #pragma warning disable CS8602
@@ -102,7 +104,7 @@ namespace LitExplore.Server.Tests
 
         #region DeleteProject
         [Fact]
-        public async void DeleteProjectAsync_Project_2_Returns_Status_Deleted(){
+        public async void Delete_Project_By_Id_2_Returns_Status_Deleted(){
             // Arrange
             Status? expected = Status.Deleted;
 
@@ -114,7 +116,7 @@ namespace LitExplore.Server.Tests
         }
 
         [Fact]
-        public async void DeleteProjectAsync_Project_10_Returns_Status_NotFound()
+        public async void Delete_Project_By_Id_10_Returns_Status_NotFound()
         {
             // Arrange
             Status? expected = Status.NotFound;
@@ -128,7 +130,7 @@ namespace LitExplore.Server.Tests
 
         #region PostPaper
         [Fact]
-        public async void PostPaperToProject_To_Existing_Project_Returns_Status_Updated()
+        public async void Post_Paper_3_To_Existing_Project_1_Returns_Status_Updated()
         {
             // Arrange
             Status? expected = Status.Updated;
@@ -141,7 +143,7 @@ namespace LitExplore.Server.Tests
         }
 
         [Fact]
-        public async void PostPaperToProject_To_Non_Existing_Project_Returns_Status_NotFound()
+        public async void Post_Paper_2_To_Non_Existing_Project_10_Returns_Status_NotFound()
         {
             // Arrange
             Status? expected = Status.NotFound;
@@ -156,7 +158,7 @@ namespace LitExplore.Server.Tests
 
         #region DeletePaper
         [Fact]
-        public async void DeletePaperFromProjectAsync_Paper1_From_Project1_Returns_Status_Deleted()
+        public async void Delete_Paper_1_From_Project_1_Returns_Status_Deleted()
         {
             // Arrange
             Status? expected = Status.Deleted;
@@ -169,7 +171,7 @@ namespace LitExplore.Server.Tests
         }
 
         [Fact]
-        public async void DeletePaperFromProjectAsync_Paper2_From_Project1_Returns_Status_NotFound()
+        public async void Delete_Paper_2_From_Project_1_Returns_Status_NotFound()
         {
             // Arrange
             Status? expected = Status.NotFound;
@@ -184,7 +186,7 @@ namespace LitExplore.Server.Tests
 
         #region PostCollaborator
         [Fact]
-        public async void PostCollaboratorToProjectAsync_User3_To_Project1_Returns_Status_Updated()
+        public async void Post_Collaborator_3_To_Existing_Project_1_Returns_Status_Updated()
         {
             // Arrange
             Status? expected = Status.Updated;
@@ -197,7 +199,7 @@ namespace LitExplore.Server.Tests
         }
         
         [Fact]
-        public async void PostCollaboratorToProjectAsync_Non_Existing_User_To_Project1_Returns_Status_NotFound()
+        public async void Post_Non_Existing_Collaborator_To_Existing_Project_1_Returns_Status_NotFound()
         {
             // Arrange
             Status? expected = Status.NotFound;
@@ -210,7 +212,7 @@ namespace LitExplore.Server.Tests
         }
         
         [Fact]
-        public async void PostCollaboratorToProjectAsync_User1_To_Non_Existing_Project_Returns_Status_NotFound()
+        public async void Post_Collaborator_4_To_Non_Existing_Project_Returns_Status_NotFound()
         {
             // Arrange
             Status? expected = Status.NotFound;
@@ -225,7 +227,7 @@ namespace LitExplore.Server.Tests
 
         #region DeleteCollaborator
         [Fact]
-        public async void DeleteCollaboratorFromProjectAsync_User3_From_Project_2_Returns_Deleted()
+        public async void Delete_Collaborator_3_From_Project_2_Returns_Deleted()
         {
             // Arrange
             Status? expected = Status.Deleted;
@@ -238,7 +240,7 @@ namespace LitExplore.Server.Tests
         }
 
          [Fact]
-        public async void DeleteCollaboratorFromProjectAsync_User3_From_Project_1_Returns_NotFound()
+        public async void Delete_Collaborator_3_From_Project_1_Returns_NotFound()
         {
             // Arrange
             Status? expected = Status.NotFound;
@@ -251,4 +253,3 @@ namespace LitExplore.Server.Tests
         }
         #endregion
     }
-}

@@ -2,8 +2,10 @@
 
 public class User
 {
+    // This is here to make the guid easier to work with than if it were the primary key
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    public int InternalId { get; set; }
+
     public Guid Id { get; set; }
 
     [StringLength(50)]
@@ -27,4 +29,7 @@ public class User
 
 public record UserDTO (Guid Id, string DisplayName);
 
+/// <summary>
+/// Contains all papers which a user has access to.
+/// </summary>
 public record UserProjectDTO(Guid Id, IReadOnlyCollection<ProjectDTO> Owns, IReadOnlyCollection<ProjectDTO> HasAccesTo);

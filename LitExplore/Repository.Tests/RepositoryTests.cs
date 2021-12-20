@@ -2,8 +2,6 @@ namespace LitExplore.Repository.Tests;
 
 public abstract class RepositoryTests : IDisposable
 {
-    protected readonly Database database;
-
     protected LitExploreContext Context { get; private set; }
 
     public RepositoryTests()
