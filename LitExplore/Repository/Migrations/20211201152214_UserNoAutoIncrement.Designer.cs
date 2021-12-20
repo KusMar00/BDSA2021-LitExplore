@@ -13,7 +13,7 @@ namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
     [Migration("20211201152214_UserNoAutoIncrement")]
-    [ExcludeFromCodeCoverage]
+    //[ExcludeFromCodeCoverage]
     partial class UserNoAutoIncrement
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

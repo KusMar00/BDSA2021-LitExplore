@@ -13,7 +13,7 @@ namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
     [Migration("20211201151654_PaperNameLengthening")]
-    [ExcludeFromCodeCoverage]
+    //[ExcludeFromCodeCoverage]
     partial class PaperNameLengthening
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

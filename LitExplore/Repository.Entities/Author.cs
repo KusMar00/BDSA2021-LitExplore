@@ -18,5 +18,4 @@ public class Author
     public ISet<Paper> Papers{ get; set; } = null!;
 }
 
-[ExcludeFromCodeCoverage]
 public record AuthorDTO(int Id, string GivenName, string Surname);

@@ -13,7 +13,7 @@ namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
     [Migration("20211201161737_TestMigration")]
-    [ExcludeFromCodeCoverage]
+    //[ExcludeFromCodeCoverage]
     partial class TestMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

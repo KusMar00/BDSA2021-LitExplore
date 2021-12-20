@@ -13,7 +13,7 @@ namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
     [Migration("20211201125226_Initial")]
-    [ExcludeFromCodeCoverage]
+    //[ExcludeFromCodeCoverage]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
