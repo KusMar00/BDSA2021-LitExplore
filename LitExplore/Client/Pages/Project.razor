@@ -13,16 +13,21 @@
     <p style="color:var(--lavender)">Loading project...</p>
 }
 else {
-<h1 style="color: white;">@project.Name</h1>
-<div class="content">
-    <Collaborator project=@project userId=@userId />
-    <Litterature project=@project />
-</div>
+    @if(project.Owner.Id == userId || project.Collaborators.Any(u => u.Id == userId)){
+        <h1 style="color: white;">@project.Name</h1>
+        <div class="content">
+            <Collaborator project=@project userId=@userId />
+            <Litterature project=@project />
+        </div>
 
-
-@if(project.Owner.Id == userId){
-    <DeleteProject CurrentProject=@project/>
-}
+        @if(project.Owner.Id == userId){
+            <DeleteProject CurrentProject=@project/>
+        }
+    }
+    else {
+    MyNavigationManager.NavigateTo("/");
+    }
+} 
 
 }
 @code {
