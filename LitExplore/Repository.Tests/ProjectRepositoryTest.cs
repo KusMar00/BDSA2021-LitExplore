@@ -1,4 +1,7 @@
-﻿namespace LitExplore.Repository.Tests;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
+
+namespace LitExplore.Repository.Tests;
 
 public class ProjectRepositoryTest : RepositoryTests
 {
@@ -11,7 +14,8 @@ public class ProjectRepositoryTest : RepositoryTests
             Id_2 = Guid.Parse("117e7b425c0d411ba3ebd08867757467"),
             Id_3 = Guid.Parse("7c567afb2109486184ab68412fed03b8"),
             Id_4 = Guid.Parse("2e30168ef092482abc0d6ff812482155"),
-            Id_5 = Guid.Parse("eb94a87f96ce49bca84675f4f7b4e9f6");
+            Id_5 = Guid.Parse("eb94a87f96ce49bca84675f4f7b4e9f6"),
+            Id_6 = Guid.Parse("a7d66e2ed1724a18a9a541076e26b196");
 
     protected override void SeedDatabase()
     {
@@ -56,7 +60,8 @@ public class ProjectRepositoryTest : RepositoryTests
             User_2 = new User { Id = Id_2, DisplayName = "User 2" },
             User_3 = new User { Id = Id_3, DisplayName = "User 3" },
             User_4 = new User { Id = Id_4, DisplayName = "User 4" },
-            User_5 = new User { Id = Id_5, DisplayName = "User 5" };
+            User_5 = new User { Id = Id_5, DisplayName = "User 5" },
+            User_6 = new User { Id = Id_6, DisplayName = "User 6" };
         #endregion
         #region Projects
         Project
@@ -92,10 +97,20 @@ public class ProjectRepositoryTest : RepositoryTests
                               // but we don't want the system to break if it does.
                 Collaborators = new HashSet<User>() { },
                 Papers = new HashSet<Paper>() { }
+            },
+            Project_5 = new Project
+            {
+                Id = 5,
+                Name = "Project 5",
+                Owner = null, // This should never be able to happen in the actual database,
+                              // but we don't want the system to break if it does.
+                Collaborators = null,
+                Papers = null
             };
         #endregion
 
         Context.Projects.AddRange(new[] { Project_1, Project_2, Project_3, Project_4 });
+        Context.Users.Add(User_6);
 
         Context.SaveChanges();
     }
@@ -548,4 +563,71 @@ public class ProjectRepositoryTest : RepositoryTests
         Assert.Equal(expected.Owner, actual.Owner);
         Assert.Equal(expected.Collaborators, actual.Collaborators);
     }
+
+    [Fact]
+    public async void RemoveCollaboratorAsync_Remove_User_2_From_Project_5_Returns_Status_NotFound()
+    {
+        // Arrange
+        var expected = Status.NotFound;
+
+        // Act
+        var actual = await repo.RemoveCollaboratorAsync(new(5, Id_2));
+    
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public async void RemovePaperAsync_Remove_Paper_1_From_Project_5_Returns_Status_NotFound()
+    {
+        // Arrange
+        var expected = Status.NotFound;
+
+        // Act
+        var actual = await repo.RemovePaperAsync(new(5, 1));
+    
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+
+    [Fact]
+    public async void ReadProjectsByUserAsync_User_6_Returns_Empty_UserProjectDTO()
+    {
+        // Arrange
+        var expected = new UserProjectDTO(Id: Id_6, 
+                                          Owns: new List<ProjectDTO>(){ }.AsReadOnly(), 
+                                          HasAccesTo: new List<ProjectDTO>(){ }.AsReadOnly()
+                                         );
+
+        // Act
+        var actual = await repo.ReadProjectsByUserAsync(Id_6);
+    
+        // Assert
+        #pragma warning disable CS8602 // Dereference of a possibly null reference.
+        Assert.Equal(expected.Id, actual.Id);
+        Assert.Equal(expected.Owns, actual.Owns);
+        Assert.Equal(expected.HasAccesTo, actual.HasAccesTo);
+    }
+
+    [Fact]
+    public async void ReadProjectsByUserAsync_User_Null_Returns_Empty_UserProjectDTO()
+    {
+        // Arrange
+        var expected = new UserProjectDTO(Id: Guid.Empty, 
+                                          Owns: new List<ProjectDTO>(){ }.AsReadOnly(), 
+                                          HasAccesTo: new List<ProjectDTO>(){ }.AsReadOnly()
+                                         );
+
+        // Act
+        User? testUser = new User(Guid.Empty, "");
+        var actual = await repo.ReadProjectsByUserAsync(testUser.Id);
+    
+        // Assert
+        #pragma warning disable CS8602 // Dereference of a possibly null reference.
+        Assert.Equal(expected.Id, actual.Id);
+        Assert.Equal(expected.Owns, actual.Owns);
+        Assert.Equal(expected.HasAccesTo, actual.HasAccesTo);
+    }
+
 }
