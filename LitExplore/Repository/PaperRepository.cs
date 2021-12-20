@@ -1,4 +1,5 @@
-﻿namespace LitExplore.Repository;
+﻿
+namespace LitExplore.Repository;
 
 public class PaperRepository : IPaperRepository
 {
