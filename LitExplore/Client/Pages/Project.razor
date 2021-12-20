@@ -3,76 +3,32 @@
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject NavigationManager MyNavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
 
 
 <PageTitle>Project</PageTitle>
-<h1 style="color: white;">ProjectTitle</h1>
-
+@if (project == null)
+{
+    <p style="color:var(--lavender)">Loading project...</p>
+}
+else {
+<h1 style="color: white;">@project.Name</h1>
 <div class="content">
-    <div class="collaborators">
-        <h3>Collaborators</h3>
-        <ul>
-            <li>Henning</li>
-            <li>Flemming</li>
-        </ul>
-        <button Id="addCollab" class="adder" @onclick="@(() => AddCollaborator.Show())">+</button>
-        <BSTooltip Target="addCollab" Placement="Placement.Bottom">Add collaborator</BSTooltip>
-    </div>
-    <div class="litterature">
-        <h3>Project Litterature</h3>
-        <ul>
-            <li>En bog</li>
-            <li>En anden bog</li>
-        </ul>
-        <p>@(MyNavigationManager.Uri)</p>
-        <p>@GetQueryParm("projectId")</p>
-        <button Id="addLit" class="adder" @onclick="@(() => AddLitterature.Show())">+</button>
-        <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
-    </div>
+    <Collaborator project=@project userId=@userId />
+    <Litterature project=@project />
 </div>
 
-<BSModal @ref="AddLitterature" Size="Size.Large">
-    <BSModalHeader OnClick="@(() => AddLitterature.Hide())">Add a paper to the project</BSModalHeader>
-	<BSModalBody>
-    <BSTabGroup>	
-    <BSTabList IsPills="true" IsList="true">
-        <BSTab>
-            <BSTabLabel>Search</BSTabLabel>
-            <BSTabContent>Search</BSTabContent>
-        </BSTab>
-        <BSTab>
-            <BSTabLabel>Recommended</BSTabLabel>
-            <BSTabContent>rec</BSTabContent>
-        </BSTab>
-    </BSTabList>
-    <BSTabSelectedContent/>
-</BSTabGroup>
-</BSModalBody>
-</BSModal>
 
-<BSModal @ref="AddCollaborator" Size="Size.Large">
-    <BSModalHeader OnClick="@(() => AddCollaborator.Hide())">Add a collaborator to the project</BSModalHeader>
-    <BSModalBody>
-        <p>Search for a user to add as a collaborator.</p>
-        <BSBasicInput InputType="InputType.Text" @ref="UserSearchInput" Value="UserSearchTerm" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="Enter username"/>
-    </BSModalBody>
-</BSModal>
+@if(project.Owner.Id == userId){
+    <DeleteProject CurrentProject=@project/>
+}
 
+}
 @code {
-    private BSModal AddLitterature;
-    private BSModal AddCollaborator;
+    private Guid userId;
+
     private ProjectDetailsDTO project;
-    private BSBasicInput<string> UserSearchInput;
-    
-    private string UserSearchTerm = string.Empty;
-
-    [Parameter]
-    public string Id { get; set; }
-
-    protected void SelectedChanged(string e)
-    {
-        UserSearchTerm = e;
-    }
 
     string GetQueryParm(string parmName)
     {
@@ -81,20 +37,29 @@
         return q[parmName] ?? "";
     }
 
+    //Only send list of collabs to the component and then update that
+    protected async Task<ProjectDetailsDTO> GetProject(){
+        var ProjectId = GetQueryParm("projectId");
+        var newProject = await Http.GetFromJsonAsync<ProjectDetailsDTO>($"api/Project/ProjectId/{ProjectId}"); 
+        return newProject;
+    }          
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            var ProjectId = GetQueryParm("projectId");
-            project = await Http.GetFromJsonAsync<ProjectDetailsDTO>($"api/Project/ProjectId/{ProjectId}");
-            Console.WriteLine(project);
+            var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            userId = Guid.Parse(authstate.User.FindFirst(c => c.Type == "sub")?.Value);    
+
+            project = await GetProject();
+
+            //if(!project.Collaborators.Contains(userID) || project.Owner.Id != userId){
+            //  MyNavigationManager.NavigateTo("/");
+            //}
         }
         catch (AccessTokenNotAvailableException exception)
         {
             exception.Redirect();
         }
     }
-
-
 }

@@ -11,7 +11,7 @@ public class Project
 
     // The user should never be null, but enforcing this with database constraints
     // causes issues with cycles and cascade paths, so we must handle this manually.
-    public User? Owner { get; set; }
+    public User? Owner { get; set; } = null!;
 
     [Required]
     public ISet<User> Collaborators { get; set; } = null!;
@@ -22,37 +22,32 @@ public class Project
 
     public ProjectDTO ToDTO()
     {
-        var id = Id;
-        var name = Name;
-        var owner = new UserDTO(    // The owner should never be null if everything works
-						            // as intended, but we better make sure it works
-						            // anyway.
-            Owner != null ? Owner.Id : Guid.Empty,
-            Owner != null ? Owner.DisplayName : ""
-		);
-        var collaborators = ( // Convert to DTOs.
-            from u in Collaborators ?? new HashSet<User>() { }
-            select new UserDTO(u.Id, u.DisplayName)
-        ).ToHashSet();
         return new ProjectDTO(
-            id,
-            name,
-            owner,
-            collaborators
+			Id,
+			Name,
+            new UserDTO(    // The owner should never be null if everything works
+                            // as intended, but we better make sure it works
+                            // anyway.
+                Owner?.Id ?? Guid.Empty,
+                Owner?.DisplayName ?? ""
+            ),
+            ( // Convert to DTOs.
+                from u in Collaborators ?? new HashSet<User>() { }
+                select new UserDTO(u.Id, u.DisplayName)
+            ).ToHashSet()
         );
     }
 
     public ProjectDetailsDTO ToDetailsDTO()
     {
         var basicDTO = ToDTO();
-        //TODO: FIX THIS PROBLEM.. SAME AS ProjectDTO
         return new ProjectDetailsDTO(
             basicDTO.Id,
             basicDTO.Name,
             basicDTO.Owner,
             basicDTO.Collaborators,
             ( // Convert to DTOs.
-                from p in Papers
+                from p in Papers ?? new HashSet<Paper>() { }
                 select new PaperDTO(p.Id, p.Name)
             ).ToHashSet()
         );
@@ -79,6 +74,9 @@ public record ProjectCreateDTO
     public string Name { get; set; } = null!;
 }
 
+/// <summary>
+/// Used to specify a project and a user to add/remove from that project when adding or removing collaborators.
+/// </summary>
 public record ProjectAddRemoveCollaboratorDTO
 {
     public ProjectAddRemoveCollaboratorDTO(int projectId, Guid collaboratorId)
@@ -100,6 +98,9 @@ public record ProjectAddRemoveCollaboratorDTO
     public Guid CollaboratorId { get; set; }
 }
 
+/// <summary>
+/// Used to specify a project and a paper to add/remove from that project when adding or removing papers.
+/// </summary>
 public record ProjectAddRemovePaperDTO
 {
     public ProjectAddRemovePaperDTO(int projectId, int paperId)

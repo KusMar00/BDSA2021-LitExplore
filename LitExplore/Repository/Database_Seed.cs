@@ -6,7 +6,8 @@ public partial class Database
 {
     /// <summary>
     /// The seed data comes from Google Scholar (https://scholar.google.com/).
-    /// The seed data does not include users at these are part of the vertical slice.
+    /// The seed data does not include users and projects since adding and
+    /// removing these are part of the vertical slice.
     /// </summary>
     public static void Seed(LitExploreContext context)
     {

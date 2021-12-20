@@ -1,3 +1,9 @@
+using System.Dynamic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage;
+
 
 namespace LitExplore.Repository;
 public partial class Database
@@ -5,7 +11,7 @@ public partial class Database
     internal const string ConnectionStringName = "LitExplore";
 
     /// <summary>
-    /// Create a Database with default options using the connection string named 'LitExplore' in LitExplore.Repository.
+    /// Creates and seeds the database if it does not already exist.
     /// </summary>
     public static void SetupDatabase(LitExploreContext context)
     {
@@ -19,6 +25,9 @@ public partial class Database
         }
     }
 
+    /// <summary>
+    /// Gets the dafault options which should be used when not testing.
+    /// </summary>
     public static DbContextOptionsBuilder<LitExploreContext> GetOptionsBuilder()
     {
         var optionsBuilder = new DbContextOptionsBuilder<LitExploreContext>()
@@ -26,6 +35,9 @@ public partial class Database
         return optionsBuilder;
     }
 
+    /// <summary>
+    /// Gets the connection string named 'LitExplore' in LitExplore.Repository
+    /// </summary>
     public static string GetConnectionString()
     {
         var configuration = LoadConfiguration();

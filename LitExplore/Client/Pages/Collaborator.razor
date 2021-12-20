@@ -1,0 +1,89 @@
+@inject HttpClient Http
+@using Microsoft.AspNetCore.Components.Web
+@inject NavigationManager MyNavigationManager
+
+<div class="collaborators" style="overflow-y: scroll;">
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin-bottom: 10px;">
+        <h3 style="color: var(--lavender);">Collaborators</h3>
+        <button Id="addCollab" class="adder" @onclick="@(() => AddCollaborator.Show())">+</button>
+        <BSTooltip Target="addCollab" Placement="Placement.Bottom">Add collaborator</BSTooltip>
+    </div>
+    
+    <BSListGroup>
+        <BSListGroupItem style="display: flex; align-items:center;">
+            <p style="">@project.Owner.DisplayName <b>(Owner)</b></p>
+        </BSListGroupItem>
+        @foreach (var user in project.Collaborators)
+        {
+            <BSListGroupItem style="display: flex; justify-content:space-between; align-items:center;">
+                <p style="margin: 0">@user.DisplayName</p>                
+                @if(project.Owner.Id == userId){
+                    <BSButton style="background-color:white; color: black; border: none;" OnClick=@(async () => {
+                        removeCollaborator(user.Id);
+                        MyNavigationManager.NavigateTo($"/Project?projectId={project.Id}", true);
+                        })><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z"/></svg>
+                    </BSButton>
+                }
+            </BSListGroupItem>
+        }
+    </BSListGroup>
+</div>
+
+<BSModal @ref="AddCollaborator" Size="Size.Large">
+    <BSModalHeader OnClick="@(() => {
+        AddCollaborator.Hide();
+
+    })">Add a collaborator to the project</BSModalHeader>
+    <BSModalBody style="margin: 0 auto; width: 60%; text-align: center;">
+        <BSBasicInput style="margin:20px auto 0 auto; width: 20vw;" InputType="InputType.Text" @ref="UserSearchInput" Value="UserSearch" ValueChanged="@(async (string value) => { SearchedUsers = await SearchUser(value);})" ValidateOnInput="true" Placeholder="Username"/>
+        @if(@SearchedUsers != null)
+        {
+            <ul style="width:40%; margin: 0 auto; padding: 0;">
+            @foreach(var user in @SearchedUsers)
+            {
+                <li style="display: flex; flex-direction: row; justify-content:space-between; margin-top: 5px; width: 100%;">
+                    <p style="margin: 0;">@user.DisplayName</p>
+                    <BSButton style="background-color: var(--bs-success)" @onclick="@(async ()=>{
+                        AddCollaboratorToProject(user.Id);
+                    })">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" fill="white"/></svg>
+                    </BSButton>
+                </li>
+            }
+            </ul>
+        }
+    </BSModalBody>
+</BSModal>
+
+@code {
+    [Parameter]
+    public ProjectDetailsDTO project {get; set;}
+    [Parameter]
+    public Guid userId {get; set;}
+    private BSModal AddCollaborator;
+
+    private BSBasicInput<string> UserSearchInput;
+    private string UserSearch = string.Empty;
+    private UserDTO[] SearchedUsers;
+
+    protected async void removeCollaborator(Guid id){
+        var response = await Http.PutAsJsonAsync($"api/Project/Collaborator", new ProjectAddRemoveCollaboratorDTO(project.Id, id));
+    }
+
+    protected async void AddCollaboratorToProject(Guid userId)
+    {
+        ProjectAddRemoveCollaboratorDTO user = new ProjectAddRemoveCollaboratorDTO(project.Id, userId);
+        await Http.PostAsJsonAsync<ProjectAddRemoveCollaboratorDTO>($"api/Project/Collaborator", user);
+        MyNavigationManager.NavigateTo($"/Project?projectId={project.Id}", true); 
+    }  
+
+     protected async Task<UserDTO[]> SearchUser(string e)
+    {
+        UserSearch = e;
+        if (UserSearch.Length > 3)
+        {
+            return await Http.GetFromJsonAsync<UserDTO[]>($"api/User/Name/{UserSearch}");
+        }
+        return new UserDTO[0];
+    }
+}

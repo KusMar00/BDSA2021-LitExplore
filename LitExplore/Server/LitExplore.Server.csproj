@@ -15,9 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PaperDiscovery\LitExplore.PaperDiscovery.csproj" />
-    <ProjectReference Include="..\ProjectManagement\LitExplore.ProjectManagement.csproj" />
     <ProjectReference Include="..\Shared\LitExplore.Shared.csproj" />
-    <ProjectReference Include="..\UserManagement\LitExplore.UserManagement.csproj" />
     <ProjectReference Include="..\Client\LitExplore.Client.csproj" />
   </ItemGroup>
 

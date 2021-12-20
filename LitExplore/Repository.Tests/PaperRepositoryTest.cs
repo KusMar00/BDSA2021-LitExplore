@@ -74,7 +74,7 @@ public class PaperRepositoryTest : RepositoryTests
         Assert.Equal(expected, actual);
     }
     #endregion
-
+/*
     #region ReadDetailsAsync
     [Fact]
     public async void ReadDetailsAsync_Non_Existing_Returns_Null()
@@ -116,8 +116,8 @@ public class PaperRepositoryTest : RepositoryTests
         Assert.Equal(expected.Authors, actual.Authors);
         Assert.Equal(expected.URL, actual.URL);
         Assert.Equal(expected.Abstract, actual.Abstract);
-    }
-    #endregion
+    }*/
+    //#endregion
 
     #region ReadByNameAsync
     [Fact]

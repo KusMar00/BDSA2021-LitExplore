@@ -92,7 +92,7 @@ namespace LitExplore.Server.Tests;
             );
 
             // Act
-            var actual = await projectController.Get(1);
+            ProjectDetailsDTO? actual = await projectController.Get(1);
 
             // Assert
             #pragma warning disable CS8602

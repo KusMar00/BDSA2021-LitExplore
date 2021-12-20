@@ -29,7 +29,7 @@ namespace LitExplore.Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     URL = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
                     Abstract = table.Column<string>(type: "nvarchar(2200)", maxLength: 2200, nullable: true)
                 },
@@ -42,12 +42,14 @@ namespace LitExplore.Repository.Migrations
                 name: "Users",
                 columns: table => new
                 {
+                    InternalId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     DisplayName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.InternalId);
                 });
 
             migrationBuilder.CreateTable(
@@ -75,22 +77,45 @@ namespace LitExplore.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "PaperPaper",
+                columns: table => new
+                {
+                    CitedById = table.Column<int>(type: "int", nullable: false),
+                    CitingsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PaperPaper", x => new { x.CitedById, x.CitingsId });
+                    table.ForeignKey(
+                        name: "FK_PaperPaper_Papers_CitedById",
+                        column: x => x.CitedById,
+                        principalTable: "Papers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PaperPaper_Papers_CitingsId",
+                        column: x => x.CitingsId,
+                        principalTable: "Papers",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Projects",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    OwnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    OwnerInternalId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Projects", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Projects_Users_OwnerId",
-                        column: x => x.OwnerId,
+                        name: "FK_Projects_Users_OwnerInternalId",
+                        column: x => x.OwnerInternalId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "InternalId");
                 });
 
             migrationBuilder.CreateTable(
@@ -121,12 +146,12 @@ namespace LitExplore.Repository.Migrations
                 name: "ProjectUser",
                 columns: table => new
                 {
-                    CollaboratorsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CollaboratorsInternalId = table.Column<int>(type: "int", nullable: false),
                     HasAccessToId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectUser", x => new { x.CollaboratorsId, x.HasAccessToId });
+                    table.PrimaryKey("PK_ProjectUser", x => new { x.CollaboratorsInternalId, x.HasAccessToId });
                     table.ForeignKey(
                         name: "FK_ProjectUser_Projects_HasAccessToId",
                         column: x => x.HasAccessToId,
@@ -134,10 +159,10 @@ namespace LitExplore.Repository.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProjectUser_Users_CollaboratorsId",
-                        column: x => x.CollaboratorsId,
+                        name: "FK_ProjectUser_Users_CollaboratorsInternalId",
+                        column: x => x.CollaboratorsInternalId,
                         principalTable: "Users",
-                        principalColumn: "Id",
+                        principalColumn: "InternalId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -147,25 +172,39 @@ namespace LitExplore.Repository.Migrations
                 column: "PapersId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PaperPaper_CitingsId",
+                table: "PaperPaper",
+                column: "CitingsId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PaperProject_UsedInId",
                 table: "PaperProject",
                 column: "UsedInId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Projects_OwnerId",
+                name: "IX_Projects_OwnerInternalId",
                 table: "Projects",
-                column: "OwnerId");
+                column: "OwnerInternalId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProjectUser_HasAccessToId",
                 table: "ProjectUser",
                 column: "HasAccessToId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Id",
+                table: "Users",
+                column: "Id",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "AuthorPaper");
+
+            migrationBuilder.DropTable(
+                name: "PaperPaper");
 
             migrationBuilder.DropTable(
                 name: "PaperProject");
