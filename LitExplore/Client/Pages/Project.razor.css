@@ -3,7 +3,8 @@
   height: 80vh;
 }
 
-li, ::deep li {
+li,
+::deep li {
   list-style-type: none;
 }
 
@@ -37,7 +38,6 @@ li, ::deep li {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  margin: 10px auto;
   color: green;
   font-size: 3.2em;
   font-weight: 750;

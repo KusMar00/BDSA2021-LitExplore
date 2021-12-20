@@ -30,7 +30,7 @@ public class ProjectRepository : IProjectRepository
             return Status.NotFound;
         }
 
-        if (projectToModify.Collaborators.Contains(collaboratorToAdd))
+        if (collaboratorToAdd == projectToModify.Owner || projectToModify.Collaborators.Contains(collaboratorToAdd))
         {
             return Status.Conflict;
         }

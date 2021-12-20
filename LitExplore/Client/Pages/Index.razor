@@ -22,6 +22,13 @@
     <Authorized>
         <div style="width: 90vw; margin: 0 auto 20px auto; display: flex; flex-direction: column; align-items:center; justify-content: center;">
             <h1 style="color: var(--lavender);">Your Projects</h1>
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;">
+                <BSBasicInput Style ="width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="New project"/>
+                <BSButton style="background-color:var(--bs-success);" Id="addLit" class="adder" @onclick="@(() => @CreateNewProject())">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" fill="white"/></svg>
+                </BSButton>
+                <BSTooltip Target="addLit" Placement="Placement.Bottom">Add new project</BSTooltip>
+            </div>
             @if(UserProjects == null)
             {
                 <p style="color: var(--lavender); margin-top: 10px;"><i>No projects were found</i></p>
@@ -33,13 +40,6 @@
                     <ProjectCard Name="@project.Name" Owner="@project.Owner.DisplayName" ProjectId="@project.Id" />
                 }
             }
-            
-
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;">
-                <BSBasicInput Style ="width: 20vw;"InputType="InputType.Text" @ref="UserSearchInput" Value="newProjectName" ValueChanged="@((string value) => SelectedChanged(value))" ValidateOnInput="true" Placeholder="New project"/>
-                <BSButton style="background-color:var(--bs-success);" Id="addLit" class="adder" @onclick="@(() => @CreateNewProject())">+</BSButton>
-                <BSTooltip Target="addLit" Placement="Placement.Bottom">Add litterature</BSTooltip>
-            </div>
         </div>
     </Authorized>
     <NotAuthorized>
