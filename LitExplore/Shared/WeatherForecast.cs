@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace LitExplore.Shared;
 
+[ExcludeFromCodeCoverage]
 public class WeatherForecast
 {
     public DateTime Date { get; set; }

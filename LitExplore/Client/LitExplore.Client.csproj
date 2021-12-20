@@ -18,5 +18,9 @@
     <ProjectReference Include="..\Shared\LitExplore.Shared.csproj" />
     <ProjectReference Include="..\Repository.Entities\LitExplore.Repository.Entities.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <!-- ... -->
+    <AssemblyAttribute Include="System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"/>
+  </ItemGroup>
 
 </Project>

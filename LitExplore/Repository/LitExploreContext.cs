@@ -3,7 +3,7 @@
 namespace LitExplore.Repository;
 public class LitExploreContext : DbContext
 {
-    public DbSet<Author> Authors => Set<Author>();
+    //public DbSet<Author> Authors => Set<Author>();
     public DbSet<Paper> Papers => Set<Paper>();
     public DbSet<Project> Projects => Set<Project>();
     public DbSet<User> Users => Set<User>();

@@ -1,4 +1,7 @@
-﻿namespace LitExplore.Repository.Entities;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace LitExplore.Repository.Entities;
+
 
 public class Author
 {
@@ -15,4 +18,5 @@ public class Author
     public ISet<Paper> Papers{ get; set; } = null!;
 }
 
+[ExcludeFromCodeCoverage]
 public record AuthorDTO(int Id, string GivenName, string Surname);

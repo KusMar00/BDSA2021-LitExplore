@@ -1,11 +1,13 @@
 ﻿using LitExplore.Repository;
 using LitExplore.Repository.Entities;
 using LitExplore.UserManagement;
+using System.Diagnostics.CodeAnalysis;
 
 
 
 namespace LitExplore.PaperDiscovery;
 
+    [ExcludeFromCodeCoverage]
     public class PaperDiscovery : IPaperDiscovery
     {
 

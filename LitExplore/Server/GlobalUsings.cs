@@ -10,3 +10,5 @@ global using Microsoft.AspNetCore.Identity;
 
 global using LitExplore.Repository.Entities;
 global using LitExplore.Repository;
+
+global using System.Diagnostics.CodeAnalysis;

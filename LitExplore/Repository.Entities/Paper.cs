@@ -1,4 +1,6 @@
-﻿namespace LitExplore.Repository.Entities;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace LitExplore.Repository.Entities;
 
 public class Paper
 {

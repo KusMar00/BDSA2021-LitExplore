@@ -4,6 +4,7 @@
 
 namespace LitExplore.Repository.Migrations
 {
+    [ExcludeFromCodeCoverage]
     public partial class newmig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

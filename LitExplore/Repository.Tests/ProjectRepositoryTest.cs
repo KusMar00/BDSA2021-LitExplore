@@ -578,6 +578,19 @@ public class ProjectRepositoryTest : RepositoryTests
     }
 
     [Fact]
+    public async void RemoveCollaboratorAsync_Remove_Collaborator_From_Project_5_Returns_Status_NotFound()
+    {
+        // Arrange
+        var expected = Status.NotFound;
+
+        // Act
+        var actual = await repo.RemoveCollaboratorAsync(new(5, Id_2));
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
     public async void RemovePaperAsync_Remove_Paper_1_From_Project_5_Returns_Status_NotFound()
     {
         // Arrange

@@ -4,6 +4,7 @@
 
 namespace LitExplore.Repository.Migrations
 {
+    [ExcludeFromCodeCoverage]
     public partial class RelationMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

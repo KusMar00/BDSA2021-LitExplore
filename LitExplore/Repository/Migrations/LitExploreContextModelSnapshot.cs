@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LitExplore.Repository.Migrations
 {
+    [ExcludeFromCodeCoverage]
     [DbContext(typeof(LitExploreContext))]
     partial class LitExploreContextModelSnapshot : ModelSnapshot
     {

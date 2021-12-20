@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace LitExplore.Repository;
 
+[ExcludeFromCodeCoverage]
 public class LitExploreContextFactory : IDesignTimeDbContextFactory<LitExploreContext>
 {
     public LitExploreContext CreateDbContext(string[] args)

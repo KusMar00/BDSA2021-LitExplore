@@ -13,6 +13,7 @@ namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
     [Migration("20211201152843_PrimaryKeys")]
+    [ExcludeFromCodeCoverage]
     partial class PrimaryKeys
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

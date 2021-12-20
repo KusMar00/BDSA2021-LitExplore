@@ -1,9 +1,12 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Components.Authorization;
 using LitExplore.Repository.Entities;
+using System.Diagnostics.CodeAnalysis;
+
 namespace LitExplore.UserManagement
 {
-        public class CustomAuthStateProvider : AuthenticationStateProvider, ICustomAuthStateProvider
+    [ExcludeFromCodeCoverage]
+    public class CustomAuthStateProvider : AuthenticationStateProvider, ICustomAuthStateProvider
         {
             
             string? name;

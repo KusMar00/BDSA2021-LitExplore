@@ -2,10 +2,12 @@
 using LitExplore.Repository;
 using Microsoft.EntityFrameworkCore;
 using LitExplore.UserManagement;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace LitExplore.ProjectManagement
 {
+    [ExcludeFromCodeCoverage]
     public class ProjectManagement : IProjectManagement
     {
         protected IProjectRepository projectRepository;

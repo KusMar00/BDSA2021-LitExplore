@@ -16,7 +16,7 @@ public class DatabaseTests
         // If it does not, it should create and seed it.
     }
 
-    [Fact]
+    [Fact(Skip = "We don't want to modify the live database when testing.")]
     public static void Get_Options_Builder_NotNull(){
         // Arrange
 
@@ -27,7 +27,7 @@ public class DatabaseTests
         Assert.NotNull(actual);
     }
 
-    [Fact]
+    [Fact(Skip = "We don't want to modify the live database when testing.")]
     public static void Get_Connection_String_NotNull(){
         // Arrange
 
@@ -38,7 +38,7 @@ public class DatabaseTests
         Assert.NotNull(actual);
     }
 
-    [Fact]
+    [Fact(Skip = "We don't want to modify the live database when testing.")]
     public static void Load_Configuration_NotNull(){
         // Arrange
 
@@ -50,7 +50,7 @@ public class DatabaseTests
     }
 
 
-    [Fact]
+    [Fact(Skip = "We don't want to modify the live database when testing.")]
     public static void LitExploreContextFactory_Create_DB_Context_NotNull(){
         // Arrange
         var LitExploreContextFactory = new LitExploreContextFactory();
@@ -61,6 +61,4 @@ public class DatabaseTests
         // Assert
         Assert.NotNull(actual);
     }
-
-
 }

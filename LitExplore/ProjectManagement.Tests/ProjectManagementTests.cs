@@ -4,9 +4,11 @@ using System;
 using LitExplore.Repository.Tests;
 using LitExplore.Repository;
 using Xunit;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LitExplore.ProjectManagement.Tests;
 
+[ExcludeFromCodeCoverage]
 public class ProjectManagementsTests : RepositoryTests
 {
 

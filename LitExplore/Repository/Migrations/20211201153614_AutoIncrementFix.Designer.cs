@@ -13,6 +13,7 @@ namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
     [Migration("20211201153614_AutoIncrementFix")]
+    [ExcludeFromCodeCoverage]
     partial class AutoIncrementFix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
