@@ -29,7 +29,7 @@ You add the first paper by pressing the "+" button next to "Project Litterature"
 The recomended papers are based on the papers which are currently in your project, so there will not be anything here until you add your first paper.
 
 Gathering papers for the database is not really part of our vertical slice. Because of this, the amount of papers in the database is very small since they are only there to demonstrate the functionality of the application.
-A good serch term for finding your first paper in this small set of papers is "Coffee".
+A good serch term for finding your first paper in this small set of papers is "Coffee" or "Zinc".
 
 > ###### About the papers in the database
 >
