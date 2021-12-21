@@ -35,3 +35,7 @@ A good serch term for finding your first paper in this small set of papers is "C
 > ###### About the papers in the database
 >
 > We used [Google Scholar](https://scholar.google.com/) to gather papers for the database. We use more or less random papers based on the search term "Coffee".
+
+## Code coverage
+
+To see a description of the code coverage supplied by our test suite go to [github pages](https://kusmar00.github.io/BDSA2021-LitExplore/).
