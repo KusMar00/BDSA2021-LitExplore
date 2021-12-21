@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LitExplore.Repository.Migrations
 {
+    [ExcludeFromCoverage]
     public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
