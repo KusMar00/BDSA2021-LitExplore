@@ -12,9 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LitExplore.Repository.Migrations
 {
     [DbContext(typeof(LitExploreContext))]
-    [Migration("20211201152843_PrimaryKeys")]
-    //[ExcludeFromCodeCoverage]
-    partial class PrimaryKeys
+    [Migration("20211221125508_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,7 +59,7 @@ namespace LitExplore.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Author");
                 });
 
             modelBuilder.Entity("LitExplore.Repository.Entities.Paper", b =>
@@ -101,27 +100,36 @@ namespace LitExplore.Repository.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<Guid?>("OwnerId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("OwnerInternalId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerInternalId");
 
                     b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("LitExplore.Repository.Entities.User", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("InternalId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InternalId"), 1L, 1);
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("Id");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("InternalId");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });
@@ -158,13 +166,13 @@ namespace LitExplore.Repository.Migrations
 
             modelBuilder.Entity("ProjectUser", b =>
                 {
-                    b.Property<Guid>("CollaboratorsId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("CollaboratorsInternalId")
+                        .HasColumnType("int");
 
                     b.Property<int>("HasAccessToId")
                         .HasColumnType("int");
 
-                    b.HasKey("CollaboratorsId", "HasAccessToId");
+                    b.HasKey("CollaboratorsInternalId", "HasAccessToId");
 
                     b.HasIndex("HasAccessToId");
 
@@ -190,7 +198,7 @@ namespace LitExplore.Repository.Migrations
                 {
                     b.HasOne("LitExplore.Repository.Entities.User", "Owner")
                         .WithMany("IsOwnerOf")
-                        .HasForeignKey("OwnerId");
+                        .HasForeignKey("OwnerInternalId");
 
                     b.Navigation("Owner");
                 });
@@ -229,7 +237,7 @@ namespace LitExplore.Repository.Migrations
                 {
                     b.HasOne("LitExplore.Repository.Entities.User", null)
                         .WithMany()
-                        .HasForeignKey("CollaboratorsId")
+                        .HasForeignKey("CollaboratorsInternalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

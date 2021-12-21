@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace LitExplore.PaperDiscovery.Tests;
 
-/*
+
 [ExcludeFromCodeCoverage]
 public class PaperDiscoveryTests : RepositoryTests
 {
@@ -104,4 +104,3 @@ public class PaperDiscoveryTests : RepositoryTests
         Assert.Equal(expected, actual);
     }
 }
-*/

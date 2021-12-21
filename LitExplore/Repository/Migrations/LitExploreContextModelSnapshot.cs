@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LitExplore.Repository.Migrations
 {
-    [ExcludeFromCodeCoverage]
     [DbContext(typeof(LitExploreContext))]
     partial class LitExploreContextModelSnapshot : ModelSnapshot
     {
@@ -58,7 +57,7 @@ namespace LitExplore.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Author");
                 });
 
             modelBuilder.Entity("LitExplore.Repository.Entities.Paper", b =>

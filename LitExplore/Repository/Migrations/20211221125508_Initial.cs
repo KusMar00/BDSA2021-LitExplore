@@ -5,13 +5,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LitExplore.Repository.Migrations
 {
-    [ExcludeFromCodeCoverage]
     public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Authors",
+                name: "Author",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -21,7 +20,7 @@ namespace LitExplore.Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Authors", x => x.Id);
+                    table.PrimaryKey("PK_Author", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -64,9 +63,9 @@ namespace LitExplore.Repository.Migrations
                 {
                     table.PrimaryKey("PK_AuthorPaper", x => new { x.AuthorsId, x.PapersId });
                     table.ForeignKey(
-                        name: "FK_AuthorPaper_Authors_AuthorsId",
+                        name: "FK_AuthorPaper_Author_AuthorsId",
                         column: x => x.AuthorsId,
-                        principalTable: "Authors",
+                        principalTable: "Author",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -214,7 +213,7 @@ namespace LitExplore.Repository.Migrations
                 name: "ProjectUser");
 
             migrationBuilder.DropTable(
-                name: "Authors");
+                name: "Author");
 
             migrationBuilder.DropTable(
                 name: "Papers");
