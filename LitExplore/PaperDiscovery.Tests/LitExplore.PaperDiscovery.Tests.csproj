@@ -28,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PaperDiscovery\LitExplore.PaperDiscovery.csproj" />
     <ProjectReference Include="..\Repository.Tests\LitExplore.Repository.Tests.csproj" />
+    <ProjectReference Include="..\Server\LitExplore.Server.csproj" />
   </ItemGroup>
 
 </Project>

@@ -42,14 +42,18 @@ namespace LitExplore.Server.Tests;
         public async void Get_Paper_By_Id_1_Returns_Paper_1()
         {
             // Arrange
-            PaperDTO? expected = new(1, "Paper1");
+            PaperDetailsDTO? expected = new(1, "Paper1", new HashSet<AuthorDTO>() { new AuthorDTO(1, "James", "Wilson") }, null, null);
 
             // Act
             var actual = await paperController.Get(1);
 
             // Assert
-            Assert.Equal(expected, actual);
-        }
+            Assert.Equal(expected.Id, actual.Id);
+            Assert.Equal(expected.Name, actual.Name);
+            Assert.Equal(expected.Authors, actual.Authors);
+            Assert.Equal(expected.URL, actual.URL);
+            Assert.Equal(expected.Abstract, actual.Abstract);
+    }
 
         [Fact]
         public async void Get_Paper_By_Id_5_Returns_Null()
@@ -72,46 +76,6 @@ namespace LitExplore.Server.Tests;
 
             // Act
             var actual = await paperController.Get("Paper1");
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-        public async void Get_Related_Papers_By_Id_1_Returns_Paper_2()
-        {
-            // Arrange
-            IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(2, "Paper2")};
-
-            // Act
-            var actual = await paperController.Get("Paper1");
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-
-
-        [Fact]
-        public async void Get_Related_Papers_By_Id_2_Returns_Paper_2_And_Paper_3()
-        {
-            // Arrange
-            IReadOnlyCollection<PaperDTO>? expected = new []{new PaperDTO(1, "Paper1"), new PaperDTO(3, "Paper3")};
-
-            // Act
-            var actual = await paperController.Get("Paper2");
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-        public async void Get_Related_Papers_By_Id_4_Returns_Empty()
-        {
-            // Arrange
-            IReadOnlyCollection<PaperDTO>? expected = new List<PaperDTO>();
-
-            // Act
-            var actual = await paperController.Get("Paper4");
 
             // Assert
             Assert.Equal(expected, actual);

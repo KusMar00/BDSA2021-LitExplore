@@ -5,12 +5,17 @@ using LitExplore.Repository.Tests;
 using Xunit;
 using System.Diagnostics.CodeAnalysis;
 
-namespace LitExplore.PaperDiscovery.Tests;
-
-
-[ExcludeFromCodeCoverage]
-public class PaperDiscoveryTests : RepositoryTests
+namespace LitExplore.PaperDiscovery.Tests
 {
+
+    [ExcludeFromCodeCoverage]
+    public class PaperDiscoveryControllerTest
+    {
+    }
+}
+
+
+/*
     private IPaperRepository repo;
     private PaperDiscovery paperDiscovery;
 
@@ -104,3 +109,4 @@ public class PaperDiscoveryTests : RepositoryTests
         Assert.Equal(expected, actual);
     }
 }
+*/
