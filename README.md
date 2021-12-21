@@ -1,3 +1,3 @@
-# BDSA2021-LitExplore
+# Code coverage
 
-This is for the github pages to show our test coverage.
+This branch is for the github pages to show our test coverage.
