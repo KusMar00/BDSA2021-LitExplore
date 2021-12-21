@@ -8,6 +8,7 @@
 
 The script will save the necessary info to reconnect to the docker container in `\LitExplore\.local\secrets`. (Make sure to delete the secrets folder if you delete the docker container so the script will generate a new one).
 If the application doesn't start correctly for some reason, try running 'Start-Application.ps1' a second time.
+You can also try to delete the `\LitExplore\.local\secrets` folder.
 
 ## Accessing the web interface
 
