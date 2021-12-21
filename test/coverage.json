@@ -1,0 +1,1236 @@
+{
+  "LitExplore.PaperDiscovery.dll": {},
+  "LitExplore.Repository.dll": {
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository\\LitExploreContext.cs": {
+      "LitExplore.Repository.LitExploreContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.LitExploreContext::get_Papers()": {
+          "Lines": {
+            "7": 37
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.LitExploreContext::get_Projects()": {
+          "Lines": {
+            "8": 115
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<LitExplore.Repository.Entities.User> LitExplore.Repository.LitExploreContext::get_Users()": {
+          "Lines": {
+            "9": 94
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.LitExploreContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "28": 4,
+            "29": 4,
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.LitExploreContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<LitExplore.Repository.LitExploreContext>)": {
+          "Lines": {
+            "11": 240
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository\\PaperRepository.cs": {
+      "LitExplore.Repository.PaperRepository": {
+        "System.Void LitExplore.Repository.PaperRepository::.ctor(LitExplore.Repository.LitExploreContext)": {
+          "Lines": {
+            "8": 36
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.PaperRepository/<ReadAsync>d__2": {
+        "System.Void LitExplore.Repository.PaperRepository/<ReadAsync>d__2::MoveNext()": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.PaperRepository/<ReadByNameAsync>d__3": {
+        "System.Void LitExplore.Repository.PaperRepository/<ReadByNameAsync>d__3::MoveNext()": {
+          "Lines": {
+            "19": 5,
+            "20": 5,
+            "21": 5,
+            "22": 5,
+            "23": 5,
+            "24": 5
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.PaperRepository/<ReadByRelationsAsync>d__4": {
+        "System.Void LitExplore.Repository.PaperRepository/<ReadByRelationsAsync>d__4::MoveNext()": {
+          "Lines": {
+            "27": 7,
+            "28": 7,
+            "29": 7,
+            "30": 7,
+            "31": 7,
+            "32": 7,
+            "33": 7,
+            "34": 7,
+            "36": 7,
+            "37": 7
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.PaperRepository/<ReadDetailsAsync>d__5": {
+        "System.Void LitExplore.Repository.PaperRepository/<ReadDetailsAsync>d__5::MoveNext()": {
+          "Lines": {
+            "40": 4,
+            "41": 4,
+            "42": 4,
+            "43": 4,
+            "44": 4,
+            "45": 4,
+            "46": 4,
+            "47": 4,
+            "48": 4,
+            "49": 4,
+            "50": 4,
+            "51": 4,
+            "52": 4,
+            "53": 4,
+            "54": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository\\ProjectRepository.cs": {
+      "LitExplore.Repository.ProjectRepository": {
+        "System.Void LitExplore.Repository.ProjectRepository::.ctor(LitExplore.Repository.LitExploreContext)": {
+          "Lines": {
+            "7": 102
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<>c__DisplayClass10_0": {
+        "System.Boolean LitExplore.Repository.ProjectRepository/<>c__DisplayClass10_0::<RemovePaperAsync>b__0(LitExplore.Repository.Entities.Paper)": {
+          "Lines": {
+            "237": 5
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<>c__DisplayClass8_0": {
+        "System.Boolean LitExplore.Repository.ProjectRepository/<>c__DisplayClass8_0::<RemoveCollaboratorAsync>b__0(LitExplore.Repository.Entities.User)": {
+          "Lines": {
+            "178": 6
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<AddCollaboratorAsync>d__2": {
+        "System.Void LitExplore.Repository.ProjectRepository/<AddCollaboratorAsync>d__2::MoveNext()": {
+          "Lines": {
+            "10": 8,
+            "11": 8,
+            "12": 8,
+            "13": 8,
+            "14": 8,
+            "15": 8,
+            "17": 8,
+            "18": 2,
+            "19": 2,
+            "22": 6,
+            "23": 6,
+            "24": 6,
+            "25": 6,
+            "26": 6,
+            "28": 6,
+            "29": 2,
+            "30": 2,
+            "34": 4,
+            "35": 2,
+            "36": 2,
+            "39": 2,
+            "40": 2,
+            "41": 2,
+            "42": 8
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 415,
+              "EndOffset": 417,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 17,
+              "Offset": 415,
+              "EndOffset": 425,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 28,
+              "Offset": 726,
+              "EndOffset": 728,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 28,
+              "Offset": 726,
+              "EndOffset": 736,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 34,
+              "Offset": 753,
+              "EndOffset": 755,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 3
+            },
+            {
+              "Line": 34,
+              "Offset": 753,
+              "EndOffset": 779,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 784,
+              "EndOffset": 786,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 34,
+              "Offset": 784,
+              "EndOffset": 794,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<AddPaperAsync>d__3": {
+        "System.Void LitExplore.Repository.ProjectRepository/<AddPaperAsync>d__3::MoveNext()": {
+          "Lines": {
+            "45": 6,
+            "46": 6,
+            "47": 6,
+            "48": 6,
+            "49": 6,
+            "50": 6,
+            "52": 6,
+            "53": 2,
+            "54": 2,
+            "57": 4,
+            "58": 4,
+            "59": 4,
+            "60": 4,
+            "61": 4,
+            "63": 4,
+            "64": 1,
+            "65": 1,
+            "68": 3,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 3,
+            "73": 1,
+            "74": 1,
+            "77": 2,
+            "78": 2,
+            "79": 2,
+            "80": 6
+          },
+          "Branches": [
+            {
+              "Line": 52,
+              "Offset": 415,
+              "EndOffset": 417,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 52,
+              "Offset": 415,
+              "EndOffset": 425,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 63,
+              "Offset": 710,
+              "EndOffset": 712,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 63,
+              "Offset": 710,
+              "EndOffset": 720,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 68,
+              "Offset": 738,
+              "EndOffset": 740,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 738,
+              "EndOffset": 761,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 3
+            },
+            {
+              "Line": 72,
+              "Offset": 787,
+              "EndOffset": 789,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 72,
+              "Offset": 787,
+              "EndOffset": 797,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<CreateProjectAsync>d__4": {
+        "System.Void LitExplore.Repository.ProjectRepository/<CreateProjectAsync>d__4::MoveNext()": {
+          "Lines": {
+            "83": 6,
+            "84": 6,
+            "85": 6,
+            "86": 6,
+            "87": 6,
+            "88": 6,
+            "90": 6,
+            "91": 2,
+            "92": 2,
+            "95": 4,
+            "96": 4,
+            "97": 4,
+            "98": 4,
+            "99": 4,
+            "101": 4,
+            "102": 2,
+            "103": 2,
+            "106": 2,
+            "107": 2,
+            "108": 2,
+            "109": 2,
+            "110": 2,
+            "111": 2,
+            "112": 2,
+            "114": 2,
+            "115": 2,
+            "116": 2,
+            "117": 6
+          },
+          "Branches": [
+            {
+              "Line": 90,
+              "Offset": 579,
+              "EndOffset": 581,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 90,
+              "Offset": 579,
+              "EndOffset": 600,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 101,
+              "Offset": 779,
+              "EndOffset": 781,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 101,
+              "Offset": 779,
+              "EndOffset": 795,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<DeleteProjectAsync>d__5": {
+        "System.Void LitExplore.Repository.ProjectRepository/<DeleteProjectAsync>d__5::MoveNext()": {
+          "Lines": {
+            "120": 4,
+            "121": 4,
+            "122": 4,
+            "123": 4,
+            "124": 4,
+            "125": 4,
+            "127": 4,
+            "128": 2,
+            "129": 2,
+            "132": 2,
+            "133": 2,
+            "135": 2,
+            "136": 4
+          },
+          "Branches": [
+            {
+              "Line": 127,
+              "Offset": 319,
+              "EndOffset": 321,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 127,
+              "Offset": 319,
+              "EndOffset": 329,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<ReadProjectAsync>d__6": {
+        "System.Void LitExplore.Repository.ProjectRepository/<ReadProjectAsync>d__6::MoveNext()": {
+          "Lines": {
+            "139": 7,
+            "140": 7,
+            "141": 7,
+            "142": 7,
+            "143": 7,
+            "144": 7,
+            "145": 7,
+            "146": 7
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<ReadProjectDetailsAsync>d__7": {
+        "System.Void LitExplore.Repository.ProjectRepository/<ReadProjectDetailsAsync>d__7::MoveNext()": {
+          "Lines": {
+            "149": 12,
+            "150": 12,
+            "151": 12,
+            "152": 12,
+            "153": 12,
+            "154": 12,
+            "155": 12,
+            "156": 12,
+            "157": 12
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<ReadProjectsByUserAsync>d__9": {
+        "System.Void LitExplore.Repository.ProjectRepository/<ReadProjectsByUserAsync>d__9::MoveNext()": {
+          "Lines": {
+            "192": 4,
+            "193": 4,
+            "194": 4,
+            "195": 4,
+            "196": 4,
+            "197": 4,
+            "199": 6,
+            "200": 2,
+            "203": 2,
+            "204": 2,
+            "205": 2,
+            "206": 2,
+            "207": 2,
+            "209": 2,
+            "210": 2,
+            "211": 2,
+            "212": 2,
+            "213": 2,
+            "215": 2,
+            "216": 4
+          },
+          "Branches": [
+            {
+              "Line": 199,
+              "Offset": 359,
+              "EndOffset": 361,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 199,
+              "Offset": 359,
+              "EndOffset": 398,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<RemoveCollaboratorAsync>d__8": {
+        "System.Void LitExplore.Repository.ProjectRepository/<RemoveCollaboratorAsync>d__8::MoveNext()": {
+          "Lines": {
+            "160": 7,
+            "161": 7,
+            "162": 7,
+            "163": 7,
+            "164": 7,
+            "165": 7,
+            "167": 7,
+            "168": 3,
+            "169": 3,
+            "172": 4,
+            "173": 0,
+            "174": 0,
+            "176": 4,
+            "177": 4,
+            "179": 4,
+            "180": 4,
+            "182": 4,
+            "183": 2,
+            "184": 2,
+            "186": 2,
+            "187": 2,
+            "188": 2,
+            "189": 7
+          },
+          "Branches": [
+            {
+              "Line": 167,
+              "Offset": 390,
+              "EndOffset": 392,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 167,
+              "Offset": 390,
+              "EndOffset": 400,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 172,
+              "Offset": 418,
+              "EndOffset": 420,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 172,
+              "Offset": 418,
+              "EndOffset": 439,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 182,
+              "Offset": 496,
+              "EndOffset": 498,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 182,
+              "Offset": 496,
+              "EndOffset": 503,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.ProjectRepository/<RemovePaperAsync>d__10": {
+        "System.Void LitExplore.Repository.ProjectRepository/<RemovePaperAsync>d__10::MoveNext()": {
+          "Lines": {
+            "219": 6,
+            "220": 6,
+            "221": 6,
+            "222": 6,
+            "223": 6,
+            "224": 6,
+            "226": 6,
+            "227": 2,
+            "228": 2,
+            "231": 4,
+            "232": 0,
+            "233": 0,
+            "235": 4,
+            "236": 4,
+            "238": 4,
+            "239": 4,
+            "241": 4,
+            "242": 2,
+            "243": 2,
+            "246": 2,
+            "247": 2,
+            "248": 2,
+            "249": 6
+          },
+          "Branches": [
+            {
+              "Line": 226,
+              "Offset": 390,
+              "EndOffset": 392,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 226,
+              "Offset": 390,
+              "EndOffset": 400,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 231,
+              "Offset": 418,
+              "EndOffset": 420,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 231,
+              "Offset": 418,
+              "EndOffset": 439,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 241,
+              "Offset": 496,
+              "EndOffset": 498,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 241,
+              "Offset": 496,
+              "EndOffset": 503,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository\\UserRepository.cs": {
+      "LitExplore.Repository.UserRepository": {
+        "System.Void LitExplore.Repository.UserRepository::.ctor(LitExplore.Repository.LitExploreContext)": {
+          "Lines": {
+            "7": 28
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.UserRepository/<CreateAsync>d__2": {
+        "System.Void LitExplore.Repository.UserRepository/<CreateAsync>d__2::MoveNext()": {
+          "Lines": {
+            "10": 4,
+            "11": 4,
+            "12": 4,
+            "13": 4,
+            "14": 4,
+            "16": 4,
+            "17": 2,
+            "18": 2,
+            "21": 2,
+            "23": 2,
+            "25": 2,
+            "27": 2,
+            "28": 4
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 473,
+              "EndOffset": 475,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 16,
+              "Offset": 473,
+              "EndOffset": 494,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.UserRepository/<DeleteAsync>d__3": {
+        "System.Void LitExplore.Repository.UserRepository/<DeleteAsync>d__3::MoveNext()": {
+          "Lines": {
+            "31": 5,
+            "32": 5,
+            "33": 5,
+            "34": 5,
+            "36": 5,
+            "37": 2,
+            "38": 2,
+            "41": 3,
+            "42": 1,
+            "43": 1,
+            "46": 2,
+            "47": 2,
+            "49": 2,
+            "50": 5
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 392,
+              "EndOffset": 394,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 36,
+              "Offset": 392,
+              "EndOffset": 402,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 41,
+              "Offset": 422,
+              "EndOffset": 424,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 422,
+              "EndOffset": 432,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.UserRepository/<ReadAsync>d__4": {
+        "System.Void LitExplore.Repository.UserRepository/<ReadAsync>d__4::MoveNext()": {
+          "Lines": {
+            "53": 4,
+            "54": 4,
+            "55": 4,
+            "56": 4,
+            "57": 4,
+            "58": 4
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.UserRepository/<ReadByNameAsync>d__5": {
+        "System.Void LitExplore.Repository.UserRepository/<ReadByNameAsync>d__5::MoveNext()": {
+          "Lines": {
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "66": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "LitExplore.Repository.Entities.dll": {
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository.Entities\\Author.cs": {
+      "LitExplore.Repository.Entities.Author": {
+        "System.Int32 LitExplore.Repository.Entities.Author::get_Id()": {
+          "Lines": {
+            "10": 284
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.Author::get_GivenName()": {
+          "Lines": {
+            "13": 568
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.Author::get_Surname()": {
+          "Lines": {
+            "16": 568
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Author::get_Papers()": {
+          "Lines": {
+            "18": 284
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.AuthorDTO": {
+        "System.Int32 LitExplore.Repository.Entities.AuthorDTO::get_Id()": {
+          "Lines": {
+            "21": 24
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository.Entities\\Paper.cs": {
+      "LitExplore.Repository.Entities.Paper": {
+        "System.Int32 LitExplore.Repository.Entities.Paper::get_Id()": {
+          "Lines": {
+            "9": 240
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Author> LitExplore.Repository.Entities.Paper::get_Authors()": {
+          "Lines": {
+            "11": 442
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.Paper::get_Name()": {
+          "Lines": {
+            "14": 235
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.Paper::get_URL()": {
+          "Lines": {
+            "18": 221
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.Paper::get_Abstract()": {
+          "Lines": {
+            "21": 221
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.Entities.Paper::get_UsedIn()": {
+          "Lines": {
+            "23": 221
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Paper::get_Citings()": {
+          "Lines": {
+            "27": 310
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Paper::get_CitedBy()": {
+          "Lines": {
+            "28": 221
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.PaperDTO": {
+        "System.Int32 LitExplore.Repository.Entities.PaperDTO::get_Id()": {
+          "Lines": {
+            "31": 162
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.PaperDetailsDTO": {
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.AuthorDTO> LitExplore.Repository.Entities.PaperDetailsDTO::get_Authors()": {
+          "Lines": {
+            "32": 28
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository.Entities\\Project.cs": {
+      "LitExplore.Repository.Entities.Project": {
+        "System.Int32 LitExplore.Repository.Entities.Project::get_Id()": {
+          "Lines": {
+            "7": 243
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.Project::get_Name()": {
+          "Lines": {
+            "10": 473
+          },
+          "Branches": []
+        },
+        "LitExplore.Repository.Entities.User LitExplore.Repository.Entities.Project::get_Owner()": {
+          "Lines": {
+            "14": 486
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.User> LitExplore.Repository.Entities.Project::get_Collaborators()": {
+          "Lines": {
+            "17": 480
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Project::get_Papers()": {
+          "Lines": {
+            "20": 476
+          },
+          "Branches": []
+        },
+        "LitExplore.Repository.Entities.ProjectDTO LitExplore.Repository.Entities.Project::ToDTO()": {
+          "Lines": {
+            "24": 17,
+            "25": 17,
+            "26": 17,
+            "27": 17,
+            "28": 17,
+            "29": 17,
+            "30": 17,
+            "31": 17,
+            "32": 17,
+            "33": 17,
+            "34": 17,
+            "35": 17,
+            "36": 25,
+            "37": 17,
+            "38": 17,
+            "39": 17
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 25,
+              "Offset": 20,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 15
+            },
+            {
+              "Line": 25,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 25,
+              "Offset": 42,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 15
+            },
+            {
+              "Line": 25,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 25,
+              "Offset": 54,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 17
+            },
+            {
+              "Line": 25,
+              "Offset": 74,
+              "EndOffset": 76,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 74,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 17
+            }
+          ]
+        },
+        "LitExplore.Repository.Entities.ProjectDetailsDTO LitExplore.Repository.Entities.Project::ToDetailsDTO()": {
+          "Lines": {
+            "42": 10,
+            "43": 10,
+            "44": 10,
+            "45": 10,
+            "46": 10,
+            "47": 10,
+            "48": 10,
+            "49": 10,
+            "50": 10,
+            "51": 14,
+            "52": 10,
+            "53": 10,
+            "54": 10
+          },
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 39,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            }
+          ]
+        }
+      },
+      "LitExplore.Repository.Entities.ProjectDTO": {
+        "System.Int32 LitExplore.Repository.Entities.ProjectDTO::get_Id()": {
+          "Lines": {
+            "57": 300
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.ProjectDetailsDTO": {
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.PaperDTO> LitExplore.Repository.Entities.ProjectDetailsDTO::get_Papers()": {
+          "Lines": {
+            "59": 34
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.ProjectCreateDTO": {
+        "System.Guid LitExplore.Repository.Entities.ProjectCreateDTO::get_OwnerId()": {
+          "Lines": {
+            "70": 16
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.ProjectCreateDTO::get_Name()": {
+          "Lines": {
+            "74": 20
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.Entities.ProjectCreateDTO::.ctor(System.Guid,System.String)": {
+          "Lines": {
+            "63": 6,
+            "64": 6,
+            "65": 6,
+            "66": 6,
+            "67": 6
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO": {
+        "System.Int32 LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO::get_ProjectId()": {
+          "Lines": {
+            "92": 30
+          },
+          "Branches": []
+        },
+        "System.Guid LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO::get_CollaboratorId()": {
+          "Lines": {
+            "98": 27
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO::.ctor(System.Int32,System.Guid)": {
+          "Lines": {
+            "82": 15,
+            "83": 15,
+            "84": 15,
+            "85": 15,
+            "86": 15
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.ProjectAddRemovePaperDTO": {
+        "System.Int32 LitExplore.Repository.Entities.ProjectAddRemovePaperDTO::get_ProjectId()": {
+          "Lines": {
+            "116": 24
+          },
+          "Branches": []
+        },
+        "System.Int32 LitExplore.Repository.Entities.ProjectAddRemovePaperDTO::get_PaperId()": {
+          "Lines": {
+            "122": 21
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.Entities.ProjectAddRemovePaperDTO::.ctor(System.Int32,System.Int32)": {
+          "Lines": {
+            "106": 12,
+            "107": 12,
+            "108": 12,
+            "109": 12,
+            "110": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\mgerv\\Desktop\\ITU\\3_sem\\BDSA\\VS\\LitExplore\\Repository.Entities\\User.cs": {
+      "LitExplore.Repository.Entities.User": {
+        "System.Int32 LitExplore.Repository.Entities.User::get_InternalId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Guid LitExplore.Repository.Entities.User::get_Id()": {
+          "Lines": {
+            "9": 380
+          },
+          "Branches": []
+        },
+        "System.String LitExplore.Repository.Entities.User::get_DisplayName()": {
+          "Lines": {
+            "12": 698
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.Entities.User::get_HasAccessTo()": {
+          "Lines": {
+            "14": 328
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.Entities.User::get_IsOwnerOf()": {
+          "Lines": {
+            "16": 339
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.Entities.User::.ctor(System.Guid,System.String)": {
+          "Lines": {
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4
+          },
+          "Branches": []
+        },
+        "System.Void LitExplore.Repository.Entities.User::.ctor()": {
+          "Lines": {
+            "24": 324,
+            "25": 324,
+            "27": 324
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.UserDTO": {
+        "System.Guid LitExplore.Repository.Entities.UserDTO::get_Id()": {
+          "Lines": {
+            "30": 246
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Entities.UserProjectDTO": {
+        "System.Guid LitExplore.Repository.Entities.UserProjectDTO::get_Id()": {
+          "Lines": {
+            "35": 56
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

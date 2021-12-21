@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.9782016348773842" branch-rate="0.9038461538461539" lines-covered="359" lines-valid="367" branches-covered="47" branches-valid="52" complexity="108" version="0" timestamp="1640129661">
+  <sources>
+    <source>C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\</source>
+  </sources>
+  <packages>
+    <package name="LitExplore.Repository" line-rate="0.975" branch-rate="0.9285714285714286" complexity="58">
+      <classes>
+        <class name="LitExplore.Repository.LitExploreContext" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository\LitExploreContext.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Papers" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="37" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Projects" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="115" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Users" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="94" branch="false" />
+              </lines>
+            </method>
+            <method name="OnModelCreating" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="4" branch="false" />
+                <line number="15" hits="4" branch="false" />
+                <line number="16" hits="4" branch="false" />
+                <line number="17" hits="4" branch="false" />
+                <line number="18" hits="4" branch="false" />
+                <line number="19" hits="4" branch="false" />
+                <line number="20" hits="4" branch="false" />
+                <line number="21" hits="4" branch="false" />
+                <line number="22" hits="4" branch="false" />
+                <line number="24" hits="4" branch="false" />
+                <line number="25" hits="4" branch="false" />
+                <line number="26" hits="4" branch="false" />
+                <line number="28" hits="4" branch="false" />
+                <line number="29" hits="4" branch="false" />
+                <line number="30" hits="4" branch="false" />
+                <line number="31" hits="4" branch="false" />
+                <line number="32" hits="4" branch="false" />
+                <line number="33" hits="4" branch="false" />
+                <line number="34" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="240" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="37" branch="false" />
+            <line number="8" hits="115" branch="false" />
+            <line number="9" hits="94" branch="false" />
+            <line number="11" hits="240" branch="false" />
+            <line number="14" hits="4" branch="false" />
+            <line number="15" hits="4" branch="false" />
+            <line number="16" hits="4" branch="false" />
+            <line number="17" hits="4" branch="false" />
+            <line number="18" hits="4" branch="false" />
+            <line number="19" hits="4" branch="false" />
+            <line number="20" hits="4" branch="false" />
+            <line number="21" hits="4" branch="false" />
+            <line number="22" hits="4" branch="false" />
+            <line number="24" hits="4" branch="false" />
+            <line number="25" hits="4" branch="false" />
+            <line number="26" hits="4" branch="false" />
+            <line number="28" hits="4" branch="false" />
+            <line number="29" hits="4" branch="false" />
+            <line number="30" hits="4" branch="false" />
+            <line number="31" hits="4" branch="false" />
+            <line number="32" hits="4" branch="false" />
+            <line number="33" hits="4" branch="false" />
+            <line number="34" hits="4" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.PaperRepository" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository\PaperRepository.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="36" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="2" branch="false" />
+                <line number="12" hits="2" branch="false" />
+                <line number="13" hits="2" branch="false" />
+                <line number="14" hits="2" branch="false" />
+                <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadByNameAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="5" branch="false" />
+                <line number="20" hits="5" branch="false" />
+                <line number="21" hits="5" branch="false" />
+                <line number="22" hits="5" branch="false" />
+                <line number="23" hits="5" branch="false" />
+                <line number="24" hits="5" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadByRelationsAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="7" branch="false" />
+                <line number="28" hits="7" branch="false" />
+                <line number="29" hits="7" branch="false" />
+                <line number="30" hits="7" branch="false" />
+                <line number="31" hits="7" branch="false" />
+                <line number="32" hits="7" branch="false" />
+                <line number="33" hits="7" branch="false" />
+                <line number="34" hits="7" branch="false" />
+                <line number="36" hits="7" branch="false" />
+                <line number="37" hits="7" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadDetailsAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="4" branch="false" />
+                <line number="41" hits="4" branch="false" />
+                <line number="42" hits="4" branch="false" />
+                <line number="43" hits="4" branch="false" />
+                <line number="44" hits="4" branch="false" />
+                <line number="45" hits="4" branch="false" />
+                <line number="46" hits="4" branch="false" />
+                <line number="47" hits="4" branch="false" />
+                <line number="48" hits="4" branch="false" />
+                <line number="49" hits="4" branch="false" />
+                <line number="50" hits="4" branch="false" />
+                <line number="51" hits="4" branch="false" />
+                <line number="52" hits="4" branch="false" />
+                <line number="53" hits="4" branch="false" />
+                <line number="54" hits="4" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="36" branch="false" />
+            <line number="11" hits="2" branch="false" />
+            <line number="12" hits="2" branch="false" />
+            <line number="13" hits="2" branch="false" />
+            <line number="14" hits="2" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="19" hits="5" branch="false" />
+            <line number="20" hits="5" branch="false" />
+            <line number="21" hits="5" branch="false" />
+            <line number="22" hits="5" branch="false" />
+            <line number="23" hits="5" branch="false" />
+            <line number="24" hits="5" branch="false" />
+            <line number="27" hits="7" branch="false" />
+            <line number="28" hits="7" branch="false" />
+            <line number="29" hits="7" branch="false" />
+            <line number="30" hits="7" branch="false" />
+            <line number="31" hits="7" branch="false" />
+            <line number="32" hits="7" branch="false" />
+            <line number="33" hits="7" branch="false" />
+            <line number="34" hits="7" branch="false" />
+            <line number="36" hits="7" branch="false" />
+            <line number="37" hits="7" branch="false" />
+            <line number="40" hits="4" branch="false" />
+            <line number="41" hits="4" branch="false" />
+            <line number="42" hits="4" branch="false" />
+            <line number="43" hits="4" branch="false" />
+            <line number="44" hits="4" branch="false" />
+            <line number="45" hits="4" branch="false" />
+            <line number="46" hits="4" branch="false" />
+            <line number="47" hits="4" branch="false" />
+            <line number="48" hits="4" branch="false" />
+            <line number="49" hits="4" branch="false" />
+            <line number="50" hits="4" branch="false" />
+            <line number="51" hits="4" branch="false" />
+            <line number="52" hits="4" branch="false" />
+            <line number="53" hits="4" branch="false" />
+            <line number="54" hits="4" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.ProjectRepository" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository\ProjectRepository.cs" line-rate="0.9608938547486033" branch-rate="0.9166666666666666" complexity="39">
+          <methods>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="102" branch="false" />
+              </lines>
+            </method>
+            <method name="AddCollaboratorAsync" signature="()" line-rate="1" branch-rate="1" complexity="8">
+              <lines>
+                <line number="10" hits="8" branch="false" />
+                <line number="11" hits="8" branch="false" />
+                <line number="12" hits="8" branch="false" />
+                <line number="13" hits="8" branch="false" />
+                <line number="14" hits="8" branch="false" />
+                <line number="15" hits="8" branch="false" />
+                <line number="17" hits="8" branch="true" condition-coverage="100% (2/2)" />
+                <line number="18" hits="2" branch="false" />
+                <line number="19" hits="2" branch="false" />
+                <line number="22" hits="6" branch="false" />
+                <line number="23" hits="6" branch="false" />
+                <line number="24" hits="6" branch="false" />
+                <line number="25" hits="6" branch="false" />
+                <line number="26" hits="6" branch="false" />
+                <line number="28" hits="6" branch="true" condition-coverage="100% (2/2)" />
+                <line number="29" hits="2" branch="false" />
+                <line number="30" hits="2" branch="false" />
+                <line number="34" hits="4" branch="true" condition-coverage="100% (4/4)" />
+                <line number="35" hits="2" branch="false" />
+                <line number="36" hits="2" branch="false" />
+                <line number="39" hits="2" branch="false" />
+                <line number="40" hits="2" branch="false" />
+                <line number="41" hits="2" branch="false" />
+                <line number="42" hits="8" branch="false" />
+              </lines>
+            </method>
+            <method name="AddPaperAsync" signature="()" line-rate="0.8928571428571429" branch-rate="0.875" complexity="8">
+              <lines>
+                <line number="45" hits="6" branch="false" />
+                <line number="46" hits="6" branch="false" />
+                <line number="47" hits="6" branch="false" />
+                <line number="48" hits="6" branch="false" />
+                <line number="49" hits="6" branch="false" />
+                <line number="50" hits="6" branch="false" />
+                <line number="52" hits="6" branch="true" condition-coverage="100% (2/2)" />
+                <line number="53" hits="2" branch="false" />
+                <line number="54" hits="2" branch="false" />
+                <line number="57" hits="4" branch="false" />
+                <line number="58" hits="4" branch="false" />
+                <line number="59" hits="4" branch="false" />
+                <line number="60" hits="4" branch="false" />
+                <line number="61" hits="4" branch="false" />
+                <line number="63" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="64" hits="1" branch="false" />
+                <line number="65" hits="1" branch="false" />
+                <line number="68" hits="3" branch="true" condition-coverage="50% (1/2)" />
+                <line number="69" hits="0" branch="false" />
+                <line number="70" hits="0" branch="false" />
+                <line number="71" hits="0" branch="false" />
+                <line number="72" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="73" hits="1" branch="false" />
+                <line number="74" hits="1" branch="false" />
+                <line number="77" hits="2" branch="false" />
+                <line number="78" hits="2" branch="false" />
+                <line number="79" hits="2" branch="false" />
+                <line number="80" hits="6" branch="false" />
+              </lines>
+            </method>
+            <method name="CreateProjectAsync" signature="()" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="83" hits="6" branch="false" />
+                <line number="84" hits="6" branch="false" />
+                <line number="85" hits="6" branch="false" />
+                <line number="86" hits="6" branch="false" />
+                <line number="87" hits="6" branch="false" />
+                <line number="88" hits="6" branch="false" />
+                <line number="90" hits="6" branch="true" condition-coverage="100% (2/2)" />
+                <line number="91" hits="2" branch="false" />
+                <line number="92" hits="2" branch="false" />
+                <line number="95" hits="4" branch="false" />
+                <line number="96" hits="4" branch="false" />
+                <line number="97" hits="4" branch="false" />
+                <line number="98" hits="4" branch="false" />
+                <line number="99" hits="4" branch="false" />
+                <line number="101" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="102" hits="2" branch="false" />
+                <line number="103" hits="2" branch="false" />
+                <line number="106" hits="2" branch="false" />
+                <line number="107" hits="2" branch="false" />
+                <line number="108" hits="2" branch="false" />
+                <line number="109" hits="2" branch="false" />
+                <line number="110" hits="2" branch="false" />
+                <line number="111" hits="2" branch="false" />
+                <line number="112" hits="2" branch="false" />
+                <line number="114" hits="2" branch="false" />
+                <line number="115" hits="2" branch="false" />
+                <line number="116" hits="2" branch="false" />
+                <line number="117" hits="6" branch="false" />
+              </lines>
+            </method>
+            <method name="DeleteProjectAsync" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="120" hits="4" branch="false" />
+                <line number="121" hits="4" branch="false" />
+                <line number="122" hits="4" branch="false" />
+                <line number="123" hits="4" branch="false" />
+                <line number="124" hits="4" branch="false" />
+                <line number="125" hits="4" branch="false" />
+                <line number="127" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="128" hits="2" branch="false" />
+                <line number="129" hits="2" branch="false" />
+                <line number="132" hits="2" branch="false" />
+                <line number="133" hits="2" branch="false" />
+                <line number="135" hits="2" branch="false" />
+                <line number="136" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadProjectAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="139" hits="7" branch="false" />
+                <line number="140" hits="7" branch="false" />
+                <line number="141" hits="7" branch="false" />
+                <line number="142" hits="7" branch="false" />
+                <line number="143" hits="7" branch="false" />
+                <line number="144" hits="7" branch="false" />
+                <line number="145" hits="7" branch="false" />
+                <line number="146" hits="7" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadProjectDetailsAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="149" hits="12" branch="false" />
+                <line number="150" hits="12" branch="false" />
+                <line number="151" hits="12" branch="false" />
+                <line number="152" hits="12" branch="false" />
+                <line number="153" hits="12" branch="false" />
+                <line number="154" hits="12" branch="false" />
+                <line number="155" hits="12" branch="false" />
+                <line number="156" hits="12" branch="false" />
+                <line number="157" hits="12" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadProjectsByUserAsync" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="192" hits="4" branch="false" />
+                <line number="193" hits="4" branch="false" />
+                <line number="194" hits="4" branch="false" />
+                <line number="195" hits="4" branch="false" />
+                <line number="196" hits="4" branch="false" />
+                <line number="197" hits="4" branch="false" />
+                <line number="199" hits="6" branch="true" condition-coverage="100% (2/2)" />
+                <line number="200" hits="2" branch="false" />
+                <line number="203" hits="2" branch="false" />
+                <line number="204" hits="2" branch="false" />
+                <line number="205" hits="2" branch="false" />
+                <line number="206" hits="2" branch="false" />
+                <line number="207" hits="2" branch="false" />
+                <line number="209" hits="2" branch="false" />
+                <line number="210" hits="2" branch="false" />
+                <line number="211" hits="2" branch="false" />
+                <line number="212" hits="2" branch="false" />
+                <line number="213" hits="2" branch="false" />
+                <line number="215" hits="2" branch="false" />
+                <line number="216" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="RemoveCollaboratorAsync" signature="()" line-rate="0.9166666666666666" branch-rate="0.8333333333333334" complexity="6">
+              <lines>
+                <line number="160" hits="7" branch="false" />
+                <line number="161" hits="7" branch="false" />
+                <line number="162" hits="7" branch="false" />
+                <line number="163" hits="7" branch="false" />
+                <line number="164" hits="7" branch="false" />
+                <line number="165" hits="7" branch="false" />
+                <line number="167" hits="7" branch="true" condition-coverage="100% (2/2)" />
+                <line number="168" hits="3" branch="false" />
+                <line number="169" hits="3" branch="false" />
+                <line number="172" hits="4" branch="true" condition-coverage="50% (1/2)" />
+                <line number="173" hits="0" branch="false" />
+                <line number="174" hits="0" branch="false" />
+                <line number="176" hits="4" branch="false" />
+                <line number="177" hits="4" branch="false" />
+                <line number="178" hits="6" branch="false" />
+                <line number="179" hits="4" branch="false" />
+                <line number="180" hits="4" branch="false" />
+                <line number="182" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="183" hits="2" branch="false" />
+                <line number="184" hits="2" branch="false" />
+                <line number="186" hits="2" branch="false" />
+                <line number="187" hits="2" branch="false" />
+                <line number="188" hits="2" branch="false" />
+                <line number="189" hits="7" branch="false" />
+              </lines>
+            </method>
+            <method name="RemovePaperAsync" signature="()" line-rate="0.9166666666666666" branch-rate="0.8333333333333334" complexity="6">
+              <lines>
+                <line number="219" hits="6" branch="false" />
+                <line number="220" hits="6" branch="false" />
+                <line number="221" hits="6" branch="false" />
+                <line number="222" hits="6" branch="false" />
+                <line number="223" hits="6" branch="false" />
+                <line number="224" hits="6" branch="false" />
+                <line number="226" hits="6" branch="true" condition-coverage="100% (2/2)" />
+                <line number="227" hits="2" branch="false" />
+                <line number="228" hits="2" branch="false" />
+                <line number="231" hits="4" branch="true" condition-coverage="50% (1/2)" />
+                <line number="232" hits="0" branch="false" />
+                <line number="233" hits="0" branch="false" />
+                <line number="235" hits="4" branch="false" />
+                <line number="236" hits="4" branch="false" />
+                <line number="237" hits="5" branch="false" />
+                <line number="238" hits="4" branch="false" />
+                <line number="239" hits="4" branch="false" />
+                <line number="241" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="242" hits="2" branch="false" />
+                <line number="243" hits="2" branch="false" />
+                <line number="246" hits="2" branch="false" />
+                <line number="247" hits="2" branch="false" />
+                <line number="248" hits="2" branch="false" />
+                <line number="249" hits="6" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="102" branch="false" />
+            <line number="10" hits="8" branch="false" />
+            <line number="11" hits="8" branch="false" />
+            <line number="12" hits="8" branch="false" />
+            <line number="13" hits="8" branch="false" />
+            <line number="14" hits="8" branch="false" />
+            <line number="15" hits="8" branch="false" />
+            <line number="17" hits="8" branch="true" condition-coverage="100% (2/2)" />
+            <line number="18" hits="2" branch="false" />
+            <line number="19" hits="2" branch="false" />
+            <line number="22" hits="6" branch="false" />
+            <line number="23" hits="6" branch="false" />
+            <line number="24" hits="6" branch="false" />
+            <line number="25" hits="6" branch="false" />
+            <line number="26" hits="6" branch="false" />
+            <line number="28" hits="6" branch="true" condition-coverage="100% (2/2)" />
+            <line number="29" hits="2" branch="false" />
+            <line number="30" hits="2" branch="false" />
+            <line number="34" hits="4" branch="true" condition-coverage="100% (4/4)" />
+            <line number="35" hits="2" branch="false" />
+            <line number="36" hits="2" branch="false" />
+            <line number="39" hits="2" branch="false" />
+            <line number="40" hits="2" branch="false" />
+            <line number="41" hits="2" branch="false" />
+            <line number="42" hits="8" branch="false" />
+            <line number="45" hits="6" branch="false" />
+            <line number="46" hits="6" branch="false" />
+            <line number="47" hits="6" branch="false" />
+            <line number="48" hits="6" branch="false" />
+            <line number="49" hits="6" branch="false" />
+            <line number="50" hits="6" branch="false" />
+            <line number="52" hits="6" branch="true" condition-coverage="100% (2/2)" />
+            <line number="53" hits="2" branch="false" />
+            <line number="54" hits="2" branch="false" />
+            <line number="57" hits="4" branch="false" />
+            <line number="58" hits="4" branch="false" />
+            <line number="59" hits="4" branch="false" />
+            <line number="60" hits="4" branch="false" />
+            <line number="61" hits="4" branch="false" />
+            <line number="63" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="64" hits="1" branch="false" />
+            <line number="65" hits="1" branch="false" />
+            <line number="68" hits="3" branch="true" condition-coverage="50% (1/2)" />
+            <line number="69" hits="0" branch="false" />
+            <line number="70" hits="0" branch="false" />
+            <line number="71" hits="0" branch="false" />
+            <line number="72" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="73" hits="1" branch="false" />
+            <line number="74" hits="1" branch="false" />
+            <line number="77" hits="2" branch="false" />
+            <line number="78" hits="2" branch="false" />
+            <line number="79" hits="2" branch="false" />
+            <line number="80" hits="6" branch="false" />
+            <line number="83" hits="6" branch="false" />
+            <line number="84" hits="6" branch="false" />
+            <line number="85" hits="6" branch="false" />
+            <line number="86" hits="6" branch="false" />
+            <line number="87" hits="6" branch="false" />
+            <line number="88" hits="6" branch="false" />
+            <line number="90" hits="6" branch="true" condition-coverage="100% (2/2)" />
+            <line number="91" hits="2" branch="false" />
+            <line number="92" hits="2" branch="false" />
+            <line number="95" hits="4" branch="false" />
+            <line number="96" hits="4" branch="false" />
+            <line number="97" hits="4" branch="false" />
+            <line number="98" hits="4" branch="false" />
+            <line number="99" hits="4" branch="false" />
+            <line number="101" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="102" hits="2" branch="false" />
+            <line number="103" hits="2" branch="false" />
+            <line number="106" hits="2" branch="false" />
+            <line number="107" hits="2" branch="false" />
+            <line number="108" hits="2" branch="false" />
+            <line number="109" hits="2" branch="false" />
+            <line number="110" hits="2" branch="false" />
+            <line number="111" hits="2" branch="false" />
+            <line number="112" hits="2" branch="false" />
+            <line number="114" hits="2" branch="false" />
+            <line number="115" hits="2" branch="false" />
+            <line number="116" hits="2" branch="false" />
+            <line number="117" hits="6" branch="false" />
+            <line number="120" hits="4" branch="false" />
+            <line number="121" hits="4" branch="false" />
+            <line number="122" hits="4" branch="false" />
+            <line number="123" hits="4" branch="false" />
+            <line number="124" hits="4" branch="false" />
+            <line number="125" hits="4" branch="false" />
+            <line number="127" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="128" hits="2" branch="false" />
+            <line number="129" hits="2" branch="false" />
+            <line number="132" hits="2" branch="false" />
+            <line number="133" hits="2" branch="false" />
+            <line number="135" hits="2" branch="false" />
+            <line number="136" hits="4" branch="false" />
+            <line number="139" hits="7" branch="false" />
+            <line number="140" hits="7" branch="false" />
+            <line number="141" hits="7" branch="false" />
+            <line number="142" hits="7" branch="false" />
+            <line number="143" hits="7" branch="false" />
+            <line number="144" hits="7" branch="false" />
+            <line number="145" hits="7" branch="false" />
+            <line number="146" hits="7" branch="false" />
+            <line number="149" hits="12" branch="false" />
+            <line number="150" hits="12" branch="false" />
+            <line number="151" hits="12" branch="false" />
+            <line number="152" hits="12" branch="false" />
+            <line number="153" hits="12" branch="false" />
+            <line number="154" hits="12" branch="false" />
+            <line number="155" hits="12" branch="false" />
+            <line number="156" hits="12" branch="false" />
+            <line number="157" hits="12" branch="false" />
+            <line number="160" hits="7" branch="false" />
+            <line number="161" hits="7" branch="false" />
+            <line number="162" hits="7" branch="false" />
+            <line number="163" hits="7" branch="false" />
+            <line number="164" hits="7" branch="false" />
+            <line number="165" hits="7" branch="false" />
+            <line number="167" hits="7" branch="true" condition-coverage="100% (2/2)" />
+            <line number="168" hits="3" branch="false" />
+            <line number="169" hits="3" branch="false" />
+            <line number="172" hits="4" branch="true" condition-coverage="50% (1/2)" />
+            <line number="173" hits="0" branch="false" />
+            <line number="174" hits="0" branch="false" />
+            <line number="176" hits="4" branch="false" />
+            <line number="177" hits="4" branch="false" />
+            <line number="178" hits="6" branch="false" />
+            <line number="179" hits="4" branch="false" />
+            <line number="180" hits="4" branch="false" />
+            <line number="182" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="183" hits="2" branch="false" />
+            <line number="184" hits="2" branch="false" />
+            <line number="186" hits="2" branch="false" />
+            <line number="187" hits="2" branch="false" />
+            <line number="188" hits="2" branch="false" />
+            <line number="189" hits="7" branch="false" />
+            <line number="192" hits="4" branch="false" />
+            <line number="193" hits="4" branch="false" />
+            <line number="194" hits="4" branch="false" />
+            <line number="195" hits="4" branch="false" />
+            <line number="196" hits="4" branch="false" />
+            <line number="197" hits="4" branch="false" />
+            <line number="199" hits="6" branch="true" condition-coverage="100% (2/2)" />
+            <line number="200" hits="2" branch="false" />
+            <line number="203" hits="2" branch="false" />
+            <line number="204" hits="2" branch="false" />
+            <line number="205" hits="2" branch="false" />
+            <line number="206" hits="2" branch="false" />
+            <line number="207" hits="2" branch="false" />
+            <line number="209" hits="2" branch="false" />
+            <line number="210" hits="2" branch="false" />
+            <line number="211" hits="2" branch="false" />
+            <line number="212" hits="2" branch="false" />
+            <line number="213" hits="2" branch="false" />
+            <line number="215" hits="2" branch="false" />
+            <line number="216" hits="4" branch="false" />
+            <line number="219" hits="6" branch="false" />
+            <line number="220" hits="6" branch="false" />
+            <line number="221" hits="6" branch="false" />
+            <line number="222" hits="6" branch="false" />
+            <line number="223" hits="6" branch="false" />
+            <line number="224" hits="6" branch="false" />
+            <line number="226" hits="6" branch="true" condition-coverage="100% (2/2)" />
+            <line number="227" hits="2" branch="false" />
+            <line number="228" hits="2" branch="false" />
+            <line number="231" hits="4" branch="true" condition-coverage="50% (1/2)" />
+            <line number="232" hits="0" branch="false" />
+            <line number="233" hits="0" branch="false" />
+            <line number="235" hits="4" branch="false" />
+            <line number="236" hits="4" branch="false" />
+            <line number="237" hits="5" branch="false" />
+            <line number="238" hits="4" branch="false" />
+            <line number="239" hits="4" branch="false" />
+            <line number="241" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="242" hits="2" branch="false" />
+            <line number="243" hits="2" branch="false" />
+            <line number="246" hits="2" branch="false" />
+            <line number="247" hits="2" branch="false" />
+            <line number="248" hits="2" branch="false" />
+            <line number="249" hits="6" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.UserRepository" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository\UserRepository.cs" line-rate="1" branch-rate="1" complexity="9">
+          <methods>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="28" branch="false" />
+              </lines>
+            </method>
+            <method name="CreateAsync" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="10" hits="4" branch="false" />
+                <line number="11" hits="4" branch="false" />
+                <line number="12" hits="4" branch="false" />
+                <line number="13" hits="4" branch="false" />
+                <line number="14" hits="4" branch="false" />
+                <line number="16" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
+                <line number="21" hits="2" branch="false" />
+                <line number="23" hits="2" branch="false" />
+                <line number="25" hits="2" branch="false" />
+                <line number="27" hits="2" branch="false" />
+                <line number="28" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="DeleteAsync" signature="()" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="31" hits="5" branch="false" />
+                <line number="32" hits="5" branch="false" />
+                <line number="33" hits="5" branch="false" />
+                <line number="34" hits="5" branch="false" />
+                <line number="36" hits="5" branch="true" condition-coverage="100% (2/2)" />
+                <line number="37" hits="2" branch="false" />
+                <line number="38" hits="2" branch="false" />
+                <line number="41" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="42" hits="1" branch="false" />
+                <line number="43" hits="1" branch="false" />
+                <line number="46" hits="2" branch="false" />
+                <line number="47" hits="2" branch="false" />
+                <line number="49" hits="2" branch="false" />
+                <line number="50" hits="5" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="53" hits="4" branch="false" />
+                <line number="54" hits="4" branch="false" />
+                <line number="55" hits="4" branch="false" />
+                <line number="56" hits="4" branch="false" />
+                <line number="57" hits="4" branch="false" />
+                <line number="58" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="ReadByNameAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="61" hits="1" branch="false" />
+                <line number="62" hits="1" branch="false" />
+                <line number="63" hits="1" branch="false" />
+                <line number="64" hits="1" branch="false" />
+                <line number="65" hits="1" branch="false" />
+                <line number="66" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="28" branch="false" />
+            <line number="10" hits="4" branch="false" />
+            <line number="11" hits="4" branch="false" />
+            <line number="12" hits="4" branch="false" />
+            <line number="13" hits="4" branch="false" />
+            <line number="14" hits="4" branch="false" />
+            <line number="16" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="21" hits="2" branch="false" />
+            <line number="23" hits="2" branch="false" />
+            <line number="25" hits="2" branch="false" />
+            <line number="27" hits="2" branch="false" />
+            <line number="28" hits="4" branch="false" />
+            <line number="31" hits="5" branch="false" />
+            <line number="32" hits="5" branch="false" />
+            <line number="33" hits="5" branch="false" />
+            <line number="34" hits="5" branch="false" />
+            <line number="36" hits="5" branch="true" condition-coverage="100% (2/2)" />
+            <line number="37" hits="2" branch="false" />
+            <line number="38" hits="2" branch="false" />
+            <line number="41" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="42" hits="1" branch="false" />
+            <line number="43" hits="1" branch="false" />
+            <line number="46" hits="2" branch="false" />
+            <line number="47" hits="2" branch="false" />
+            <line number="49" hits="2" branch="false" />
+            <line number="50" hits="5" branch="false" />
+            <line number="53" hits="4" branch="false" />
+            <line number="54" hits="4" branch="false" />
+            <line number="55" hits="4" branch="false" />
+            <line number="56" hits="4" branch="false" />
+            <line number="57" hits="4" branch="false" />
+            <line number="58" hits="4" branch="false" />
+            <line number="61" hits="1" branch="false" />
+            <line number="62" hits="1" branch="false" />
+            <line number="63" hits="1" branch="false" />
+            <line number="64" hits="1" branch="false" />
+            <line number="65" hits="1" branch="false" />
+            <line number="66" hits="1" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="LitExplore.Repository.Entities" line-rate="0.9885057471264368" branch-rate="0.8" complexity="50">
+      <classes>
+        <class name="LitExplore.Repository.Entities.Author" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Author.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="284" branch="false" />
+              </lines>
+            </method>
+            <method name="get_GivenName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="568" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Surname" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="568" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Papers" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="284" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="284" branch="false" />
+            <line number="13" hits="568" branch="false" />
+            <line number="16" hits="568" branch="false" />
+            <line number="18" hits="284" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.AuthorDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Author.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="24" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="24" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.Paper" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Paper.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="240" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Authors" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="442" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="235" branch="false" />
+              </lines>
+            </method>
+            <method name="get_URL" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="221" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Abstract" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="221" branch="false" />
+              </lines>
+            </method>
+            <method name="get_UsedIn" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="221" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Citings" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="310" branch="false" />
+              </lines>
+            </method>
+            <method name="get_CitedBy" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="221" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="240" branch="false" />
+            <line number="11" hits="442" branch="false" />
+            <line number="14" hits="235" branch="false" />
+            <line number="18" hits="221" branch="false" />
+            <line number="21" hits="221" branch="false" />
+            <line number="23" hits="221" branch="false" />
+            <line number="27" hits="310" branch="false" />
+            <line number="28" hits="221" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.PaperDetailsDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Paper.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Authors" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="28" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="28" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.PaperDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Paper.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="162" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="162" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.Project" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Project.cs" line-rate="1" branch-rate="0.8" complexity="15">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="243" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="473" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Owner" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="486" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Collaborators" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="480" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Papers" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="476" branch="false" />
+              </lines>
+            </method>
+            <method name="ToDTO" signature="()" line-rate="1" branch-rate="0.875" complexity="8">
+              <lines>
+                <line number="24" hits="17" branch="false" />
+                <line number="25" hits="17" branch="true" condition-coverage="88% (7/8)" />
+                <line number="26" hits="17" branch="false" />
+                <line number="27" hits="17" branch="false" />
+                <line number="28" hits="17" branch="false" />
+                <line number="29" hits="17" branch="false" />
+                <line number="30" hits="17" branch="false" />
+                <line number="31" hits="17" branch="false" />
+                <line number="32" hits="17" branch="false" />
+                <line number="33" hits="17" branch="false" />
+                <line number="34" hits="17" branch="false" />
+                <line number="35" hits="17" branch="false" />
+                <line number="36" hits="25" branch="false" />
+                <line number="37" hits="17" branch="false" />
+                <line number="38" hits="17" branch="false" />
+                <line number="39" hits="17" branch="false" />
+              </lines>
+            </method>
+            <method name="ToDetailsDTO" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="42" hits="10" branch="false" />
+                <line number="43" hits="10" branch="false" />
+                <line number="44" hits="10" branch="true" condition-coverage="50% (1/2)" />
+                <line number="45" hits="10" branch="false" />
+                <line number="46" hits="10" branch="false" />
+                <line number="47" hits="10" branch="false" />
+                <line number="48" hits="10" branch="false" />
+                <line number="49" hits="10" branch="false" />
+                <line number="50" hits="10" branch="false" />
+                <line number="51" hits="14" branch="false" />
+                <line number="52" hits="10" branch="false" />
+                <line number="53" hits="10" branch="false" />
+                <line number="54" hits="10" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="243" branch="false" />
+            <line number="10" hits="473" branch="false" />
+            <line number="14" hits="486" branch="false" />
+            <line number="17" hits="480" branch="false" />
+            <line number="20" hits="476" branch="false" />
+            <line number="24" hits="17" branch="false" />
+            <line number="25" hits="17" branch="true" condition-coverage="88% (7/8)" />
+            <line number="26" hits="17" branch="false" />
+            <line number="27" hits="17" branch="false" />
+            <line number="28" hits="17" branch="false" />
+            <line number="29" hits="17" branch="false" />
+            <line number="30" hits="17" branch="false" />
+            <line number="31" hits="17" branch="false" />
+            <line number="32" hits="17" branch="false" />
+            <line number="33" hits="17" branch="false" />
+            <line number="34" hits="17" branch="false" />
+            <line number="35" hits="17" branch="false" />
+            <line number="36" hits="25" branch="false" />
+            <line number="37" hits="17" branch="false" />
+            <line number="38" hits="17" branch="false" />
+            <line number="39" hits="17" branch="false" />
+            <line number="42" hits="10" branch="false" />
+            <line number="43" hits="10" branch="false" />
+            <line number="44" hits="10" branch="true" condition-coverage="50% (1/2)" />
+            <line number="45" hits="10" branch="false" />
+            <line number="46" hits="10" branch="false" />
+            <line number="47" hits="10" branch="false" />
+            <line number="48" hits="10" branch="false" />
+            <line number="49" hits="10" branch="false" />
+            <line number="50" hits="10" branch="false" />
+            <line number="51" hits="14" branch="false" />
+            <line number="52" hits="10" branch="false" />
+            <line number="53" hits="10" branch="false" />
+            <line number="54" hits="10" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Project.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_ProjectId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="92" hits="30" branch="false" />
+              </lines>
+            </method>
+            <method name="get_CollaboratorId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="98" hits="27" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="82" hits="15" branch="false" />
+                <line number="83" hits="15" branch="false" />
+                <line number="84" hits="15" branch="false" />
+                <line number="85" hits="15" branch="false" />
+                <line number="86" hits="15" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="82" hits="15" branch="false" />
+            <line number="83" hits="15" branch="false" />
+            <line number="84" hits="15" branch="false" />
+            <line number="85" hits="15" branch="false" />
+            <line number="86" hits="15" branch="false" />
+            <line number="92" hits="30" branch="false" />
+            <line number="98" hits="27" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.ProjectAddRemovePaperDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Project.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_ProjectId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="116" hits="24" branch="false" />
+              </lines>
+            </method>
+            <method name="get_PaperId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="122" hits="21" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="106" hits="12" branch="false" />
+                <line number="107" hits="12" branch="false" />
+                <line number="108" hits="12" branch="false" />
+                <line number="109" hits="12" branch="false" />
+                <line number="110" hits="12" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="106" hits="12" branch="false" />
+            <line number="107" hits="12" branch="false" />
+            <line number="108" hits="12" branch="false" />
+            <line number="109" hits="12" branch="false" />
+            <line number="110" hits="12" branch="false" />
+            <line number="116" hits="24" branch="false" />
+            <line number="122" hits="21" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.ProjectCreateDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Project.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_OwnerId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="70" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="74" hits="20" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="63" hits="6" branch="false" />
+                <line number="64" hits="6" branch="false" />
+                <line number="65" hits="6" branch="false" />
+                <line number="66" hits="6" branch="false" />
+                <line number="67" hits="6" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="63" hits="6" branch="false" />
+            <line number="64" hits="6" branch="false" />
+            <line number="65" hits="6" branch="false" />
+            <line number="66" hits="6" branch="false" />
+            <line number="67" hits="6" branch="false" />
+            <line number="70" hits="16" branch="false" />
+            <line number="74" hits="20" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.ProjectDetailsDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Project.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Papers" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="59" hits="34" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="59" hits="34" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.ProjectDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\Project.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="57" hits="300" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="57" hits="300" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.User" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\User.cs" line-rate="0.9230769230769231" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_InternalId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="380" branch="false" />
+              </lines>
+            </method>
+            <method name="get_DisplayName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="698" branch="false" />
+              </lines>
+            </method>
+            <method name="get_HasAccessTo" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="328" branch="false" />
+              </lines>
+            </method>
+            <method name="get_IsOwnerOf" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="339" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="4" branch="false" />
+                <line number="19" hits="4" branch="false" />
+                <line number="20" hits="4" branch="false" />
+                <line number="21" hits="4" branch="false" />
+                <line number="22" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="324" branch="false" />
+                <line number="25" hits="324" branch="false" />
+                <line number="27" hits="324" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="false" />
+            <line number="9" hits="380" branch="false" />
+            <line number="12" hits="698" branch="false" />
+            <line number="14" hits="328" branch="false" />
+            <line number="16" hits="339" branch="false" />
+            <line number="18" hits="4" branch="false" />
+            <line number="19" hits="4" branch="false" />
+            <line number="20" hits="4" branch="false" />
+            <line number="21" hits="4" branch="false" />
+            <line number="22" hits="4" branch="false" />
+            <line number="24" hits="324" branch="false" />
+            <line number="25" hits="324" branch="false" />
+            <line number="27" hits="324" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.UserDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\User.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="246" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="246" branch="false" />
+          </lines>
+        </class>
+        <class name="LitExplore.Repository.Entities.UserProjectDTO" filename="C:\Users\mgerv\Desktop\ITU\3_sem\BDSA\VS\LitExplore\Repository.Entities\User.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="56" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="56" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
