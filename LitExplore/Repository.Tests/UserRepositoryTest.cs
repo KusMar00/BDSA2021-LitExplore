@@ -54,6 +54,31 @@ public class UserRepositoryTest : RepositoryTests
         // Assert
         Assert.Equal(expected, actual);
     }
+
+    public async void ReadByNameAsync_Non_Existing_User6_Returns_Empty_List()
+    {
+        // Arrange
+        IReadOnlyCollection<UserDTO>? expected = new List<UserDTO>() { };
+
+        // Act
+        var actual = await repo.ReadByNameAsync("User 6");
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public async void ReadByNameAsync_User_1_Returns_User_1()
+    {
+        // Arrange
+        IReadOnlyCollection<UserDTO> expected = new List<UserDTO>() { new UserDTO(Id_1, "User 1") };
+
+        // Act
+        var actual = await repo.ReadByNameAsync("User 1");
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
     #endregion
 
     #region CreateAsync

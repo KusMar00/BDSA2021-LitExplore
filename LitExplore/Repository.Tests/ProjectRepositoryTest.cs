@@ -502,11 +502,25 @@ public class ProjectRepositoryTest : RepositoryTests
 
         // Assert
         Assert.Equal(expected, actual);
-    }
-    #endregion
 
-    #region RemoveCollaboratorAsync
+    }
+
     [Fact]
+    public async void AddCollaboratorAsync_Collaborator_Is_Owner_Returns_Conflict()
+    {
+        // Arrange
+        var expected = Status.Conflict;
+
+        // Act
+        var actual = await repo.AddCollaboratorAsync(new(1, Id_1));
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+        #endregion
+
+        #region RemoveCollaboratorAsync
+        [Fact]
     public async void RemoveCollaboratorAsync_Remove_Collaborator_Not_In_Project_Returns_NotFound()
     {
         // Arrange
