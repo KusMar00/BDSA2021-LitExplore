@@ -48,6 +48,7 @@ namespace LitExplore.Server.Tests;
             var actual = await paperController.Get(1);
 
             // Assert
+            #pragma warning disable CS8602
             Assert.Equal(expected.Id, actual.Id);
             Assert.Equal(expected.Name, actual.Name);
             Assert.Equal(expected.Authors, actual.Authors);
@@ -80,18 +81,4 @@ namespace LitExplore.Server.Tests;
             // Assert
             Assert.Equal(expected, actual);
         }
-/*
-        [Fact]
-        public async void GetByRelationsAsync_Paper_5_Returns_Null()
-        {
-            // Arrange
-            IReadOnlyCollection<PaperDTO>? expected = new ReadOnlyCollection<PaperDTO>[] { };
-
-            // Act
-            var actual = await paperController.Get(5);
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-*/
     }

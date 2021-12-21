@@ -54,32 +54,6 @@ public class UserRepositoryTest : RepositoryTests
         // Assert
         Assert.Equal(expected, actual);
     }
- /*   
-    [Fact]
-    public async void ReadByNameAsync_per_Returns_All()
-    {
-        // Arrange
-        var expected = new List<UserDTO>() { new(Id_1, "Egon"), new(Id_2, "Benny"), new(Id_3, "Kjeld") };
-
-        // Act
-        var actual = await repo.ReadByNameAsync("Ben");
-
-        // Assert
-        Assert.Equal(expected, actual);
-    }
-
-    [Fact]
-    public async void ReadByNameAsync_Is_Case_Insensitive()
-    {
-        // Arrange
-        var expected = new List<UserDTO>() { new(Id_1, "Egon"), new(Id_2, "Benny"), new(Id_3, "Kjeld") };
-
-        // Act
-        var actual = await repo.ReadByNameAsync("bEn");
-
-        // Assert
-        Assert.Equal(expected, actual);
-    }*/
     #endregion
 
     #region CreateAsync

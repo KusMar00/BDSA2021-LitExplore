@@ -1,1055 +1,17 @@
 {
-  "LitExplore.Client.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Program.cs": {
-      "Program/<<Main>$>d__0": {
-        "System.Void Program/<<Main>$>d__0::MoveNext()": {
-          "Lines": {
-            "7": 0,
-            "8": 0,
-            "9": 0,
-            "11": 0,
-            "12": 0,
-            "15": 0,
-            "17": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\App.razor": {
-      "LitExplore.Client.App/<>c__DisplayClass0_1": {
-        "System.Void LitExplore.Client.App/<>c__DisplayClass0_1::<BuildRenderTree>b__6(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "9": 0,
-            "10": 0,
-            "12": 0,
-            "14": 0,
-            "16": 0
-          },
-          "Branches": [
-            {
-              "Line": 9,
-              "Offset": 18,
-              "EndOffset": 20,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 9,
-              "Offset": 18,
-              "EndOffset": 24,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 9,
-              "Offset": 34,
-              "EndOffset": 36,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 9,
-              "Offset": 34,
-              "EndOffset": 56,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            }
-          ]
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Shared\\RedirectToLogin.razor": {
-      "LitExplore.Client.Shared.RedirectToLogin": {
-        "System.Void LitExplore.Client.Shared.RedirectToLogin::OnInitialized()": {
-          "Lines": {
-            "5": 0,
-            "6": 0,
-            "7": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Shared\\LoginDisplay.razor": {
-      "LitExplore.Client.Shared.LoginDisplay/<>c__DisplayClass0_0": {
-        "System.Void LitExplore.Client.Shared.LoginDisplay/<>c__DisplayClass0_0::<BuildRenderTree>b__2(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "11": 0
-          },
-          "Branches": [
-            {
-              "Line": 11,
-              "Offset": 33,
-              "EndOffset": 35,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 11,
-              "Offset": 33,
-              "EndOffset": 39,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.Client.Shared.LoginDisplay/<BeginLogout>d__1": {
-        "System.Void LitExplore.Client.Shared.LoginDisplay/<BeginLogout>d__1::MoveNext()": {
-          "Lines": {
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Shared\\MainLayout.razor": {
-      "LitExplore.Client.Shared.MainLayout": {
-        "System.Void LitExplore.Client.Shared.MainLayout::BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Shared.MainLayout::GoHome()": {
-          "Lines": {
-            "18": 0,
-            "19": 0,
-            "20": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Shared\\NavMenu.razor": {
-      "LitExplore.Client.Shared.NavMenu": {
-        "System.String LitExplore.Client.Shared.NavMenu::get_NavMenuCssClass()": {
-          "Lines": {
-            "33": 0
-          },
-          "Branches": [
-            {
-              "Line": 33,
-              "Offset": 6,
-              "EndOffset": 8,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 33,
-              "Offset": 6,
-              "EndOffset": 11,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        },
-        "System.Void LitExplore.Client.Shared.NavMenu::ToggleNavMenu()": {
-          "Lines": {
-            "36": 0,
-            "37": 0,
-            "38": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Shared.NavMenu::.ctor()": {
-          "Lines": {
-            "31": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Pages\\Authentication.razor": {
-      "LitExplore.Client.Pages.Authentication": {
-        "System.String LitExplore.Client.Pages.Authentication::get_Action()": {
-          "Lines": {
-            "6": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Pages\\FetchData.razor": {
-      "LitExplore.Client.Pages.FetchData": {
-        "System.Void LitExplore.Client.Pages.FetchData::BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "14": 0,
-            "15": 0,
-            "17": 0,
-            "19": 0,
-            "30": 0,
-            "31": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "38": 0,
-            "41": 0
-          },
-          "Branches": [
-            {
-              "Line": 14,
-              "Offset": 110,
-              "EndOffset": 112,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 14,
-              "Offset": 110,
-              "EndOffset": 132,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 30,
-              "Offset": 447,
-              "EndOffset": 207,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 30,
-              "Offset": 447,
-              "EndOffset": 452,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.Client.Pages.FetchData/<OnInitializedAsync>d__2": {
-        "System.Void LitExplore.Client.Pages.FetchData/<OnInitializedAsync>d__2::MoveNext()": {
-          "Lines": {
-            "47": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Pages\\Index.razor": {
-      "LitExplore.Client.Pages.Index": {
-        "System.Void LitExplore.Client.Pages.Index::SelectedChanged(System.String)": {
-          "Lines": {
-            "54": 0,
-            "55": 0,
-            "56": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Index::<BuildRenderTree>b__0_4(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "25": 0,
-            "26": 0,
-            "28": 0,
-            "30": 0,
-            "31": 0,
-            "33": 0
-          },
-          "Branches": [
-            {
-              "Line": 25,
-              "Offset": 62,
-              "EndOffset": 64,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 25,
-              "Offset": 62,
-              "EndOffset": 80,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 30,
-              "Offset": 232,
-              "EndOffset": 116,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 30,
-              "Offset": 232,
-              "EndOffset": 234,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            }
-          ]
-        },
-        "System.Void LitExplore.Client.Pages.Index::<BuildRenderTree>b__0_5(System.String)": {
-          "Lines": {
-            "35": 0
-          },
-          "Branches": []
-        },
-        "System.Threading.Tasks.Task LitExplore.Client.Pages.Index::<BuildRenderTree>b__0_7()": {
-          "Lines": {
-            "36": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Index::.ctor()": {
-          "Lines": {
-            "46": 0,
-            "48": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Client.Pages.Index/<>c": {
-        "System.Boolean LitExplore.Client.Pages.Index/<>c::<OnInitializedAsync>b__7_0(System.Security.Claims.Claim)": {
-          "Lines": {
-            "61": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Client.Pages.Index/<CreateNewProject>d__8": {
-        "System.Void LitExplore.Client.Pages.Index/<CreateNewProject>d__8::MoveNext()": {
-          "Lines": {
-            "83": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Client.Pages.Index/<OnInitializedAsync>d__7": {
-        "System.Void LitExplore.Client.Pages.Index/<OnInitializedAsync>d__7::MoveNext()": {
-          "Lines": {
-            "59": 0,
-            "60": 0,
-            "62": 0,
-            "64": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0
-          },
-          "Branches": [
-            {
-              "Line": 61,
-              "Offset": 233,
-              "EndOffset": 235,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 61,
-              "Offset": 233,
-              "EndOffset": 239,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Pages\\Project.razor": {
-      "LitExplore.Client.Pages.Project": {
-        "System.Void LitExplore.Client.Pages.Project::BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "27": 0,
-            "28": 0
-          },
-          "Branches": []
-        },
-        "System.String LitExplore.Client.Pages.Project::get_Id()": {
-          "Lines": {
-            "70": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::SelectedChanged(System.String)": {
-          "Lines": {
-            "73": 0,
-            "74": 0,
-            "75": 0
-          },
-          "Branches": []
-        },
-        "System.String LitExplore.Client.Pages.Project::GetQueryParm(System.String)": {
-          "Lines": {
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0
-          },
-          "Branches": [
-            {
-              "Line": 81,
-              "Offset": 38,
-              "EndOffset": 40,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 81,
-              "Offset": 38,
-              "EndOffset": 46,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_1()": {
-          "Lines": {
-            "18": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_3()": {
-          "Lines": {
-            "29": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_9()": {
-          "Lines": {
-            "35": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_6(System.Object)": {
-          "Lines": {
-            "34": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_20()": {
-          "Lines": {
-            "54": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_23(System.String)": {
-          "Lines": {
-            "57": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::<BuildRenderTree>b__0_8(System.Object)": {
-          "Lines": {
-            "53": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.Project::.ctor()": {
-          "Lines": {
-            "67": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Client.Pages.Project/<OnInitializedAsync>d__12": {
-        "System.Void LitExplore.Client.Pages.Project/<OnInitializedAsync>d__12::MoveNext()": {
-          "Lines": {
-            "86": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Client\\Pages\\ProjectCard.razor": {
-      "LitExplore.Client.Pages.ProjectCard": {
-        "System.Void LitExplore.Client.Pages.ProjectCard::BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)": {
-          "Lines": {
-            "4": 0,
-            "5": 0
-          },
-          "Branches": []
-        },
-        "System.String LitExplore.Client.Pages.ProjectCard::get_Name()": {
-          "Lines": {
-            "13": 0
-          },
-          "Branches": []
-        },
-        "System.String LitExplore.Client.Pages.ProjectCard::get_Owner()": {
-          "Lines": {
-            "16": 0
-          },
-          "Branches": []
-        },
-        "System.Int32 LitExplore.Client.Pages.ProjectCard::get_ProjectId()": {
-          "Lines": {
-            "19": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Client.Pages.ProjectCard::OpenProject()": {
-          "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0
-          },
-          "Branches": []
-        }
-      }
-    }
-  },
-  "LitExplore.PaperDiscovery.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\PaperDiscovery\\PaperDiscovery.cs": {
-      "LitExplore.PaperDiscovery.PaperDiscovery": {
-        "System.Void LitExplore.PaperDiscovery.PaperDiscovery::.ctor(LitExplore.Repository.IPaperRepository,System.String)": {
-          "Lines": {
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.PaperDiscovery.PaperDiscovery/<GetPaperAsync>d__4": {
-        "System.Void LitExplore.PaperDiscovery.PaperDiscovery/<GetPaperAsync>d__4::MoveNext()": {
-          "Lines": {
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "26": 0,
-            "27": 0
-          },
-          "Branches": [
-            {
-              "Line": 23,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 23,
-              "Offset": 157,
-              "EndOffset": 290,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.PaperDiscovery.PaperDiscovery/<GetRelatedPaperAsync>d__5": {
-        "System.Void LitExplore.PaperDiscovery.PaperDiscovery/<GetRelatedPaperAsync>d__5::MoveNext()": {
-          "Lines": {
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "33": 0,
-            "34": 0
-          },
-          "Branches": [
-            {
-              "Line": 30,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 30,
-              "Offset": 157,
-              "EndOffset": 290,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      }
-    }
-  },
-  "LitExplore.ProjectManagement.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\ProjectManagement\\ProjectManagement.cs": {
-      "LitExplore.ProjectManagement.ProjectManagement": {
-        "System.String LitExplore.ProjectManagement.ProjectManagement::get_userName()": {
-          "Lines": {
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.ProjectManagement.ProjectManagement::.ctor(LitExplore.Repository.IProjectRepository,System.String)": {
-          "Lines": {
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<DeleteCollaboratorFromProjectAsync>d__13": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<DeleteCollaboratorFromProjectAsync>d__13::MoveNext()": {
-          "Lines": {
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "72": 0,
-            "73": 0
-          },
-          "Branches": [
-            {
-              "Line": 68,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 68,
-              "Offset": 157,
-              "EndOffset": 295,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<DeletePaperFromProjectAsync>d__11": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<DeletePaperFromProjectAsync>d__11::MoveNext()": {
-          "Lines": {
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "56": 0,
-            "57": 0
-          },
-          "Branches": [
-            {
-              "Line": 52,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 52,
-              "Offset": 157,
-              "EndOffset": 295,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<DeleteProjectAsync>d__9": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<DeleteProjectAsync>d__9::MoveNext()": {
-          "Lines": {
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "40": 0,
-            "41": 0
-          },
-          "Branches": [
-            {
-              "Line": 36,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 36,
-              "Offset": 157,
-              "EndOffset": 295,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<GetProjectAsync>d__8": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<GetProjectAsync>d__8::MoveNext()": {
-          "Lines": {
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "32": 0,
-            "33": 0
-          },
-          "Branches": [
-            {
-              "Line": 29,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 29,
-              "Offset": 157,
-              "EndOffset": 290,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<PostCollaboratorToProjectAsync>d__12": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<PostCollaboratorToProjectAsync>d__12::MoveNext()": {
-          "Lines": {
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "64": 0,
-            "65": 0
-          },
-          "Branches": [
-            {
-              "Line": 60,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 60,
-              "Offset": 157,
-              "EndOffset": 295,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<PostPaperToProjectAsync>d__10": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<PostPaperToProjectAsync>d__10::MoveNext()": {
-          "Lines": {
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "48": 0,
-            "49": 0
-          },
-          "Branches": [
-            {
-              "Line": 44,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 44,
-              "Offset": 157,
-              "EndOffset": 295,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.ProjectManagement.ProjectManagement/<PostProjectAsync>d__7": {
-        "System.Void LitExplore.ProjectManagement.ProjectManagement/<PostProjectAsync>d__7::MoveNext()": {
-          "Lines": {
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "26": 0
-          },
-          "Branches": [
-            {
-              "Line": 22,
-              "Offset": 157,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 22,
-              "Offset": 157,
-              "EndOffset": 290,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      }
-    }
-  },
+  "LitExplore.PaperDiscovery.dll": {},
   "LitExplore.Repository.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Database.cs": {
-      "LitExplore.Repository.Database": {
-        "System.Void LitExplore.Repository.Database::SetupDatabase(LitExplore.Repository.LitExploreContext)": {
-          "Lines": {
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
-          },
-          "Branches": [
-            {
-              "Line": 12,
-              "Offset": 19,
-              "EndOffset": 21,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 12,
-              "Offset": 19,
-              "EndOffset": 37,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        },
-        "Microsoft.EntityFrameworkCore.DbContextOptionsBuilder`1<LitExplore.Repository.LitExploreContext> LitExplore.Repository.Database::GetOptionsBuilder()": {
-          "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0
-          },
-          "Branches": []
-        },
-        "System.String LitExplore.Repository.Database::GetConnectionString()": {
-          "Lines": {
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0
-          },
-          "Branches": []
-        },
-        "Microsoft.Extensions.Configuration.IConfiguration LitExplore.Repository.Database::LoadConfiguration()": {
-          "Lines": {
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "43": 0,
-            "44": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Database_Seed.cs": {
-      "LitExplore.Repository.Database": {
-        "System.Void LitExplore.Repository.Database::Seed(LitExplore.Repository.LitExploreContext)": {
-          "Lines": {
-            "12": 0,
-            "13": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "64": 0,
-            "65": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "112": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "127": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "133": 0,
-            "134": 0,
-            "137": 0,
-            "138": 0,
-            "140": 0,
-            "141": 0,
-            "142": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "150": 0,
-            "151": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\LitExploreContext.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\LitExploreContext.cs": {
       "LitExplore.Repository.LitExploreContext": {
-        "Microsoft.EntityFrameworkCore.DbSet`1<LitExplore.Repository.Entities.Author> LitExplore.Repository.LitExploreContext::get_Authors()": {
-          "Lines": {
-            "6": 0
-          },
-          "Branches": []
-        },
         "Microsoft.EntityFrameworkCore.DbSet`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.LitExploreContext::get_Papers()": {
           "Lines": {
-            "7": 13
+            "7": 10
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.LitExploreContext::get_Projects()": {
           "Lines": {
-            "8": 38
+            "8": 44
           },
           "Branches": []
         },
@@ -1076,7 +38,10 @@
             "28": 2,
             "29": 2,
             "30": 2,
-            "31": 2
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2
           },
           "Branches": []
         },
@@ -1088,27 +53,7 @@
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\LitExploreContextFactory.cs": {
-      "LitExplore.Repository.LitExploreContextFactory": {
-        "LitExplore.Repository.LitExploreContext LitExplore.Repository.LitExploreContextFactory::CreateDbContext(System.String[])": {
-          "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "16": 0,
-            "18": 0,
-            "19": 0,
-            "21": 0,
-            "22": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\PaperRepository.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\PaperRepository.cs": {
       "LitExplore.Repository.PaperRepository": {
         "System.Void LitExplore.Repository.PaperRepository::.ctor(LitExplore.Repository.LitExploreContext)": {
           "Lines": {
@@ -1120,12 +65,12 @@
       "LitExplore.Repository.PaperRepository/<ReadAsync>d__2": {
         "System.Void LitExplore.Repository.PaperRepository/<ReadAsync>d__2::MoveNext()": {
           "Lines": {
-            "11": 2,
-            "12": 2,
-            "13": 2,
-            "14": 2,
-            "15": 2,
-            "16": 2
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
           },
           "Branches": []
         }
@@ -1152,8 +97,10 @@
             "30": 3,
             "31": 3,
             "32": 3,
+            "33": 3,
             "34": 3,
-            "35": 3
+            "36": 3,
+            "37": 3
           },
           "Branches": []
         }
@@ -1161,31 +108,31 @@
       "LitExplore.Repository.PaperRepository/<ReadDetailsAsync>d__5": {
         "System.Void LitExplore.Repository.PaperRepository/<ReadDetailsAsync>d__5::MoveNext()": {
           "Lines": {
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0
+            "40": 2,
+            "41": 2,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "53": 2,
+            "54": 2
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\ProjectRepository.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\ProjectRepository.cs": {
       "LitExplore.Repository.ProjectRepository": {
         "System.Void LitExplore.Repository.ProjectRepository::.ctor(LitExplore.Repository.LitExploreContext)": {
           "Lines": {
-            "7": 34
+            "7": 40
           },
           "Branches": []
         }
@@ -1193,7 +140,7 @@
       "LitExplore.Repository.ProjectRepository/<>c__DisplayClass10_0": {
         "System.Boolean LitExplore.Repository.ProjectRepository/<>c__DisplayClass10_0::<RemovePaperAsync>b__0(LitExplore.Repository.Entities.Paper)": {
           "Lines": {
-            "227": 2
+            "237": 2
           },
           "Branches": []
         }
@@ -1201,7 +148,7 @@
       "LitExplore.Repository.ProjectRepository/<>c__DisplayClass8_0": {
         "System.Boolean LitExplore.Repository.ProjectRepository/<>c__DisplayClass8_0::<RemoveCollaboratorAsync>b__0(LitExplore.Repository.Entities.User)": {
           "Lines": {
-            "168": 2
+            "178": 2
           },
           "Branches": []
         }
@@ -1226,61 +173,77 @@
             "28": 2,
             "29": 1,
             "30": 1,
-            "33": 1,
-            "34": 0,
+            "34": 1,
             "35": 0,
-            "38": 1,
+            "36": 0,
             "39": 1,
             "40": 1,
-            "41": 3
+            "41": 1,
+            "42": 3
           },
           "Branches": [
             {
               "Line": 17,
-              "Offset": 353,
-              "EndOffset": 355,
+              "Offset": 415,
+              "EndOffset": 417,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
               "Line": 17,
-              "Offset": 353,
-              "EndOffset": 363,
+              "Offset": 415,
+              "EndOffset": 425,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 2
             },
             {
               "Line": 28,
-              "Offset": 664,
-              "EndOffset": 666,
+              "Offset": 726,
+              "EndOffset": 728,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 1
             },
             {
               "Line": 28,
-              "Offset": 664,
-              "EndOffset": 674,
+              "Offset": 726,
+              "EndOffset": 736,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 1
             },
             {
-              "Line": 33,
-              "Offset": 700,
-              "EndOffset": 702,
+              "Line": 34,
+              "Offset": 753,
+              "EndOffset": 755,
               "Path": 0,
               "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 753,
+              "EndOffset": 779,
+              "Path": 1,
+              "Ordinal": 5,
               "Hits": 0
             },
             {
-              "Line": 33,
-              "Offset": 700,
-              "EndOffset": 710,
+              "Line": 34,
+              "Offset": 784,
+              "EndOffset": 786,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 784,
+              "EndOffset": 794,
               "Path": 1,
-              "Ordinal": 5,
+              "Ordinal": 7,
               "Hits": 1
             }
           ]
@@ -1289,78 +252,98 @@
       "LitExplore.Repository.ProjectRepository/<AddPaperAsync>d__3": {
         "System.Void LitExplore.Repository.ProjectRepository/<AddPaperAsync>d__3::MoveNext()": {
           "Lines": {
-            "44": 2,
             "45": 2,
             "46": 2,
             "47": 2,
             "48": 2,
             "49": 2,
-            "51": 2,
-            "52": 1,
+            "50": 2,
+            "52": 2,
             "53": 1,
-            "56": 1,
+            "54": 1,
             "57": 1,
             "58": 1,
             "59": 1,
             "60": 1,
-            "62": 1,
-            "63": 0,
+            "61": 1,
+            "63": 1,
             "64": 0,
-            "67": 1,
-            "68": 0,
+            "65": 0,
+            "68": 1,
             "69": 0,
+            "70": 0,
+            "71": 0,
             "72": 1,
-            "73": 1,
-            "74": 1,
-            "75": 2
+            "73": 0,
+            "74": 0,
+            "77": 1,
+            "78": 1,
+            "79": 1,
+            "80": 2
           },
           "Branches": [
             {
-              "Line": 51,
-              "Offset": 353,
-              "EndOffset": 355,
+              "Line": 52,
+              "Offset": 415,
+              "EndOffset": 417,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
-              "Line": 51,
-              "Offset": 353,
-              "EndOffset": 363,
+              "Line": 52,
+              "Offset": 415,
+              "EndOffset": 425,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 1
             },
             {
-              "Line": 62,
-              "Offset": 648,
-              "EndOffset": 650,
+              "Line": 63,
+              "Offset": 710,
+              "EndOffset": 712,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 62,
-              "Offset": 648,
-              "EndOffset": 658,
+              "Line": 63,
+              "Offset": 710,
+              "EndOffset": 720,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 1
             },
             {
-              "Line": 67,
-              "Offset": 684,
-              "EndOffset": 686,
+              "Line": 68,
+              "Offset": 738,
+              "EndOffset": 740,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
-              "Line": 67,
-              "Offset": 684,
-              "EndOffset": 694,
+              "Line": 68,
+              "Offset": 738,
+              "EndOffset": 761,
               "Path": 1,
               "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 72,
+              "Offset": 787,
+              "EndOffset": 789,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 787,
+              "EndOffset": 797,
+              "Path": 1,
+              "Ordinal": 7,
               "Hits": 1
             }
           ]
@@ -1369,38 +352,38 @@
       "LitExplore.Repository.ProjectRepository/<CreateProjectAsync>d__4": {
         "System.Void LitExplore.Repository.ProjectRepository/<CreateProjectAsync>d__4::MoveNext()": {
           "Lines": {
-            "78": 3,
-            "79": 3,
-            "80": 3,
-            "81": 3,
-            "82": 3,
             "83": 3,
+            "84": 3,
             "85": 3,
-            "86": 1,
-            "87": 1,
-            "90": 2,
-            "91": 2,
-            "92": 2,
-            "93": 2,
-            "94": 2,
+            "86": 3,
+            "87": 3,
+            "88": 3,
+            "90": 3,
+            "91": 1,
+            "92": 1,
+            "95": 2,
             "96": 2,
-            "97": 1,
-            "98": 1,
-            "101": 1,
+            "97": 2,
+            "98": 2,
+            "99": 2,
+            "101": 2,
             "102": 1,
             "103": 1,
-            "104": 1,
-            "105": 1,
             "106": 1,
             "107": 1,
+            "108": 1,
             "109": 1,
             "110": 1,
             "111": 1,
-            "112": 3
+            "112": 1,
+            "114": 1,
+            "115": 1,
+            "116": 1,
+            "117": 3
           },
           "Branches": [
             {
-              "Line": 85,
+              "Line": 90,
               "Offset": 579,
               "EndOffset": 581,
               "Path": 0,
@@ -1408,7 +391,7 @@
               "Hits": 1
             },
             {
-              "Line": 85,
+              "Line": 90,
               "Offset": 579,
               "EndOffset": 600,
               "Path": 1,
@@ -1416,7 +399,7 @@
               "Hits": 2
             },
             {
-              "Line": 96,
+              "Line": 101,
               "Offset": 779,
               "EndOffset": 781,
               "Path": 0,
@@ -1424,7 +407,7 @@
               "Hits": 1
             },
             {
-              "Line": 96,
+              "Line": 101,
               "Offset": 779,
               "EndOffset": 795,
               "Path": 1,
@@ -1437,23 +420,23 @@
       "LitExplore.Repository.ProjectRepository/<DeleteProjectAsync>d__5": {
         "System.Void LitExplore.Repository.ProjectRepository/<DeleteProjectAsync>d__5::MoveNext()": {
           "Lines": {
-            "115": 2,
-            "116": 2,
-            "117": 2,
-            "118": 2,
-            "119": 2,
             "120": 2,
+            "121": 2,
             "122": 2,
-            "123": 1,
-            "124": 1,
-            "127": 1,
+            "123": 2,
+            "124": 2,
+            "125": 2,
+            "127": 2,
             "128": 1,
-            "130": 1,
-            "131": 2
+            "129": 1,
+            "132": 1,
+            "133": 1,
+            "135": 1,
+            "136": 2
           },
           "Branches": [
             {
-              "Line": 122,
+              "Line": 127,
               "Offset": 319,
               "EndOffset": 321,
               "Path": 0,
@@ -1461,7 +444,7 @@
               "Hits": 1
             },
             {
-              "Line": 122,
+              "Line": 127,
               "Offset": 319,
               "EndOffset": 329,
               "Path": 1,
@@ -1474,12 +457,14 @@
       "LitExplore.Repository.ProjectRepository/<ReadProjectAsync>d__6": {
         "System.Void LitExplore.Repository.ProjectRepository/<ReadProjectAsync>d__6::MoveNext()": {
           "Lines": {
-            "134": 1,
-            "135": 1,
-            "136": 1,
-            "137": 1,
-            "138": 1,
-            "139": 1
+            "139": 1,
+            "140": 1,
+            "141": 1,
+            "142": 1,
+            "143": 1,
+            "144": 1,
+            "145": 1,
+            "146": 1
           },
           "Branches": []
         }
@@ -1487,12 +472,15 @@
       "LitExplore.Repository.ProjectRepository/<ReadProjectDetailsAsync>d__7": {
         "System.Void LitExplore.Repository.ProjectRepository/<ReadProjectDetailsAsync>d__7::MoveNext()": {
           "Lines": {
-            "142": 2,
-            "143": 2,
-            "144": 2,
-            "145": 2,
-            "146": 2,
-            "147": 2
+            "149": 5,
+            "150": 5,
+            "151": 5,
+            "152": 5,
+            "153": 5,
+            "154": 5,
+            "155": 5,
+            "156": 5,
+            "157": 5
           },
           "Branches": []
         }
@@ -1500,30 +488,30 @@
       "LitExplore.Repository.ProjectRepository/<ReadProjectsByUserAsync>d__9": {
         "System.Void LitExplore.Repository.ProjectRepository/<ReadProjectsByUserAsync>d__9::MoveNext()": {
           "Lines": {
-            "182": 2,
-            "183": 2,
-            "184": 2,
-            "185": 2,
-            "186": 2,
-            "187": 2,
-            "189": 3,
-            "190": 1,
-            "193": 1,
-            "194": 1,
-            "195": 1,
-            "196": 1,
-            "197": 1,
-            "199": 1,
+            "192": 2,
+            "193": 2,
+            "194": 2,
+            "195": 2,
+            "196": 2,
+            "197": 2,
+            "199": 3,
             "200": 1,
-            "201": 1,
-            "202": 1,
             "203": 1,
+            "204": 1,
             "205": 1,
-            "206": 2
+            "206": 1,
+            "207": 1,
+            "209": 1,
+            "210": 1,
+            "211": 1,
+            "212": 1,
+            "213": 1,
+            "215": 1,
+            "216": 2
           },
           "Branches": [
             {
-              "Line": 189,
+              "Line": 199,
               "Offset": 359,
               "EndOffset": 361,
               "Path": 0,
@@ -1531,7 +519,7 @@
               "Hits": 1
             },
             {
-              "Line": 189,
+              "Line": 199,
               "Offset": 359,
               "EndOffset": 398,
               "Path": 1,
@@ -1544,75 +532,75 @@
       "LitExplore.Repository.ProjectRepository/<RemoveCollaboratorAsync>d__8": {
         "System.Void LitExplore.Repository.ProjectRepository/<RemoveCollaboratorAsync>d__8::MoveNext()": {
           "Lines": {
-            "150": 2,
-            "151": 2,
-            "152": 2,
-            "153": 2,
-            "154": 2,
-            "155": 2,
-            "157": 2,
-            "158": 0,
-            "159": 0,
+            "160": 2,
+            "161": 2,
             "162": 2,
-            "163": 0,
-            "164": 0,
-            "166": 2,
+            "163": 2,
+            "164": 2,
+            "165": 2,
             "167": 2,
-            "169": 2,
-            "170": 2,
+            "168": 0,
+            "169": 0,
             "172": 2,
-            "173": 1,
-            "174": 1,
-            "176": 1,
-            "177": 1,
-            "178": 1,
-            "179": 2
+            "173": 0,
+            "174": 0,
+            "176": 2,
+            "177": 2,
+            "179": 2,
+            "180": 2,
+            "182": 2,
+            "183": 1,
+            "184": 1,
+            "186": 1,
+            "187": 1,
+            "188": 1,
+            "189": 2
           },
           "Branches": [
             {
-              "Line": 157,
-              "Offset": 328,
-              "EndOffset": 330,
+              "Line": 167,
+              "Offset": 390,
+              "EndOffset": 392,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 157,
-              "Offset": 328,
-              "EndOffset": 338,
+              "Line": 167,
+              "Offset": 390,
+              "EndOffset": 400,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 2
             },
             {
-              "Line": 162,
-              "Offset": 356,
-              "EndOffset": 358,
+              "Line": 172,
+              "Offset": 418,
+              "EndOffset": 420,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 162,
-              "Offset": 356,
-              "EndOffset": 377,
+              "Line": 172,
+              "Offset": 418,
+              "EndOffset": 439,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 2
             },
             {
-              "Line": 172,
-              "Offset": 434,
-              "EndOffset": 436,
+              "Line": 182,
+              "Offset": 496,
+              "EndOffset": 498,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 1
             },
             {
-              "Line": 172,
-              "Offset": 434,
-              "EndOffset": 441,
+              "Line": 182,
+              "Offset": 496,
+              "EndOffset": 503,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 1
@@ -1623,75 +611,75 @@
       "LitExplore.Repository.ProjectRepository/<RemovePaperAsync>d__10": {
         "System.Void LitExplore.Repository.ProjectRepository/<RemovePaperAsync>d__10::MoveNext()": {
           "Lines": {
-            "209": 2,
-            "210": 2,
-            "211": 2,
-            "212": 2,
-            "213": 2,
-            "214": 2,
-            "216": 2,
-            "217": 0,
-            "218": 0,
+            "219": 2,
+            "220": 2,
             "221": 2,
-            "222": 0,
-            "223": 0,
-            "225": 2,
+            "222": 2,
+            "223": 2,
+            "224": 2,
             "226": 2,
-            "228": 2,
-            "229": 2,
+            "227": 0,
+            "228": 0,
             "231": 2,
-            "232": 1,
-            "233": 1,
-            "236": 1,
-            "237": 1,
-            "238": 1,
-            "239": 2
+            "232": 0,
+            "233": 0,
+            "235": 2,
+            "236": 2,
+            "238": 2,
+            "239": 2,
+            "241": 2,
+            "242": 1,
+            "243": 1,
+            "246": 1,
+            "247": 1,
+            "248": 1,
+            "249": 2
           },
           "Branches": [
             {
-              "Line": 216,
-              "Offset": 328,
-              "EndOffset": 330,
+              "Line": 226,
+              "Offset": 390,
+              "EndOffset": 392,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 216,
-              "Offset": 328,
-              "EndOffset": 338,
+              "Line": 226,
+              "Offset": 390,
+              "EndOffset": 400,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 2
             },
             {
-              "Line": 221,
-              "Offset": 356,
-              "EndOffset": 358,
+              "Line": 231,
+              "Offset": 418,
+              "EndOffset": 420,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 221,
-              "Offset": 356,
-              "EndOffset": 377,
+              "Line": 231,
+              "Offset": 418,
+              "EndOffset": 439,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 2
             },
             {
-              "Line": 231,
-              "Offset": 434,
-              "EndOffset": 436,
+              "Line": 241,
+              "Offset": 496,
+              "EndOffset": 498,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 1
             },
             {
-              "Line": 231,
-              "Offset": 434,
-              "EndOffset": 441,
+              "Line": 241,
+              "Offset": 496,
+              "EndOffset": 503,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 1
@@ -1700,7 +688,7 @@
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\UserRepository.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\UserRepository.cs": {
       "LitExplore.Repository.UserRepository": {
         "System.Void LitExplore.Repository.UserRepository::.ctor(LitExplore.Repository.LitExploreContext)": {
           "Lines": {
@@ -1812,2314 +800,16 @@
           },
           "Branches": []
         }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201125226_Initial.cs": {
-      "LitExplore.Repository.Migrations.Initial": {
-        "System.Void LitExplore.Repository.Migrations.Initial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+      },
+      "LitExplore.Repository.UserRepository/<ReadByNameAsync>d__5": {
+        "System.Void LitExplore.Repository.UserRepository/<ReadByNameAsync>d__5::MoveNext()": {
           "Lines": {
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
             "61": 0,
             "62": 0,
             "63": 0,
             "64": 0,
             "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "112": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "127": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "142": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "157": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.Initial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "170": 0,
-            "171": 0,
-            "173": 0,
-            "174": 0,
-            "176": 0,
-            "177": 0,
-            "179": 0,
-            "180": 0,
-            "182": 0,
-            "183": 0,
-            "185": 0,
-            "186": 0,
-            "187": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201125226_Initial.Designer.cs": {
-      "LitExplore.Repository.Migrations.Initial": {
-        "System.Void LitExplore.Repository.Migrations.Initial::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "127": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "142": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "157": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "172": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "187": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "196": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "211": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "218": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201131349_RelationMigration.cs": {
-      "LitExplore.Repository.Migrations.RelationMigration": {
-        "System.Void LitExplore.Repository.Migrations.RelationMigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.RelationMigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201131349_RelationMigration.Designer.cs": {
-      "LitExplore.Repository.Migrations.RelationMigration": {
-        "System.Void LitExplore.Repository.Migrations.RelationMigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "127": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "142": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "157": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "172": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "187": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "196": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "211": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "226": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "241": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "246": 0,
-            "248": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201151654_PaperNameLengthening.cs": {
-      "LitExplore.Repository.Migrations.PaperNameLengthening": {
-        "System.Void LitExplore.Repository.Migrations.PaperNameLengthening::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.PaperNameLengthening::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201151654_PaperNameLengthening.Designer.cs": {
-      "LitExplore.Repository.Migrations.PaperNameLengthening": {
-        "System.Void LitExplore.Repository.Migrations.PaperNameLengthening::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "127": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "142": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "157": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "172": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "187": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "196": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "211": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "226": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "241": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "246": 0,
-            "248": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201152214_UserNoAutoIncrement.cs": {
-      "LitExplore.Repository.Migrations.UserNoAutoIncrement": {
-        "System.Void LitExplore.Repository.Migrations.UserNoAutoIncrement::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.UserNoAutoIncrement::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "15": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201152214_UserNoAutoIncrement.Designer.cs": {
-      "LitExplore.Repository.Migrations.UserNoAutoIncrement": {
-        "System.Void LitExplore.Repository.Migrations.UserNoAutoIncrement::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "158": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "173": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "197": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "212": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "227": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "242": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "247": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201152843_PrimaryKeys.cs": {
-      "LitExplore.Repository.Migrations.PrimaryKeys": {
-        "System.Void LitExplore.Repository.Migrations.PrimaryKeys::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.PrimaryKeys::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "15": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201152843_PrimaryKeys.Designer.cs": {
-      "LitExplore.Repository.Migrations.PrimaryKeys": {
-        "System.Void LitExplore.Repository.Migrations.PrimaryKeys::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "158": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "173": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "197": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "212": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "227": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "242": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "247": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201153614_AutoIncrementFix.cs": {
-      "LitExplore.Repository.Migrations.AutoIncrementFix": {
-        "System.Void LitExplore.Repository.Migrations.AutoIncrementFix::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.AutoIncrementFix::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "15": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201153614_AutoIncrementFix.Designer.cs": {
-      "LitExplore.Repository.Migrations.AutoIncrementFix": {
-        "System.Void LitExplore.Repository.Migrations.AutoIncrementFix::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "158": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "173": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "197": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "212": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "227": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "242": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "247": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201161737_TestMigration.cs": {
-      "LitExplore.Repository.Migrations.TestMigration": {
-        "System.Void LitExplore.Repository.Migrations.TestMigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.TestMigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "15": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211201161737_TestMigration.Designer.cs": {
-      "LitExplore.Repository.Migrations.TestMigration": {
-        "System.Void LitExplore.Repository.Migrations.TestMigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "158": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "173": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "197": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "212": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "227": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "242": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "247": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211209224425_newmig.cs": {
-      "LitExplore.Repository.Migrations.newmig": {
-        "System.Void LitExplore.Repository.Migrations.newmig::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "10": 0,
-            "12": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Repository.Migrations.newmig::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
-          "Lines": {
-            "15": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\20211209224425_newmig.Designer.cs": {
-      "LitExplore.Repository.Migrations.newmig": {
-        "System.Void LitExplore.Repository.Migrations.newmig::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "19": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "126": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "155": 0,
-            "156": 0,
-            "158": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0,
-            "173": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "197": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "210": 0,
-            "212": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "227": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "239": 0,
-            "240": 0,
-            "242": 0,
-            "243": 0,
-            "244": 0,
-            "245": 0,
-            "247": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository\\Migrations\\LitExploreContextModelSnapshot.cs": {
-      "LitExplore.Repository.Migrations.LitExploreContextModelSnapshot": {
-        "System.Void LitExplore.Repository.Migrations.LitExploreContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "17": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "23": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "63": 0,
-            "64": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "95": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "111": 0,
-            "112": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "126": 0,
-            "127": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "139": 0,
-            "141": 0,
-            "142": 0,
-            "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0,
-            "147": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0,
-            "151": 0,
-            "152": 0,
-            "153": 0,
-            "154": 0,
-            "156": 0,
-            "157": 0,
-            "158": 0,
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "171": 0,
-            "172": 0,
-            "173": 0,
-            "174": 0,
-            "175": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0,
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "186": 0,
-            "187": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "195": 0,
-            "196": 0,
-            "197": 0,
-            "198": 0,
-            "199": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0,
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "206": 0,
-            "207": 0,
-            "208": 0,
-            "210": 0,
-            "211": 0,
-            "212": 0,
-            "213": 0,
-            "214": 0,
-            "215": 0,
-            "216": 0,
-            "217": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "225": 0,
-            "226": 0,
-            "227": 0,
-            "228": 0,
-            "229": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "237": 0,
-            "238": 0,
-            "240": 0,
-            "241": 0,
-            "242": 0,
-            "243": 0,
-            "245": 0
+            "66": 0
           },
           "Branches": []
         }
@@ -4127,29 +817,29 @@
     }
   },
   "LitExplore.Repository.Entities.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\Author.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\Author.cs": {
       "LitExplore.Repository.Entities.Author": {
         "System.Int32 LitExplore.Repository.Entities.Author::get_Id()": {
           "Lines": {
-            "7": 69
+            "10": 69
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.Author::get_GivenName()": {
           "Lines": {
-            "10": 138
+            "13": 138
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.Author::get_Surname()": {
           "Lines": {
-            "13": 138
+            "16": 138
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Author::get_Papers()": {
           "Lines": {
-            "15": 69
+            "18": 69
           },
           "Branches": []
         }
@@ -4157,59 +847,59 @@
       "LitExplore.Repository.Entities.AuthorDTO": {
         "System.Int32 LitExplore.Repository.Entities.AuthorDTO::get_Id()": {
           "Lines": {
-            "18": 0
+            "21": 8
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\Paper.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\Paper.cs": {
       "LitExplore.Repository.Entities.Paper": {
         "System.Int32 LitExplore.Repository.Entities.Paper::get_Id()": {
           "Lines": {
-            "7": 95
+            "9": 98
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Author> LitExplore.Repository.Entities.Paper::get_Authors()": {
           "Lines": {
-            "9": 184
+            "11": 184
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.Paper::get_Name()": {
           "Lines": {
-            "12": 93
+            "14": 96
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.Paper::get_URL()": {
           "Lines": {
-            "16": 92
+            "18": 92
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.Paper::get_Abstract()": {
           "Lines": {
-            "19": 92
+            "21": 92
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.Entities.Paper::get_UsedIn()": {
           "Lines": {
-            "21": 92
+            "23": 92
           },
           "Branches": []
         },
         "System.Collections.Generic.ICollection`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Paper::get_Citings()": {
           "Lines": {
-            "25": 138
+            "27": 138
           },
           "Branches": []
         },
         "System.Collections.Generic.ICollection`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Paper::get_CitedBy()": {
           "Lines": {
-            "26": 92
+            "28": 92
           },
           "Branches": []
         }
@@ -4217,7 +907,7 @@
       "LitExplore.Repository.Entities.PaperDTO": {
         "System.Int32 LitExplore.Repository.Entities.PaperDTO::get_Id()": {
           "Lines": {
-            "29": 36
+            "31": 52
           },
           "Branches": []
         }
@@ -4225,141 +915,170 @@
       "LitExplore.Repository.Entities.PaperDetailsDTO": {
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.AuthorDTO> LitExplore.Repository.Entities.PaperDetailsDTO::get_Authors()": {
           "Lines": {
-            "30": 0
+            "32": 14
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\Project.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\Project.cs": {
       "LitExplore.Repository.Entities.Project": {
         "System.Int32 LitExplore.Repository.Entities.Project::get_Id()": {
           "Lines": {
-            "7": 55
+            "7": 69
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.Project::get_Name()": {
           "Lines": {
-            "10": 108
+            "10": 134
           },
           "Branches": []
         },
         "LitExplore.Repository.Entities.User LitExplore.Repository.Entities.Project::get_Owner()": {
           "Lines": {
-            "14": 68
+            "14": 141
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.User> LitExplore.Repository.Entities.Project::get_Collaborators()": {
           "Lines": {
-            "17": 115
+            "17": 141
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Paper> LitExplore.Repository.Entities.Project::get_Papers()": {
           "Lines": {
-            "20": 113
+            "20": 140
           },
           "Branches": []
         },
         "LitExplore.Repository.Entities.ProjectDTO LitExplore.Repository.Entities.Project::ToDTO()": {
           "Lines": {
-            "24": 4,
-            "25": 4,
-            "26": 4,
-            "27": 4,
-            "28": 4,
-            "29": 4,
-            "30": 4,
-            "31": 4,
-            "32": 4,
-            "33": 4,
-            "34": 4,
-            "35": 2,
+            "24": 6,
+            "25": 6,
+            "26": 6,
+            "27": 6,
+            "28": 6,
+            "29": 6,
+            "30": 6,
+            "31": 6,
+            "32": 6,
+            "33": 6,
+            "34": 6,
+            "35": 6,
             "36": 4,
-            "37": 4,
-            "38": 4,
-            "39": 4,
-            "40": 4,
-            "41": 4,
-            "42": 4,
-            "43": 4
+            "37": 6,
+            "38": 6,
+            "39": 6
           },
           "Branches": [
             {
-              "Line": 27,
-              "Offset": 21,
-              "EndOffset": 23,
+              "Line": 25,
+              "Offset": 20,
+              "EndOffset": 22,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 27,
-              "Offset": 21,
+              "Line": 25,
+              "Offset": 20,
               "EndOffset": 30,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 4
+              "Hits": 6
             },
             {
-              "Line": 27,
-              "Offset": 47,
-              "EndOffset": 49,
+              "Line": 25,
+              "Offset": 42,
+              "EndOffset": 44,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 27,
-              "Offset": 47,
-              "EndOffset": 56,
+              "Line": 25,
+              "Offset": 42,
+              "EndOffset": 48,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 4
+              "Hits": 6
             },
             {
-              "Line": 33,
-              "Offset": 80,
-              "EndOffset": 82,
+              "Line": 25,
+              "Offset": 54,
+              "EndOffset": 56,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
-              "Line": 33,
-              "Offset": 80,
-              "EndOffset": 88,
+              "Line": 25,
+              "Offset": 54,
+              "EndOffset": 62,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 4
+              "Hits": 6
+            },
+            {
+              "Line": 25,
+              "Offset": 74,
+              "EndOffset": 76,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 74,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 6
             }
           ]
         },
         "LitExplore.Repository.Entities.ProjectDetailsDTO LitExplore.Repository.Entities.Project::ToDetailsDTO()": {
           "Lines": {
-            "46": 2,
-            "47": 2,
-            "49": 2,
-            "50": 2,
-            "51": 2,
-            "52": 2,
-            "53": 2,
-            "54": 2,
-            "55": 2,
-            "56": 1,
-            "57": 2,
-            "58": 2,
-            "59": 2
+            "42": 4,
+            "43": 4,
+            "44": 4,
+            "45": 4,
+            "46": 4,
+            "47": 4,
+            "48": 4,
+            "49": 4,
+            "50": 4,
+            "51": 4,
+            "52": 4,
+            "53": 4,
+            "54": 4
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 39,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
         }
       },
       "LitExplore.Repository.Entities.ProjectDTO": {
         "System.Int32 LitExplore.Repository.Entities.ProjectDTO::get_Id()": {
           "Lines": {
-            "62": 83
+            "57": 111
           },
           "Branches": []
         }
@@ -4367,7 +1086,7 @@
       "LitExplore.Repository.Entities.ProjectDetailsDTO": {
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.PaperDTO> LitExplore.Repository.Entities.ProjectDetailsDTO::get_Papers()": {
           "Lines": {
-            "64": 6
+            "59": 12
           },
           "Branches": []
         }
@@ -4375,23 +1094,23 @@
       "LitExplore.Repository.Entities.ProjectCreateDTO": {
         "System.Guid LitExplore.Repository.Entities.ProjectCreateDTO::get_OwnerId()": {
           "Lines": {
-            "75": 8
+            "70": 8
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.ProjectCreateDTO::get_Name()": {
           "Lines": {
-            "79": 10
+            "74": 10
           },
           "Branches": []
         },
         "System.Void LitExplore.Repository.Entities.ProjectCreateDTO::.ctor(System.Guid,System.String)": {
           "Lines": {
-            "68": 3,
-            "69": 3,
-            "70": 3,
-            "71": 3,
-            "72": 3
+            "63": 3,
+            "64": 3,
+            "65": 3,
+            "66": 3,
+            "67": 3
           },
           "Branches": []
         }
@@ -4399,23 +1118,23 @@
       "LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO": {
         "System.Int32 LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO::get_ProjectId()": {
           "Lines": {
-            "94": 10
+            "92": 10
           },
           "Branches": []
         },
         "System.Guid LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO::get_CollaboratorId()": {
           "Lines": {
-            "100": 9
+            "98": 9
           },
           "Branches": []
         },
         "System.Void LitExplore.Repository.Entities.ProjectAddRemoveCollaboratorDTO::.ctor(System.Int32,System.Guid)": {
           "Lines": {
+            "82": 5,
+            "83": 5,
             "84": 5,
             "85": 5,
-            "86": 5,
-            "87": 5,
-            "88": 5
+            "86": 5
           },
           "Branches": []
         }
@@ -4423,69 +1142,75 @@
       "LitExplore.Repository.Entities.ProjectAddRemovePaperDTO": {
         "System.Int32 LitExplore.Repository.Entities.ProjectAddRemovePaperDTO::get_ProjectId()": {
           "Lines": {
-            "115": 8
+            "116": 8
           },
           "Branches": []
         },
         "System.Int32 LitExplore.Repository.Entities.ProjectAddRemovePaperDTO::get_PaperId()": {
           "Lines": {
-            "121": 7
+            "122": 7
           },
           "Branches": []
         },
         "System.Void LitExplore.Repository.Entities.ProjectAddRemovePaperDTO::.ctor(System.Int32,System.Int32)": {
           "Lines": {
-            "105": 4,
             "106": 4,
             "107": 4,
             "108": 4,
-            "109": 4
+            "109": 4,
+            "110": 4
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\User.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Entities\\User.cs": {
       "LitExplore.Repository.Entities.User": {
+        "System.Int32 LitExplore.Repository.Entities.User::get_InternalId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
         "System.Guid LitExplore.Repository.Entities.User::get_Id()": {
           "Lines": {
-            "7": 99
+            "9": 115
           },
           "Branches": []
         },
         "System.String LitExplore.Repository.Entities.User::get_DisplayName()": {
           "Lines": {
-            "10": 183
+            "12": 211
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.Entities.User::get_HasAccessTo()": {
           "Lines": {
-            "12": 88
+            "14": 100
           },
           "Branches": []
         },
         "System.Collections.Generic.ISet`1<LitExplore.Repository.Entities.Project> LitExplore.Repository.Entities.User::get_IsOwnerOf()": {
           "Lines": {
-            "14": 89
+            "16": 101
           },
           "Branches": []
         },
         "System.Void LitExplore.Repository.Entities.User::.ctor(System.Guid,System.String)": {
           "Lines": {
-            "16": 2,
-            "17": 2,
             "18": 2,
             "19": 2,
-            "20": 2
+            "20": 2,
+            "21": 2,
+            "22": 2
           },
           "Branches": []
         },
         "System.Void LitExplore.Repository.Entities.User::.ctor()": {
           "Lines": {
-            "22": 86,
-            "23": 86,
-            "25": 86
+            "24": 98,
+            "25": 98,
+            "27": 98
           },
           "Branches": []
         }
@@ -4493,7 +1218,7 @@
       "LitExplore.Repository.Entities.UserDTO": {
         "System.Guid LitExplore.Repository.Entities.UserDTO::get_Id()": {
           "Lines": {
-            "28": 59
+            "30": 71
           },
           "Branches": []
         }
@@ -4501,7 +1226,7 @@
       "LitExplore.Repository.Entities.UserProjectDTO": {
         "System.Guid LitExplore.Repository.Entities.UserProjectDTO::get_Id()": {
           "Lines": {
-            "30": 28
+            "35": 28
           },
           "Branches": []
         }
@@ -4519,7 +1244,7 @@
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\DatabaseTests.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\DatabaseTests.cs": {
       "LitExplore.Repository.Tests.DatabaseTests": {
         "System.Void LitExplore.Repository.Tests.DatabaseTests::SetupDatabaseTest()": {
           "Lines": {
@@ -4570,7 +1295,7 @@
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\PaperRepositoryTest.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\PaperRepositoryTest.cs": {
       "LitExplore.Repository.Tests.PaperRepositoryTest": {
         "System.Void LitExplore.Repository.Tests.PaperRepositoryTest::SeedDatabase()": {
           "Lines": {
@@ -4644,8 +1369,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Is_Case_Insensitive>d__10": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Is_Case_Insensitive>d__10::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Is_Case_Insensitive>d__8": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Is_Case_Insensitive>d__8::MoveNext()": {
           "Lines": {
             "164": 0,
             "166": 0,
@@ -4656,8 +1381,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Non_Exsisting_Returns_Empty_List>d__7": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Non_Exsisting_Returns_Empty_List>d__7::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Non_Exsisting_Returns_Empty_List>d__5": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Non_Exsisting_Returns_Empty_List>d__5::MoveNext()": {
           "Lines": {
             "125": 0,
             "127": 0,
@@ -4668,8 +1393,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Paper_1_Returns_List_With_Paper_1>d__8": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Paper_1_Returns_List_With_Paper_1>d__8::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Paper_1_Returns_List_With_Paper_1>d__6": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_Paper_1_Returns_List_With_Paper_1>d__6::MoveNext()": {
           "Lines": {
             "138": 0,
             "140": 0,
@@ -4680,8 +1405,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_per_Returns_All>d__9": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_per_Returns_All>d__9::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_per_Returns_All>d__7": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByNameAsync_per_Returns_All>d__7::MoveNext()": {
           "Lines": {
             "151": 0,
             "153": 0,
@@ -4692,8 +1417,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Non_Exsisting_Returns_Empty_List>d__12": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Non_Exsisting_Returns_Empty_List>d__12::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Non_Exsisting_Returns_Empty_List>d__10": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Non_Exsisting_Returns_Empty_List>d__10::MoveNext()": {
           "Lines": {
             "192": 0,
             "194": 0,
@@ -4704,8 +1429,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_1_Cited_By_3>d__13": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_1_Cited_By_3>d__13::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_1_Cited_By_3>d__11": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_1_Cited_By_3>d__11::MoveNext()": {
           "Lines": {
             "205": 0,
             "207": 0,
@@ -4716,8 +1441,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_2_Has_No_Relations>d__11": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_2_Has_No_Relations>d__11::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_2_Has_No_Relations>d__9": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_2_Has_No_Relations>d__9::MoveNext()": {
           "Lines": {
             "179": 0,
             "181": 0,
@@ -4728,8 +1453,8 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_3_Cited_By_1>d__14": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_3_Cited_By_1>d__14::MoveNext()": {
+      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_3_Cited_By_1>d__12": {
+        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadByRelationAsync_Paper_3_Cited_By_1>d__12::MoveNext()": {
           "Lines": {
             "218": 0,
             "220": 0,
@@ -4739,47 +1464,9 @@
           },
           "Branches": []
         }
-      },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadDetailsAsync_Non_Existing_Returns_Null>d__5": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadDetailsAsync_Non_Existing_Returns_Null>d__5::MoveNext()": {
-          "Lines": {
-            "81": 0,
-            "83": 0,
-            "86": 0,
-            "89": 0,
-            "90": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Repository.Tests.PaperRepositoryTest/<ReadDetailsAsync_Paper_1_Returns_Paper_1>d__6": {
-        "System.Void LitExplore.Repository.Tests.PaperRepositoryTest/<ReadDetailsAsync_Paper_1_Returns_Paper_1>d__6::MoveNext()": {
-          "Lines": {
-            "94": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "108": 0,
-            "111": 0,
-            "113": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0
-          },
-          "Branches": []
-        }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\ProjectRepositoryTest.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\ProjectRepositoryTest.cs": {
       "LitExplore.Repository.Tests.ProjectRepositoryTest": {
         "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest::SeedDatabase()": {
           "Lines": {
@@ -5225,37 +1912,49 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_6_Returns_Empty_UserProjectDTO>d__37": {
-        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_6_Returns_Empty_UserProjectDTO>d__37::MoveNext()": {
+      "LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_6_Returns_Empty_UserProjectDTO>d__38": {
+        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_6_Returns_Empty_UserProjectDTO>d__38::MoveNext()": {
           "Lines": {
-            "596": 0,
-            "598": 0,
-            "599": 0,
-            "600": 0,
-            "601": 0,
-            "604": 0,
-            "608": 0,
             "609": 0,
-            "610": 0,
-            "611": 0
+            "611": 0,
+            "612": 0,
+            "613": 0,
+            "614": 0,
+            "617": 0,
+            "621": 0,
+            "622": 0,
+            "623": 0,
+            "624": 0
           },
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_Null_Returns_Empty_UserProjectDTO>d__38": {
-        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_Null_Returns_Empty_UserProjectDTO>d__38::MoveNext()": {
+      "LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_Null_Returns_Empty_UserProjectDTO>d__39": {
+        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<ReadProjectsByUserAsync_User_Null_Returns_Empty_UserProjectDTO>d__39::MoveNext()": {
           "Lines": {
-            "615": 0,
-            "617": 0,
-            "618": 0,
-            "619": 0,
-            "620": 0,
-            "623": 0,
-            "624": 0,
             "628": 0,
-            "629": 0,
             "630": 0,
-            "631": 0
+            "631": 0,
+            "632": 0,
+            "633": 0,
+            "636": 0,
+            "637": 0,
+            "641": 0,
+            "642": 0,
+            "643": 0,
+            "644": 0
+          },
+          "Branches": []
+        }
+      },
+      "LitExplore.Repository.Tests.ProjectRepositoryTest/<RemoveCollaboratorAsync_Remove_Collaborator_From_Project_5_Returns_Status_NotFound>d__36": {
+        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<RemoveCollaboratorAsync_Remove_Collaborator_From_Project_5_Returns_Status_NotFound>d__36::MoveNext()": {
+          "Lines": {
+            "582": 0,
+            "584": 0,
+            "587": 0,
+            "590": 0,
+            "591": 0
           },
           "Branches": []
         }
@@ -5334,14 +2033,14 @@
           "Branches": []
         }
       },
-      "LitExplore.Repository.Tests.ProjectRepositoryTest/<RemovePaperAsync_Remove_Paper_1_From_Project_5_Returns_Status_NotFound>d__36": {
-        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<RemovePaperAsync_Remove_Paper_1_From_Project_5_Returns_Status_NotFound>d__36::MoveNext()": {
+      "LitExplore.Repository.Tests.ProjectRepositoryTest/<RemovePaperAsync_Remove_Paper_1_From_Project_5_Returns_Status_NotFound>d__37": {
+        "System.Void LitExplore.Repository.Tests.ProjectRepositoryTest/<RemovePaperAsync_Remove_Paper_1_From_Project_5_Returns_Status_NotFound>d__37::MoveNext()": {
           "Lines": {
-            "582": 0,
-            "584": 0,
-            "587": 0,
-            "590": 0,
-            "591": 0
+            "595": 0,
+            "597": 0,
+            "600": 0,
+            "603": 0,
+            "604": 0
           },
           "Branches": []
         }
@@ -5359,11 +2058,11 @@
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\RepositoryTests.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\RepositoryTests.cs": {
       "LitExplore.Repository.Tests.RepositoryTests": {
         "LitExplore.Repository.LitExploreContext LitExplore.Repository.Tests.RepositoryTests::get_Context()": {
           "Lines": {
-            "5": 191
+            "5": 194
           },
           "Branches": []
         },
@@ -5393,7 +2092,7 @@
         }
       }
     },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\UserRepositoryTest.cs": {
+    "C:\\Users\\Kalle Wilsen\\Documents\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Repository.Tests\\UserRepositoryTest.cs": {
       "LitExplore.Repository.Tests.UserRepositoryTest": {
         "System.Void LitExplore.Repository.Tests.UserRepositoryTest::SeedDatabase()": {
           "Lines": {
@@ -5428,11 +2127,11 @@
       "LitExplore.Repository.Tests.UserRepositoryTest/<CreateAsync_Given_Existing_User_Returns_Conflict>d__11": {
         "System.Void LitExplore.Repository.Tests.UserRepositoryTest/<CreateAsync_Given_Existing_User_Returns_Conflict>d__11::MoveNext()": {
           "Lines": {
-            "75": 0,
-            "77": 0,
-            "80": 0,
-            "83": 0,
-            "84": 0
+            "101": 0,
+            "103": 0,
+            "106": 0,
+            "109": 0,
+            "110": 0
           },
           "Branches": []
         }
@@ -5440,11 +2139,11 @@
       "LitExplore.Repository.Tests.UserRepositoryTest/<CreateAsync_Given_User_Returns_Created>d__10": {
         "System.Void LitExplore.Repository.Tests.UserRepositoryTest/<CreateAsync_Given_User_Returns_Created>d__10::MoveNext()": {
           "Lines": {
-            "62": 0,
-            "64": 0,
-            "67": 0,
-            "70": 0,
-            "71": 0
+            "88": 0,
+            "90": 0,
+            "93": 0,
+            "96": 0,
+            "97": 0
           },
           "Branches": []
         }
@@ -5452,10 +2151,10 @@
       "LitExplore.Repository.Tests.UserRepositoryTest/<DeleteAsync_Delete_User_Returns_Deleted>d__13": {
         "System.Void LitExplore.Repository.Tests.UserRepositoryTest/<DeleteAsync_Delete_User_Returns_Deleted>d__13::MoveNext()": {
           "Lines": {
-            "103": 0,
-            "107": 0,
-            "110": 0,
-            "111": 0
+            "129": 0,
+            "133": 0,
+            "136": 0,
+            "137": 0
           },
           "Branches": []
         }
@@ -5463,10 +2162,10 @@
       "LitExplore.Repository.Tests.UserRepositoryTest/<DeleteAsync_Delete_User_With_Project_Returns_Conflict>d__14": {
         "System.Void LitExplore.Repository.Tests.UserRepositoryTest/<DeleteAsync_Delete_User_With_Project_Returns_Conflict>d__14::MoveNext()": {
           "Lines": {
-            "115": 0,
-            "119": 0,
-            "122": 0,
-            "123": 0
+            "141": 0,
+            "145": 0,
+            "148": 0,
+            "149": 0
           },
           "Branches": []
         }
@@ -5474,11 +2173,11 @@
       "LitExplore.Repository.Tests.UserRepositoryTest/<DeleteAsync_Non_Existing_Returns_Not_Found>d__12": {
         "System.Void LitExplore.Repository.Tests.UserRepositoryTest/<DeleteAsync_Non_Existing_Returns_Not_Found>d__12::MoveNext()": {
           "Lines": {
-            "90": 0,
-            "92": 0,
-            "95": 0,
-            "98": 0,
-            "99": 0
+            "116": 0,
+            "118": 0,
+            "121": 0,
+            "124": 0,
+            "125": 0
           },
           "Branches": []
         }
@@ -5503,522 +2202,6 @@
             "52": 0,
             "55": 0,
             "56": 0
-          },
-          "Branches": []
-        }
-      }
-    }
-  },
-  "LitExplore.Server.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Server\\Program.cs": {
-      "Program": {
-        "System.Void Program::<Main>$(System.String[])": {
-          "Lines": {
-            "9": 0,
-            "12": 0,
-            "13": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "22": 0,
-            "23": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "31": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "45": 0,
-            "46": 0,
-            "48": 0,
-            "50": 0,
-            "51": 0,
-            "53": 0,
-            "55": 0,
-            "56": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "63": 0,
-            "64": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "69": 0
-          },
-          "Branches": [
-            {
-              "Line": 34,
-              "Offset": 231,
-              "EndOffset": 233,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 34,
-              "Offset": 231,
-              "EndOffset": 267,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Server\\Pages\\Error.cshtml": {
-      "AspNetCoreGeneratedDocument.Pages_Error/<<ExecuteAsync>b__13_1>d": {
-        "System.Void AspNetCoreGeneratedDocument.Pages_Error/<<ExecuteAsync>b__13_1>d::MoveNext()": {
-          "Lines": {
-            "21": 0,
-            "22": 0,
-            "24": 0,
-            "26": 0
-          },
-          "Branches": [
-            {
-              "Line": 21,
-              "Offset": 43,
-              "EndOffset": 45,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 21,
-              "Offset": 43,
-              "EndOffset": 109,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Server\\Pages\\Error.cshtml.cs": {
-      "LitExplore.Server.Pages.ErrorModel": {
-        "System.String LitExplore.Server.Pages.ErrorModel::get_RequestId()": {
-          "Lines": {
-            "11": 0
-          },
-          "Branches": []
-        },
-        "System.Boolean LitExplore.Server.Pages.ErrorModel::get_ShowRequestId()": {
-          "Lines": {
-            "13": 0
-          },
-          "Branches": []
-        },
-        "System.Void LitExplore.Server.Pages.ErrorModel::OnGet()": {
-          "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0
-          },
-          "Branches": [
-            {
-              "Line": 24,
-              "Offset": 8,
-              "EndOffset": 10,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 24,
-              "Offset": 8,
-              "EndOffset": 14,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 24,
-              "Offset": 20,
-              "EndOffset": 22,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 24,
-              "Offset": 20,
-              "EndOffset": 34,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            }
-          ]
-        },
-        "System.Void LitExplore.Server.Pages.ErrorModel::.ctor(Microsoft.Extensions.Logging.ILogger`1<LitExplore.Server.Pages.ErrorModel>)": {
-          "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Server\\Controllers\\PaperController.cs": {
-      "LitExplore.Server.Controllers.PaperController": {
-        "System.Void LitExplore.Server.Controllers.PaperController::.ctor(Microsoft.Extensions.Logging.ILogger`1<LitExplore.Server.Controllers.PaperController>,LitExplore.Repository.IPaperRepository)": {
-          "Lines": {
-            "13": 6,
-            "14": 6,
-            "15": 6,
-            "16": 6,
-            "17": 6
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.PaperController/<Get>d__3": {
-        "System.Void LitExplore.Server.Controllers.PaperController/<Get>d__3::MoveNext()": {
-          "Lines": {
-            "20": 2,
-            "21": 2,
-            "22": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.PaperController/<Get>d__4": {
-        "System.Void LitExplore.Server.Controllers.PaperController/<Get>d__4::MoveNext()": {
-          "Lines": {
-            "25": 1,
-            "26": 1,
-            "27": 1
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.PaperController/<GetRelated>d__5": {
-        "System.Void LitExplore.Server.Controllers.PaperController/<GetRelated>d__5::MoveNext()": {
-          "Lines": {
-            "31": 3,
-            "32": 3,
-            "33": 3
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Server\\Controllers\\ProjectController.cs": {
-      "LitExplore.Server.Controllers.ProjectController": {
-        "System.Void LitExplore.Server.Controllers.ProjectController::.ctor(Microsoft.Extensions.Logging.ILogger`1<LitExplore.Server.Controllers.ProjectController>,LitExplore.Repository.IProjectRepository)": {
-          "Lines": {
-            "15": 17,
-            "16": 17,
-            "17": 17,
-            "18": 17,
-            "19": 17
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Delete>d__10": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Delete>d__10::MoveNext()": {
-          "Lines": {
-            "60": 2,
-            "61": 2,
-            "62": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Delete>d__6": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Delete>d__6::MoveNext()": {
-          "Lines": {
-            "40": 2,
-            "41": 2,
-            "42": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Delete>d__8": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Delete>d__8::MoveNext()": {
-          "Lines": {
-            "50": 2,
-            "51": 2,
-            "52": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Get>d__3": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Get>d__3::MoveNext()": {
-          "Lines": {
-            "23": 2,
-            "24": 2,
-            "25": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Get>d__4": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Get>d__4::MoveNext()": {
-          "Lines": {
-            "30": 2,
-            "31": 2,
-            "32": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Post>d__5": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Post>d__5::MoveNext()": {
-          "Lines": {
-            "35": 3,
-            "36": 3,
-            "37": 3
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Post>d__7": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Post>d__7::MoveNext()": {
-          "Lines": {
-            "45": 2,
-            "46": 2,
-            "47": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.ProjectController/<Post>d__9": {
-        "System.Void LitExplore.Server.Controllers.ProjectController/<Post>d__9::MoveNext()": {
-          "Lines": {
-            "55": 3,
-            "56": 3,
-            "57": 3
-          },
-          "Branches": []
-        }
-      }
-    },
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Server\\Controllers\\UserController.cs": {
-      "LitExplore.Server.Controllers.UserController": {
-        "System.Void LitExplore.Server.Controllers.UserController::.ctor(Microsoft.Extensions.Logging.ILogger`1<LitExplore.Server.Controllers.UserController>,LitExplore.Repository.IUserRepository)": {
-          "Lines": {
-            "13": 6,
-            "14": 6,
-            "15": 6,
-            "16": 6,
-            "17": 6
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.UserController/<Get>d__4": {
-        "System.Void LitExplore.Server.Controllers.UserController/<Get>d__4::MoveNext()": {
-          "Lines": {
-            "27": 2,
-            "28": 2,
-            "29": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.UserController/<Post>d__3": {
-        "System.Void LitExplore.Server.Controllers.UserController/<Post>d__3::MoveNext()": {
-          "Lines": {
-            "21": 2,
-            "22": 2,
-            "23": 2
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.Server.Controllers.UserController/<delete>d__5": {
-        "System.Void LitExplore.Server.Controllers.UserController/<delete>d__5::MoveNext()": {
-          "Lines": {
-            "33": 2,
-            "34": 2,
-            "35": 2
-          },
-          "Branches": []
-        }
-      }
-    }
-  },
-  "LitExplore.Shared.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\Shared\\WeatherForecast.cs": {
-      "LitExplore.Shared.WeatherForecast": {
-        "System.DateTime LitExplore.Shared.WeatherForecast::get_Date()": {
-          "Lines": {
-            "5": 0
-          },
-          "Branches": []
-        },
-        "System.Int32 LitExplore.Shared.WeatherForecast::get_TemperatureC()": {
-          "Lines": {
-            "7": 0
-          },
-          "Branches": []
-        },
-        "System.String LitExplore.Shared.WeatherForecast::get_Summary()": {
-          "Lines": {
-            "9": 0
-          },
-          "Branches": []
-        },
-        "System.Int32 LitExplore.Shared.WeatherForecast::get_TemperatureF()": {
-          "Lines": {
-            "11": 0
-          },
-          "Branches": []
-        }
-      }
-    }
-  },
-  "LitExplore.UserManagement.dll": {
-    "C:\\Users\\Kalle Wilsen\\OneDrive - ITU\\3. semester\\Analysis, Design and Software Architecture\\Exam\\LitExplore\\BDSA2021-LitExplore\\LitExplore\\UserManagement\\CustomAuthStateProvider.cs": {
-      "LitExplore.UserManagement.CustomAuthStateProvider": {
-        "System.Threading.Tasks.Task`1<Microsoft.AspNetCore.Components.Authorization.AuthenticationState> LitExplore.UserManagement.CustomAuthStateProvider::GetAuthenticationStateAsync()": {
-          "Lines": {
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "36": 0,
-            "37": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.UserManagement.CustomAuthStateProvider/<GetUserAsync>d__4": {
-        "System.Void LitExplore.UserManagement.CustomAuthStateProvider/<GetUserAsync>d__4::MoveNext()": {
-          "Lines": {
-            "43": 0,
-            "44": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.UserManagement.CustomAuthStateProvider/<IsUserCollaboratorAsync>d__6": {
-        "System.Void LitExplore.UserManagement.CustomAuthStateProvider/<IsUserCollaboratorAsync>d__6::MoveNext()": {
-          "Lines": {
-            "51": 0,
-            "52": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.UserManagement.CustomAuthStateProvider/<IsUserOwnerAsync>d__5": {
-        "System.Void LitExplore.UserManagement.CustomAuthStateProvider/<IsUserOwnerAsync>d__5::MoveNext()": {
-          "Lines": {
-            "47": 0,
-            "48": 0
-          },
-          "Branches": []
-        }
-      },
-      "LitExplore.UserManagement.CustomAuthStateProvider/<IsUserValidAsync>d__1": {
-        "System.Void LitExplore.UserManagement.CustomAuthStateProvider/<IsUserValidAsync>d__1::MoveNext()": {
-          "Lines": {
-            "11": 0,
-            "12": 0,
-            "14": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0
-          },
-          "Branches": [
-            {
-              "Line": 14,
-              "Offset": 58,
-              "EndOffset": 60,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 14,
-              "Offset": 58,
-              "EndOffset": 67,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 16,
-              "Offset": 83,
-              "EndOffset": 88,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 21,
-              "Offset": 246,
-              "EndOffset": 248,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            },
-            {
-              "Line": 21,
-              "Offset": 246,
-              "EndOffset": 266,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 21,
-              "Offset": 271,
-              "EndOffset": 273,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 0
-            },
-            {
-              "Line": 21,
-              "Offset": 271,
-              "EndOffset": 277,
-              "Path": 1,
-              "Ordinal": 7,
-              "Hits": 0
-            },
-            {
-              "Line": 16,
-              "Offset": 83,
-              "EndOffset": 292,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "LitExplore.UserManagement.CustomAuthStateProvider/<PostUserAsync>d__3": {
-        "System.Void LitExplore.UserManagement.CustomAuthStateProvider/<PostUserAsync>d__3::MoveNext()": {
-          "Lines": {
-            "39": 0,
-            "40": 0
           },
           "Branches": []
         }
