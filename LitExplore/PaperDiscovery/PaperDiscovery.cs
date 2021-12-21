@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace LitExplore.PaperDiscovery;
 
-    //[ExcludeFromCodeCoverage]
+    [ExcludeFromCodeCoverage]
     public class PaperDiscovery : IPaperDiscovery
     {
 
