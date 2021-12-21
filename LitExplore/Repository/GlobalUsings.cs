@@ -10,3 +10,5 @@ global using LitExplore.Repository.Entities;
 
 global using Microsoft.EntityFrameworkCore.Infrastructure;
 global using Microsoft.EntityFrameworkCore.Storage;
+
+global using System.Diagnostics.CodeAnalysis;

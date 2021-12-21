@@ -3,10 +3,12 @@ using LitExplore.Repository.Entities;
 using LitExplore.Repository;
 using LitExplore.Repository.Tests;
 using Xunit;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LitExplore.PaperDiscovery.Tests;
 
 /*
+[ExcludeFromCodeCoverage]
 public class PaperDiscoveryTests : RepositoryTests
 {
     private IPaperRepository repo;

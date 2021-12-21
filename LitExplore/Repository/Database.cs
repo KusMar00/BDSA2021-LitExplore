@@ -5,7 +5,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace LitExplore.Repository;
+[ExcludeFromCodeCoverage]
 public partial class Database
 {
     internal const string ConnectionStringName = "LitExplore";

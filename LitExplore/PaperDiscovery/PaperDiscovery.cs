@@ -1,12 +1,15 @@
 ﻿using LitExplore.Repository;
 using LitExplore.Repository.Entities;
 using System.Linq;
-
+using LitExplore.UserManagement;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace LitExplore.PaperDiscovery;
 
-    public static class PaperDiscovery
+    [ExcludeFromCodeCoverage]
+    public static class PaperDiscovery : IPaperDiscovery
+
     {
         /// <summary>
         /// Returns a list of all papers which are related to any paper in a

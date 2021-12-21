@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LitExplore.Repository;
+
 public partial class Database
 {
     /// <summary>
