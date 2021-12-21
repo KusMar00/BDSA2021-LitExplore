@@ -29,7 +29,8 @@ public class ProjectRepository : IProjectRepository
         {
             return Status.NotFound;
         }
-
+        
+        #pragma warning disable CS8602
         if (collaboratorToAdd == projectToModify.Owner || projectToModify.Collaborators.Contains(collaboratorToAdd))
         {
             return Status.Conflict;

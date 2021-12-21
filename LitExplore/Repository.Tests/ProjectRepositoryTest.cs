@@ -1,7 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
-
-namespace LitExplore.Repository.Tests;
+﻿namespace LitExplore.Repository.Tests;
 
 public class ProjectRepositoryTest : RepositoryTests
 {

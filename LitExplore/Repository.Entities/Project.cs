@@ -14,10 +14,10 @@ public class Project
     public User? Owner { get; set; } = null!;
 
     [Required]
-    public ISet<User> Collaborators { get; set; } = null!;
+    public ISet<User>? Collaborators { get; set; } = null!;
 
     [Required]
-    public ISet<Paper> Papers { get; set; } = null!;
+    public ISet<Paper>? Papers { get; set; } = null!;
 
 
     public ProjectDTO ToDTO()
